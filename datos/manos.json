@@ -1,0 +1,276 @@
+{
+ "version": 1,
+ "manos": [
+  {
+   "id": "mano-restaurante",
+   "nombre": "Landing de restaurante que vende",
+   "objetivo": "Sitio de una página para un restaurante que lleve a reservar o pedir: se entiende qué venden en el primer pantallazo, el menú se revisa rápido y el pie prueba que el lugar existe.",
+   "tipo": "libre",
+   "cartas": [
+    {
+     "id": "dis-050",
+     "rol": "identidad: un objeto del negocio como motivo de la interfaz"
+    },
+    {
+     "id": "dis-054",
+     "rol": "héroe: una frase y una imagen, sin carrusel"
+    },
+    {
+     "id": "dis-051",
+     "rol": "acción: un solo botón sólido (reservar o pedir)"
+    },
+    {
+     "id": "dis-040",
+     "rol": "favoritos: bento con un platillo protagonista"
+    },
+    {
+     "id": "dis-027",
+     "rol": "menú: interruptor entre fotos y lista"
+    },
+    {
+     "id": "dis-044",
+     "rol": "navegación: índice del menú que sigue el scroll"
+    },
+    {
+     "id": "dis-052",
+     "rol": "cierre: pie con dirección, horario y redes"
+    }
+   ],
+   "por_que": "Todas son decisiones de composición e interacción de dificultad 1: ordenan el mensaje en lugar de adornarlo. La metáfora da identidad, el héroe y el botón deciden qué se pide, el bento y el interruptor muestran el menú de dos maneras, y el índice y el pie quitan dudas.",
+   "conflictos": "No lleva carta de movimiento: si se quiere un momento animado, debe ser uno solo (dis-023) y no en el menú. No agregar un carrusel en el héroe ni un segundo botón relleno. La metáfora no se fuerza en todos los componentes.",
+   "dificultad_total": 1,
+   "stack": "Angular + CSS",
+   "listo": [
+    "El primer pantallazo tiene una sola frase, una imagen y un único botón relleno.",
+    "El menú se puede ver como fotos o como lista y la elección se recuerda.",
+    "El índice marca la sección visible y lleva a ella al tocarlo.",
+    "El pie muestra dirección, horario, redes y aviso legal.",
+    "Sin scroll horizontal a 360 px."
+   ],
+   "usada_en": "Boca del Cielo (prototipo de restaurante de mariscos)",
+   "creada": "2026-11-13"
+  },
+  {
+   "id": "mano-papel",
+   "nombre": "App social con identidad de papel",
+   "objetivo": "Dar a una app social una identidad de papel y tinta que se reconozca en cada pantalla, con una sola pieza protagonista por página.",
+   "tipo": "libre",
+   "cartas": [
+    {
+     "id": "dis-009",
+     "rol": "material: papel mate en todas las superficies"
+    },
+    {
+     "id": "dis-023",
+     "rol": "regla: un protagonista animado por página"
+    },
+    {
+     "id": "dis-021",
+     "rol": "cambio de tema: mancha de tinta desde el botón"
+    },
+    {
+     "id": "dis-028",
+     "rol": "álbum: recuerdos en scroll horizontal"
+    },
+    {
+     "id": "dis-014",
+     "rol": "detalle generativo: ASCII que se va dibujando"
+    },
+    {
+     "id": "dis-056",
+     "rol": "pieza especial: objeto inflado cubierto de texto"
+    }
+   ],
+   "por_que": "El material se decide primero y todo lo demás lo respeta: la tinta del cambio de tema, el álbum que se hojea de lado y las dos piezas generativas, que parecen impresas o escritas. La regla del protagonista único evita que compitan entre sí.",
+   "conflictos": "Papel y vidrio no se mezclan: fuera dis-041 y los paneles con blur. dis-014 y dis-056 van en páginas distintas, cada una como protagonista de la suya. El álbum horizontal es para historias, no para listas.",
+   "dificultad_total": 3,
+   "stack": "Angular + CSS + Canvas",
+   "listo": [
+    "Ninguna superficie usa vidrio, blur ni brillo.",
+    "Cada página tiene un solo momento animado protagonista.",
+    "El cambio de tema dura menos de 700 ms y es directo con prefers-reduced-motion.",
+    "El álbum tiene una alternativa cómoda en teléfono.",
+    "Las piezas generativas se dibujan en canvas, no en el DOM."
+   ],
+   "usada_en": "mémoires (app social en Angular)",
+   "creada": "2026-11-13"
+  },
+  {
+   "id": "mano-portafolio",
+   "nombre": "Portafolio personal de desarrollador",
+   "objetivo": "Portafolio de una página que se recuerde por el nombre y por un solo gesto, y que deje ver los proyectos con jerarquía.",
+   "tipo": "escalera",
+   "cartas": [
+    {
+     "id": "dis-040",
+     "rol": "composición: bento de proyectos con uno protagonista"
+    },
+    {
+     "id": "dis-005",
+     "rol": "tipografía: el nombre como palabra gigante del héroe"
+    },
+    {
+     "id": "dis-006",
+     "rol": "color: monocromo con un solo acento"
+    },
+    {
+     "id": "dis-012",
+     "rol": "imagen: retrato con tramado y un detalle en el acento"
+    },
+    {
+     "id": "dis-007",
+     "rol": "movimiento: trazo que une las secciones al hacer scroll"
+    },
+    {
+     "id": "dis-044",
+     "rol": "interacción: índice que sigue el scroll"
+    },
+    {
+     "id": "dis-020",
+     "rol": "presentación: cada proyecto dentro de una escena"
+    }
+   ],
+   "por_que": "Escalera completa: una carta por etapa, de la composición a la presentación. El monocromo con acento ordena todo lo demás: el nombre gigante, el retrato tramado y el trazo comparten ese único color.",
+   "conflictos": "El trazo es el único momento animado: no sumar titular cinético ni texto que se decodifica. El héroe es la palabra gigante, no el héroe central escalonado (dis-063). No introducir un segundo acento.",
+   "dificultad_total": 2,
+   "stack": "Angular + CSS + SVG",
+   "listo": [
+    "El nombre no desborda a 360 px.",
+    "Hay un solo color de acento en todo el sitio.",
+    "El trazo no tapa texto y se muestra completo con prefers-reduced-motion.",
+    "El bento tiene un proyecto protagonista y ninguna tarjeta de relleno.",
+    "Cada proyecto enlaza a su repositorio o demo."
+   ],
+   "creada": "2026-11-13"
+  },
+  {
+   "id": "mano-erp",
+   "nombre": "Dashboard o ERP más claro",
+   "objetivo": "Que un tablero o un ERP se lea de un vistazo: qué importa, qué se puede hacer y qué dato es cuál, sin efectos.",
+   "tipo": "libre",
+   "cartas": [
+    {
+     "id": "dis-064",
+     "rol": "estructura: resolver la jerarquía con bloques grises"
+    },
+    {
+     "id": "dis-006",
+     "rol": "color: gris para todo y un acento para lo que pide atención"
+    },
+    {
+     "id": "dis-040",
+     "rol": "inicio: bento con un indicador protagonista"
+    },
+    {
+     "id": "dis-051",
+     "rol": "acciones: un solo botón sólido por vista"
+    },
+    {
+     "id": "dis-027",
+     "rol": "listados: interruptor entre tarjetas y tabla densa"
+    },
+    {
+     "id": "dis-039",
+     "rol": "datos: folios, fechas y cantidades en mono"
+    },
+    {
+     "id": "dis-025",
+     "rol": "espera: estados de carga con progreso real"
+    }
+   ],
+   "por_que": "En un sistema de trabajo la claridad viene de la jerarquía, no del movimiento. Primero la estructura, luego un color que solo señala, una acción por vista, dos formas de ver los listados y los datos en una fuente que los alinea. La carga diseñada es el único movimiento.",
+   "conflictos": "Nada de vidrio sobre tablas (dis-041) ni login lúdico (dis-042). El acento no se usa en elementos que no se pueden presionar ni en más de un indicador por vista. Sin animaciones de entrada en los listados.",
+   "dificultad_total": 1,
+   "stack": "Angular (signals) + CSS",
+   "listo": [
+    "Cada vista tiene un único botón relleno.",
+    "El tablero de inicio tiene un indicador claramente más grande que los demás.",
+    "Los listados cambian entre tarjetas y tabla y recuerdan la elección.",
+    "Folios, fechas y cantidades están en mono y alineados.",
+    "Toda espera de más de un segundo muestra progreso real."
+   ],
+   "creada": "2026-11-13"
+  },
+  {
+   "id": "mano-premium",
+   "nombre": "Página de producto con efecto premium",
+   "objetivo": "Página de un solo producto que se sienta cara: pocas decisiones, una foto protagonista y un único efecto memorable.",
+   "tipo": "escalera",
+   "cartas": [
+    {
+     "id": "dis-063",
+     "rol": "composición: héroe con texto central escalonado alrededor de la foto"
+    },
+    {
+     "id": "dis-004",
+     "rol": "tipografía: serif de alto contraste en mayúsculas"
+    },
+    {
+     "id": "dis-043",
+     "rol": "color: dos colores base y un acento solo en comprar"
+    },
+    {
+     "id": "dis-008",
+     "rol": "imagen: foto macro del material con el beneficio"
+    },
+    {
+     "id": "dis-010",
+     "rol": "movimiento: video del producto ligado al scroll"
+    },
+    {
+     "id": "dis-029",
+     "rol": "interacción: ver el producto en uso con un interruptor"
+    }
+   ],
+   "por_que": "Escalera de composición a interacción. Lo premium sale de restar: una foto, una serif, un acento y un solo efecto grande. El video ligado al scroll es ese efecto; el interruptor no compite porque lo acciona la persona.",
+   "conflictos": "El video es el único momento animado. Si pesa demasiado, se cambia por un solo momento 3D (dis-016), nunca los dos. No mezclar la serif con una fuente display (dis-066) ni usar el acento en títulos.",
+   "dificultad_total": 3,
+   "stack": "Angular + CSS + video",
+   "listo": [
+    "El héroe tiene una sola foto y como máximo una línea en cada esquina.",
+    "El acento aparece únicamente en el botón de compra.",
+    "El video tiene póster estático y no se reproduce con prefers-reduced-motion.",
+    "Las dos fotos del interruptor comparten encuadre.",
+    "Las imágenes se sirven en AVIF o WebP."
+   ],
+   "creada": "2026-11-13"
+  },
+  {
+   "id": "mano-jarvis",
+   "nombre": "Asistente de IA tipo Jarvis",
+   "objetivo": "Un asistente personal que opere sobre sistemas propios (por ejemplo un ERP), con memoria que no dependa del modelo y reglas claras de cuándo avisar.",
+   "tipo": "libre",
+   "cartas": [
+    {
+     "id": "age-001",
+     "rol": "plano: host, modelo, agente, conexiones y permisos"
+    },
+    {
+     "id": "age-003",
+     "rol": "memoria: fuera del modelo, en archivos o base de datos"
+    },
+    {
+     "id": "age-002",
+     "rol": "interfaz: Claude Code con Agent SDK y voz local"
+    },
+    {
+     "id": "age-004",
+     "rol": "operación: regla de escalamiento y resumen diario"
+    }
+   ],
+   "por_que": "Las cuatro cartas del mazo de agentes cubren el ciclo completo: la arquitectura, dónde vive lo aprendido, cómo se le habla y cuándo interrumpe al dueño. En ese orden se puede construir por etapas y probar cada una.",
+   "conflictos": "Permisos de solo lectura al inicio; nada de escritura a todo. Las acciones irreversibles (envíos, pagos) piden confirmación. Las cifras de la fuente de age-004 son promoción, no un dato.",
+   "dificultad_total": 3,
+   "stack": "Claude Code + Agent SDK + MCP + Node/Express + MySQL",
+   "listo": [
+    "Cada sistema conectado tiene permisos mínimos y una lista de herramientas.",
+    "La memoria se puede leer y editar fuera del modelo.",
+    "Una frase por voz o texto dispara una acción real de prueba.",
+    "Existe un umbral escrito de qué decide el agente y qué escala.",
+    "Ninguna acción irreversible ocurre sin confirmación."
+   ],
+   "creada": "2026-11-13"
+  }
+ ],
+ "actualizado": "2026-11-13"
+}

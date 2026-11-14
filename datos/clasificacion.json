@@ -1,0 +1,2005 @@
+{
+ "version": 1,
+ "cartas": {
+  "age-001": {
+   "campos": [
+    {
+     "campo": "ia",
+     "peso": 3,
+     "aplicacion": "Plano base del asistente: host, modelo, agente, conexiones MCP y permisos mínimos por sistema."
+    },
+    {
+     "campo": "backend",
+     "peso": 2,
+     "aplicacion": "Exponer cada módulo del ERP (Express + MySQL) como herramientas de un servidor MCP."
+    },
+    {
+     "campo": "devops",
+     "peso": 1,
+     "aplicacion": "Decidir dónde vive el agente (laptop o servidor) y cómo se mantiene encendido."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "depende",
+   "combina_con": [
+    "age-002",
+    "age-003",
+    "age-004"
+   ],
+   "choca_con": [],
+   "huella": "bef70d7af8b5",
+   "clasificada": "2026-11-13"
+  },
+  "age-002": {
+   "campos": [
+    {
+     "campo": "ia",
+     "peso": 3,
+     "aplicacion": "Claude Code como cerebro, Agent SDK como puente a una interfaz propia y Kokoro para la voz local."
+    },
+    {
+     "campo": "backend",
+     "peso": 1,
+     "aplicacion": "Las acciones del negocio se publican como CLIs o endpoints que el agente llama, con confirmación en lo irreversible."
+    }
+   ],
+   "nivel": "avanzado",
+   "costo": "depende",
+   "combina_con": [
+    "age-001"
+   ],
+   "choca_con": [],
+   "huella": "48ec55e5bade",
+   "clasificada": "2026-11-13"
+  },
+  "age-003": {
+   "campos": [
+    {
+     "campo": "ia",
+     "peso": 3,
+     "aplicacion": "Memoria y preferencias fuera del modelo para cambiar de proveedor sin perder contexto."
+    },
+    {
+     "campo": "datos",
+     "peso": 2,
+     "aplicacion": "Guardar la memoria en archivos o tablas MySQL propias que se inyectan en cada sesión."
+    },
+    {
+     "campo": "backend",
+     "peso": 1,
+     "aplicacion": "Un servicio carga la memoria y la entrega al modelo elegido al iniciar la sesión."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "gratis",
+   "combina_con": [
+    "age-001"
+   ],
+   "choca_con": [],
+   "huella": "8c9b2299528f",
+   "clasificada": "2026-11-13"
+  },
+  "age-004": {
+   "campos": [
+    {
+     "campo": "ia",
+     "peso": 3,
+     "aplicacion": "Reglas claras de qué decide el agente y qué escala; resumen nocturno y alerta solo sobre el umbral."
+    },
+    {
+     "campo": "producto",
+     "peso": 2,
+     "aplicacion": "Atención a clientes y ventas repetitivas sin interrumpir al dueño salvo en casos grandes."
+    },
+    {
+     "campo": "backend",
+     "peso": 1,
+     "aplicacion": "Umbrales y notificaciones (correo o mensajería) resueltos en el servidor, con bitácora."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "depende",
+   "combina_con": [
+    "age-001"
+   ],
+   "choca_con": [],
+   "nota": "Las cifras de la fuente son promoción de un reto de pago; no citarlas como dato.",
+   "huella": "8f9f1423af6d",
+   "clasificada": "2026-11-13"
+  },
+  "dis-001": {
+   "campos": [
+    {
+     "campo": "frontend",
+     "peso": 3,
+     "aplicacion": "Sección alta con imagen sticky e IntersectionObserver que actualiza un signal pasoActual."
+    },
+    {
+     "campo": "movimiento",
+     "peso": 2,
+     "aplicacion": "La imagen cambia con transición de opacidad y transform al avanzar de paso."
+    },
+    {
+     "campo": "producto",
+     "peso": 2,
+     "aplicacion": "Contar el proceso de un negocio o un onboarding en cinco pasos como máximo."
+    },
+    {
+     "campo": "movil",
+     "peso": 1,
+     "aplicacion": "En teléfono los pasos se apilan en lugar de usar sticky."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [],
+   "huella": "4956e3a77fb3",
+   "clasificada": "2026-11-13"
+  },
+  "dis-002": {
+   "campos": [
+    {
+     "campo": "frontend",
+     "peso": 3,
+     "aplicacion": "Chips con position absolute en porcentajes dentro de un contenedor relativo."
+    },
+    {
+     "campo": "movimiento",
+     "peso": 2,
+     "aplicacion": "Aparición escalonada con animation-delay y un vaivén leve con transform."
+    },
+    {
+     "campo": "producto",
+     "peso": 2,
+     "aplicacion": "Resaltar tres o cuatro atributos del producto en el héroe sin una lista."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [
+    "dis-063"
+   ],
+   "choca_con": [],
+   "huella": "963e9af7858e",
+   "clasificada": "2026-11-13"
+  },
+  "dis-003": {
+   "campos": [
+    {
+     "campo": "ux-ui",
+     "peso": 3,
+     "aplicacion": "Tokens de color para marcas cálidas: crema, café y ámbar solo en botones y números."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "Cuatro variables en :root que se reutilizan en todos los componentes."
+    },
+    {
+     "campo": "producto",
+     "peso": 1,
+     "aplicacion": "Tono artesanal para cafeterías, panaderías y productos hechos a mano."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [
+    "dis-004",
+    "dis-043",
+    "dis-050"
+   ],
+   "choca_con": [
+    "dis-006"
+   ],
+   "huella": "3f98546bff5f",
+   "clasificada": "2026-11-13"
+  },
+  "dis-004": {
+   "campos": [
+    {
+     "campo": "ux-ui",
+     "peso": 3,
+     "aplicacion": "Títulos con tono editorial: serif de alto contraste en mayúsculas e interlineado apretado."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "Playfair Display o Bodoni Moda con clamp() para títulos e Inter para el cuerpo."
+    },
+    {
+     "campo": "producto",
+     "peso": 1,
+     "aplicacion": "Marcas premium, gastronomía, moda e interiores."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [
+    "dis-003",
+    "dis-022"
+   ],
+   "choca_con": [
+    "dis-066"
+   ],
+   "huella": "705fe7ff5d5e",
+   "clasificada": "2026-11-13"
+  },
+  "dis-005": {
+   "campos": [
+    {
+     "campo": "frontend",
+     "peso": 3,
+     "aplicacion": "font-size con clamp y vw, line-height .85 e imagen superpuesta con z-index o mix-blend-mode."
+    },
+    {
+     "campo": "ux-ui",
+     "peso": 2,
+     "aplicacion": "Jerarquía extrema: el nombre es el héroe y todo lo demás queda en segundo plano."
+    },
+    {
+     "campo": "producto",
+     "peso": 2,
+     "aplicacion": "Portafolios y marcas de nombre corto que quieren ser recordadas."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [
+    "dis-006"
+   ],
+   "choca_con": [
+    "dis-063"
+   ],
+   "huella": "4a8d23ec2229",
+   "clasificada": "2026-11-13"
+  },
+  "dis-006": {
+   "campos": [
+    {
+     "campo": "ux-ui",
+     "peso": 3,
+     "aplicacion": "Paleta de blanco, negro y grises con un único acento por pantalla."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "Tres variables: fondo, texto y acento."
+    },
+    {
+     "campo": "datos",
+     "peso": 2,
+     "aplicacion": "En tableros, todo en gris y el acento solo en el indicador que pide atención."
+    },
+    {
+     "campo": "producto",
+     "peso": 1,
+     "aplicacion": "Portafolios y marcas de tecnología con actitud."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [
+    "dis-005",
+    "dis-012",
+    "dis-043",
+    "dis-051"
+   ],
+   "choca_con": [
+    "dis-003"
+   ],
+   "huella": "f8260de9ccb6",
+   "clasificada": "2026-11-13"
+  },
+  "dis-007": {
+   "campos": [
+    {
+     "campo": "movimiento",
+     "peso": 3,
+     "aplicacion": "Trazo SVG que se dibuja con el scroll: stroke-dashoffset ligado al progreso."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "SVG path a lo largo de la página, por detrás del texto."
+    },
+    {
+     "campo": "producto",
+     "peso": 1,
+     "aplicacion": "Hilo visual para portafolios y landings largas."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "gratis",
+   "combina_con": [
+    "dis-036"
+   ],
+   "choca_con": [],
+   "huella": "f3f6de00ad62",
+   "clasificada": "2026-11-13"
+  },
+  "dis-008": {
+   "campos": [
+    {
+     "campo": "producto",
+     "peso": 3,
+     "aplicacion": "El material como argumento de venta: primer plano y una frase que nombra el beneficio."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "Imagen a pantalla completa con object-fit cover y texto en esquina con alto contraste."
+    },
+    {
+     "campo": "devops",
+     "peso": 1,
+     "aplicacion": "Servirla en AVIF o WebP y con tamaños responsivos para que no pese."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "depende",
+   "combina_con": [],
+   "choca_con": [],
+   "huella": "26f31b8efffe",
+   "clasificada": "2026-11-13"
+  },
+  "dis-009": {
+   "campos": [
+    {
+     "campo": "ux-ui",
+     "peso": 3,
+     "aplicacion": "Decisión de sistema: un solo material para todas las superficies de la marca."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "Vidrio con backdrop-filter, mate con sombras suaves o metal con gradientes finos."
+    },
+    {
+     "campo": "movil",
+     "peso": 1,
+     "aplicacion": "El mismo material en tarjetas y barras de la app móvil."
+    },
+    {
+     "campo": "producto",
+     "peso": 1,
+     "aplicacion": "El material comunica la marca antes que el texto."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [
+    "dis-019"
+   ],
+   "choca_con": [],
+   "huella": "82be963b3bdb",
+   "clasificada": "2026-11-13"
+  },
+  "dis-010": {
+   "campos": [
+    {
+     "campo": "movimiento",
+     "peso": 3,
+     "aplicacion": "Video del producto cuyo currentTime sigue el progreso del scroll."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "Video muted playsinline controlado por un signal de scroll, con póster estático."
+    },
+    {
+     "campo": "producto",
+     "peso": 2,
+     "aplicacion": "Página de un producto estrella con efecto de despiece."
+    },
+    {
+     "campo": "devops",
+     "peso": 1,
+     "aplicacion": "Codificar con keyframes frecuentes y dar una versión ligera en móvil."
+    }
+   ],
+   "nivel": "avanzado",
+   "costo": "depende",
+   "combina_con": [
+    "dis-036"
+   ],
+   "choca_con": [
+    "dis-016",
+    "dis-035"
+   ],
+   "huella": "2ef7391c7102",
+   "clasificada": "2026-11-13"
+  },
+  "dis-011": {
+   "campos": [
+    {
+     "campo": "producto",
+     "peso": 3,
+     "aplicacion": "Showroom navegable para interiores, hoteles, inmobiliarias o tiendas."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "Flechas que reproducen un clip de transición y luego muestran la imagen fija del destino."
+    },
+    {
+     "campo": "movimiento",
+     "peso": 2,
+     "aplicacion": "La transición es un video corto; precargar solo el siguiente."
+    },
+    {
+     "campo": "ia",
+     "peso": 1,
+     "aplicacion": "Escenas y clips de transición generados con IA (Higgsfield)."
+    }
+   ],
+   "nivel": "avanzado",
+   "costo": "pago",
+   "combina_con": [],
+   "choca_con": [],
+   "huella": "65ea465982a4",
+   "clasificada": "2026-11-13"
+  },
+  "dis-012": {
+   "campos": [
+    {
+     "campo": "grafico",
+     "peso": 3,
+     "aplicacion": "Tramado en canvas con Floyd-Steinberg, o máscara de puntos con radial-gradient."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "Versión rápida con filter grayscale y contrast más una capa con mask."
+    },
+    {
+     "campo": "ux-ui",
+     "peso": 1,
+     "aplicacion": "Imagen con personalidad y un único detalle a color."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "gratis",
+   "combina_con": [
+    "dis-006"
+   ],
+   "choca_con": [],
+   "huella": "1ad368a980cf",
+   "clasificada": "2026-11-13"
+  },
+  "dis-013": {
+   "campos": [
+    {
+     "campo": "grafico",
+     "peso": 3,
+     "aplicacion": "Canvas 2D con requestAnimationFrame o Three.js Points detrás del contenido."
+    },
+    {
+     "campo": "movimiento",
+     "peso": 2,
+     "aplicacion": "Fondo vivo y lento que no compite con el texto."
+    },
+    {
+     "campo": "devops",
+     "peso": 1,
+     "aplicacion": "Pausar fuera de vista y limitar FPS y cantidad en móvil."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [],
+   "huella": "19f7125c898a",
+   "clasificada": "2026-11-13"
+  },
+  "dis-014": {
+   "campos": [
+    {
+     "campo": "grafico",
+     "peso": 3,
+     "aplicacion": "Muestrear una imagen en cuadrícula y elegir el carácter según el brillo, en canvas."
+    },
+    {
+     "campo": "movimiento",
+     "peso": 2,
+     "aplicacion": "Revelado progresivo por altura o máscara."
+    },
+    {
+     "campo": "producto",
+     "peso": 1,
+     "aplicacion": "Detalle decorativo para una 404 o una sección creativa."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [],
+   "nota": "Usada en mémoires.",
+   "huella": "4288b0252b71",
+   "clasificada": "2026-11-13"
+  },
+  "dis-015": {
+   "campos": [
+    {
+     "campo": "grafico",
+     "peso": 3,
+     "aplicacion": "Nube de puntos con rotación, proyección en perspectiva y z-buffer dibujada con caracteres."
+    },
+    {
+     "campo": "producto",
+     "peso": 1,
+     "aplicacion": "Pieza llamativa para un portafolio técnico."
+    },
+    {
+     "campo": "escuela",
+     "peso": 1,
+     "aplicacion": "Ejercicio de gráficos sin librerías: matrices, proyección e iluminación."
+    }
+   ],
+   "nivel": "avanzado",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [],
+   "huella": "b82e3c8c18dd",
+   "clasificada": "2026-11-13"
+  },
+  "dis-016": {
+   "campos": [
+    {
+     "campo": "grafico",
+     "peso": 3,
+     "aplicacion": "Un modelo .glb ligero con model-viewer, que el usuario puede girar."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "Web component en Angular declarando CUSTOM_ELEMENTS_SCHEMA."
+    },
+    {
+     "campo": "producto",
+     "peso": 2,
+     "aplicacion": "Mostrar el producto destacado en 3D sin construir una escena."
+    },
+    {
+     "campo": "movil",
+     "peso": 1,
+     "aplicacion": "Funciona con gestos táctiles en el teléfono."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [
+    "dis-017",
+    "dis-023"
+   ],
+   "choca_con": [
+    "dis-010",
+    "dis-035",
+    "dis-048"
+   ],
+   "huella": "41520a85204e",
+   "clasificada": "2026-11-13"
+  },
+  "dis-017": {
+   "campos": [
+    {
+     "campo": "grafico",
+     "peso": 3,
+     "aplicacion": "Mapa de opciones para 3D: de model-viewer a Three.js, Babylon.js o PlayCanvas."
+    },
+    {
+     "campo": "frontend",
+     "peso": 1,
+     "aplicacion": "Elegir la herramienta más pequeña que resuelva el caso."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "depende",
+   "combina_con": [
+    "dis-016"
+   ],
+   "choca_con": [],
+   "huella": "d5d20fb8dbee",
+   "clasificada": "2026-11-13"
+  },
+  "dis-018": {
+   "campos": [
+    {
+     "campo": "ux-ui",
+     "peso": 3,
+     "aplicacion": "Reunir de tres a cinco referencias antes de diseñar y copiar estructura, no el sitio."
+    },
+    {
+     "campo": "producto",
+     "peso": 1,
+     "aplicacion": "Ver cómo se presentan negocios de la misma industria."
+    },
+    {
+     "campo": "escuela",
+     "peso": 1,
+     "aplicacion": "Justificar decisiones de diseño con referencias en el reporte."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "depende",
+   "combina_con": [
+    "dis-019"
+   ],
+   "choca_con": [],
+   "nota": "Los prompts de pago casi siempre son ganchos; revisar antes de comprar.",
+   "huella": "fca560e0f6de",
+   "clasificada": "2026-11-13"
+  },
+  "dis-019": {
+   "campos": [
+    {
+     "campo": "ux-ui",
+     "peso": 3,
+     "aplicacion": "Fijar tokens antes de construir: escala tipográfica, espaciado de 8 px, paleta, radios y duraciones."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "Un archivo de variables CSS que todos los componentes consumen."
+    },
+    {
+     "campo": "ia",
+     "peso": 2,
+     "aplicacion": "Pedir código a una IA con valores exactos en lugar de adjetivos."
+    },
+    {
+     "campo": "escuela",
+     "peso": 1,
+     "aplicacion": "Sirve como sección de estándares de interfaz en el SRS."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [
+    "dis-009",
+    "dis-018",
+    "dis-064"
+   ],
+   "choca_con": [],
+   "huella": "379b3a0516e6",
+   "clasificada": "2026-11-13"
+  },
+  "dis-020": {
+   "campos": [
+    {
+     "campo": "producto",
+     "peso": 3,
+     "aplicacion": "Mostrar el sitio dentro de una laptop en una escena con luz que combine con su paleta."
+    },
+    {
+     "campo": "escuela",
+     "peso": 2,
+     "aplicacion": "Capturas montadas en mockup para la exposición y la portada del reporte."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [],
+   "huella": "8b5575093054",
+   "clasificada": "2026-11-13"
+  },
+  "dis-021": {
+   "campos": [
+    {
+     "campo": "movimiento",
+     "peso": 3,
+     "aplicacion": "El tema nuevo se esparce desde el botón con View Transitions y clip-path."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "document.startViewTransition al cambiar la clase del tema; máscara SVG para el borde orgánico."
+    },
+    {
+     "campo": "ux-ui",
+     "peso": 1,
+     "aplicacion": "El cambio de tema se vuelve un gesto de identidad."
+    },
+    {
+     "campo": "accesibilidad-seo",
+     "peso": 1,
+     "aplicacion": "Con prefers-reduced-motion o sin soporte, cambio directo."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "gratis",
+   "combina_con": [
+    "dis-023",
+    "dis-031"
+   ],
+   "choca_con": [
+    "dis-041"
+   ],
+   "nota": "Usada en mémoires.",
+   "huella": "b09dc3fb7169",
+   "clasificada": "2026-11-13"
+  },
+  "dis-022": {
+   "campos": [
+    {
+     "campo": "ux-ui",
+     "peso": 3,
+     "aplicacion": "Una sola palabra del título en cursiva y color de acento para marcar el concepto."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "La palabra va en em, con una serif que tenga cursiva real."
+    },
+    {
+     "campo": "producto",
+     "peso": 1,
+     "aplicacion": "Titular de héroe con una idea clave."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [
+    "dis-004",
+    "dis-054"
+   ],
+   "choca_con": [],
+   "huella": "35aa1fd938b4",
+   "clasificada": "2026-11-13"
+  },
+  "dis-023": {
+   "campos": [
+    {
+     "campo": "movimiento",
+     "peso": 3,
+     "aplicacion": "Criterio: un solo momento animado protagonista por página."
+    },
+    {
+     "campo": "ux-ui",
+     "peso": 2,
+     "aplicacion": "Decidir ese momento al planear; lo demás, transiciones de 150 a 250 ms."
+    },
+    {
+     "campo": "movil",
+     "peso": 1,
+     "aplicacion": "En apps, mover solo lo que el usuario acciona: abrir, expandir, confirmar."
+    },
+    {
+     "campo": "accesibilidad-seo",
+     "peso": 1,
+     "aplicacion": "Menos movimiento ayuda a quien es sensible a él y aligera la página."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [
+    "dis-016",
+    "dis-021",
+    "dis-058"
+   ],
+   "choca_con": [],
+   "nota": "Regla de oro de todas las manos.",
+   "huella": "01af6f15ce05",
+   "clasificada": "2026-11-13"
+  },
+  "dis-024": {
+   "campos": [
+    {
+     "campo": "frontend",
+     "peso": 3,
+     "aplicacion": "Estudiar el componente animado y reescribirlo en CSS o con una directiva de Angular."
+    },
+    {
+     "campo": "movimiento",
+     "peso": 2,
+     "aplicacion": "Catálogo de microinteracciones y efectos para tomar una sola idea."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [],
+   "nota": "Todas son de React: solo referencia, no instalar.",
+   "huella": "3e3b6d082e44",
+   "clasificada": "2026-11-13"
+  },
+  "dis-025": {
+   "campos": [
+    {
+     "campo": "ux-ui",
+     "peso": 3,
+     "aplicacion": "Una carga diseñada con contador real acorta la espera percibida."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "Componente de carga con la identidad del sitio y progreso ligado a datos o imágenes."
+    },
+    {
+     "campo": "movil",
+     "peso": 2,
+     "aplicacion": "Pantallas de carga y esqueletos en apps mientras llegan los datos."
+    },
+    {
+     "campo": "movimiento",
+     "peso": 1,
+     "aplicacion": "La animación de carga puede ser el único momento animado de la vista."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [],
+   "huella": "8182e87efc11",
+   "clasificada": "2026-11-13"
+  },
+  "dis-026": {
+   "campos": [
+    {
+     "campo": "frontend",
+     "peso": 3,
+     "aplicacion": "Lienzo grande que se arrastra con pointer events, translate3d e inercia."
+    },
+    {
+     "campo": "movimiento",
+     "peso": 2,
+     "aplicacion": "La inercia al soltar da la sensación física."
+    },
+    {
+     "campo": "accesibilidad-seo",
+     "peso": 1,
+     "aplicacion": "Teclado, rueda y vista de lista como alternativa obligatoria."
+    },
+    {
+     "campo": "producto",
+     "peso": 1,
+     "aplicacion": "Catálogos visuales, galerías y portafolios."
+    }
+   ],
+   "nivel": "avanzado",
+   "costo": "gratis",
+   "combina_con": [
+    "dis-027"
+   ],
+   "choca_con": [],
+   "huella": "cc0a1e045b0a",
+   "clasificada": "2026-11-13"
+  },
+  "dis-027": {
+   "campos": [
+    {
+     "campo": "frontend",
+     "peso": 3,
+     "aplicacion": "Un signal modo cambia la clase del contenedor: misma data, dos layouts CSS."
+    },
+    {
+     "campo": "ux-ui",
+     "peso": 2,
+     "aplicacion": "Dos formas de mirar lo mismo: explorar en cuadrícula o comparar en lista."
+    },
+    {
+     "campo": "datos",
+     "peso": 2,
+     "aplicacion": "En listados del ERP: tarjetas para explorar y tabla densa para comparar."
+    },
+    {
+     "campo": "movil",
+     "peso": 1,
+     "aplicacion": "Alternar cuadrícula y lista en un catálogo móvil."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [
+    "dis-026",
+    "dis-040"
+   ],
+   "choca_con": [],
+   "nota": "Usada en Boca del Cielo.",
+   "huella": "d676885b0183",
+   "clasificada": "2026-11-13"
+  },
+  "dis-028": {
+   "campos": [
+    {
+     "campo": "frontend",
+     "peso": 3,
+     "aplicacion": "Sección de 300vh con contenedor sticky y translateX ligado al scroll."
+    },
+    {
+     "campo": "movimiento",
+     "peso": 2,
+     "aplicacion": "El avance lateral obliga a ir despacio; sirve a una historia, no a una lista."
+    },
+    {
+     "campo": "movil",
+     "peso": 1,
+     "aplicacion": "En teléfono conviene un carrusel nativo con scroll-snap."
+    },
+    {
+     "campo": "producto",
+     "peso": 1,
+     "aplicacion": "Historia de la marca, línea de tiempo o proceso."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [],
+   "nota": "Usada en mémoires (álbum horizontal).",
+   "huella": "32d69d25108f",
+   "clasificada": "2026-11-13"
+  },
+  "dis-029": {
+   "campos": [
+    {
+     "campo": "producto",
+     "peso": 3,
+     "aplicacion": "Mostrar el producto funcionando con un interruptor de apagado y encendido."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "Dos fotos del mismo encuadre superpuestas con crossfade de opacidad."
+    },
+    {
+     "campo": "movimiento",
+     "peso": 1,
+     "aplicacion": "Transición corta que oscurece el fondo al encender."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [],
+   "huella": "f7846021bcf5",
+   "clasificada": "2026-11-13"
+  },
+  "dis-030": {
+   "campos": [
+    {
+     "campo": "escuela",
+     "peso": 3,
+     "aplicacion": "Diagramas de casos de uso, flujo y entidad-relación para el SRS y los reportes, escritos como texto."
+    },
+    {
+     "campo": "datos",
+     "peso": 2,
+     "aplicacion": "Modelo entidad-relación versionable junto al código."
+    },
+    {
+     "campo": "backend",
+     "peso": 1,
+     "aplicacion": "Documentar flujos y secuencias de la API."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [],
+   "nota": "La carta no declara riesgo; verificar la librería antes de depender de ella.",
+   "huella": "58919ca6f8a5",
+   "clasificada": "2026-11-13"
+  },
+  "dis-031": {
+   "campos": [
+    {
+     "campo": "movimiento",
+     "peso": 3,
+     "aplicacion": "El cursor deja un rastro de tinta que se une y se desvanece en el héroe."
+    },
+    {
+     "campo": "grafico",
+     "peso": 2,
+     "aplicacion": "Canvas con las últimas posiciones del puntero y filtro SVG para el efecto pegajoso."
+    },
+    {
+     "campo": "producto",
+     "peso": 1,
+     "aplicacion": "Héroes de estudios creativos y portafolios; no aporta en táctil."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "gratis",
+   "combina_con": [
+    "dis-021"
+   ],
+   "choca_con": [
+    "dis-041",
+    "dis-045",
+    "dis-049"
+   ],
+   "huella": "e17ca437aa72",
+   "clasificada": "2026-11-13"
+  },
+  "dis-032": {
+   "campos": [
+    {
+     "campo": "frontend",
+     "peso": 3,
+     "aplicacion": "Tarjeta por capas: la escena sube de opacidad en hover y cada capa se mueve con --x y --y."
+    },
+    {
+     "campo": "movimiento",
+     "peso": 2,
+     "aplicacion": "Paralaje leve entre producto y fondo."
+    },
+    {
+     "campo": "producto",
+     "peso": 2,
+     "aplicacion": "Catálogos donde conviene ver el producto en su contexto."
+    },
+    {
+     "campo": "movil",
+     "peso": 1,
+     "aplicacion": "En táctil la escena se muestra fija."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [],
+   "huella": "a2185054a217",
+   "clasificada": "2026-11-13"
+  },
+  "dis-033": {
+   "campos": [
+    {
+     "campo": "movimiento",
+     "peso": 3,
+     "aplicacion": "Paneles que se apilan: el que sale se encoge, se inclina y se oscurece."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "position sticky con animation-timeline: view()."
+    },
+    {
+     "campo": "producto",
+     "peso": 1,
+     "aplicacion": "Servicios, casos de estudio o pasos, hasta cinco paneles."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [],
+   "huella": "9b435f641503",
+   "clasificada": "2026-11-13"
+  },
+  "dis-034": {
+   "campos": [
+    {
+     "campo": "movimiento",
+     "peso": 3,
+     "aplicacion": "Tarjeta que hojea fotos como flipbook y crece hasta ocupar la pantalla."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "Cambio de imagen con un signal y View Transition o FLIP para la expansión."
+    },
+    {
+     "campo": "producto",
+     "peso": 1,
+     "aplicacion": "Entrada de portafolio, fotografía o eventos; debe poder saltarse."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [],
+   "huella": "44d9cbba0ddf",
+   "clasificada": "2026-11-13"
+  },
+  "dis-035": {
+   "campos": [
+    {
+     "campo": "grafico",
+     "peso": 3,
+     "aplicacion": "Escena 3D explorable con three.js como héroe."
+    },
+    {
+     "campo": "producto",
+     "peso": 2,
+     "aplicacion": "Para marcas que quieren ser recordadas y aceptan el costo de desarrollo."
+    },
+    {
+     "campo": "devops",
+     "peso": 1,
+     "aplicacion": "Imagen fija nítida mientras carga y versión ligera para equipos débiles."
+    }
+   ],
+   "nivel": "avanzado",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [
+    "dis-010",
+    "dis-016",
+    "dis-048"
+   ],
+   "huella": "63215be06038",
+   "clasificada": "2026-11-13"
+  },
+  "dis-036": {
+   "campos": [
+    {
+     "campo": "movimiento",
+     "peso": 3,
+     "aplicacion": "Scroll con inercia sutil que mantiene sincronizados texto y efectos."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "Lenis envuelve el scroll nativo; sticky y anclas siguen funcionando."
+    },
+    {
+     "campo": "accesibilidad-seo",
+     "peso": 1,
+     "aplicacion": "No secuestrar la rueda y respetar prefers-reduced-motion."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "gratis",
+   "combina_con": [
+    "dis-007",
+    "dis-010",
+    "dis-058"
+   ],
+   "choca_con": [],
+   "huella": "459bb1eaf6fd",
+   "clasificada": "2026-11-13"
+  },
+  "dis-037": {
+   "campos": [
+    {
+     "campo": "movimiento",
+     "peso": 3,
+     "aplicacion": "Titular que entra por palabras con máscara y translateY escalonado."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "Partir el texto en spans con un pipe de Angular o SplitText."
+    },
+    {
+     "campo": "accesibilidad-seo",
+     "peso": 1,
+     "aplicacion": "Conservar el texto real para lectores de pantalla."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [
+    "dis-038"
+   ],
+   "huella": "1e70c7d57b17",
+   "clasificada": "2026-11-13"
+  },
+  "dis-038": {
+   "campos": [
+    {
+     "campo": "movimiento",
+     "peso": 3,
+     "aplicacion": "El titular pasa por caracteres al azar y se asienta en el texto real."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "requestAnimationFrame en TypeScript y el texto real en aria-label."
+    },
+    {
+     "campo": "producto",
+     "peso": 1,
+     "aplicacion": "Tono técnico para portafolios de datos o ingeniería."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [
+    "dis-037"
+   ],
+   "huella": "ef2cd81f3c2c",
+   "clasificada": "2026-11-13"
+  },
+  "dis-039": {
+   "campos": [
+    {
+     "campo": "ux-ui",
+     "peso": 3,
+     "aplicacion": "Fuente mono solo donde hay datos reales: hora, folio, índice o coordenadas."
+    },
+    {
+     "campo": "datos",
+     "peso": 2,
+     "aplicacion": "Folios, fechas y cantidades de tablas y fichas del ERP alineados en mono."
+    },
+    {
+     "campo": "frontend",
+     "peso": 1,
+     "aplicacion": "Una clase de utilidad con font-variant-numeric tabular."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [],
+   "huella": "5657ae64f1ca",
+   "clasificada": "2026-11-13"
+  },
+  "dis-040": {
+   "campos": [
+    {
+     "campo": "frontend",
+     "peso": 3,
+     "aplicacion": "CSS grid con grid-template-areas; la tarjeta principal ocupa 2x2."
+    },
+    {
+     "campo": "ux-ui",
+     "peso": 2,
+     "aplicacion": "El tamaño indica importancia y cada tarjeta tiene contenido distinto."
+    },
+    {
+     "campo": "datos",
+     "peso": 2,
+     "aplicacion": "Tablero de inicio con un indicador protagonista y tarjetas variadas."
+    },
+    {
+     "campo": "producto",
+     "peso": 1,
+     "aplicacion": "Página de funciones o favoritos de un negocio."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [
+    "dis-027",
+    "dis-064",
+    "dis-065"
+   ],
+   "choca_con": [],
+   "nota": "Usada en Boca del Cielo.",
+   "huella": "20a02bb2b27f",
+   "clasificada": "2026-11-13"
+  },
+  "dis-041": {
+   "campos": [
+    {
+     "campo": "grafico",
+     "peso": 3,
+     "aplicacion": "Filtro SVG con feDisplacementMap aplicado como backdrop-filter (solo Chromium)."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "Respaldo con backdrop-filter: blur() y brillo de borde con box-shadow inset."
+    },
+    {
+     "campo": "ux-ui",
+     "peso": 1,
+     "aplicacion": "Material técnico para una barra de navegación o una tarjeta destacada."
+    }
+   ],
+   "nivel": "avanzado",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [
+    "dis-021",
+    "dis-031"
+   ],
+   "nota": "Vidrio: no mezclar con identidades de papel o tinta.",
+   "huella": "db15fee47e8f",
+   "clasificada": "2026-11-13"
+  },
+  "dis-042": {
+   "campos": [
+    {
+     "campo": "frontend",
+     "peso": 3,
+     "aplicacion": "Signal encendido, cono de luz con radial-gradient y formulario que pasa de opacity 0 a 1."
+    },
+    {
+     "campo": "movimiento",
+     "peso": 2,
+     "aplicacion": "El cordón y la luz son el momento animado de la pantalla."
+    },
+    {
+     "campo": "ux-ui",
+     "peso": 1,
+     "aplicacion": "Login lúdico para proyectos personales, con acceso directo por teclado."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [],
+   "nota": "No usar en sistemas de trabajo como un ERP.",
+   "huella": "c427a3aa1ee3",
+   "clasificada": "2026-11-13"
+  },
+  "dis-043": {
+   "campos": [
+    {
+     "campo": "ux-ui",
+     "peso": 3,
+     "aplicacion": "Dos colores hacen el 90 % y un acento inesperado va solo en la acción principal."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "Variables de color con el acento reservado al botón primario."
+    },
+    {
+     "campo": "producto",
+     "peso": 2,
+     "aplicacion": "El acento señala el botón que convierte."
+    },
+    {
+     "campo": "movil",
+     "peso": 1,
+     "aplicacion": "La misma regla en apps: acento solo en la acción principal."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [
+    "dis-003",
+    "dis-006",
+    "dis-051"
+   ],
+   "choca_con": [],
+   "huella": "57699a270ae8",
+   "clasificada": "2026-11-13"
+  },
+  "dis-044": {
+   "campos": [
+    {
+     "campo": "frontend",
+     "peso": 3,
+     "aplicacion": "IntersectionObserver por sección que actualiza un signal seccionActiva."
+    },
+    {
+     "campo": "ux-ui",
+     "peso": 2,
+     "aplicacion": "Saber siempre dónde está uno en páginas y formularios largos."
+    },
+    {
+     "campo": "accesibilidad-seo",
+     "peso": 1,
+     "aplicacion": "Anclas navegables con el estado activo marcado."
+    },
+    {
+     "campo": "escuela",
+     "peso": 1,
+     "aplicacion": "Documentación o reporte web largo con índice activo."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [],
+   "nota": "Usada en Boca del Cielo.",
+   "huella": "4edbba718adf",
+   "clasificada": "2026-11-13"
+  },
+  "dis-045": {
+   "campos": [
+    {
+     "campo": "frontend",
+     "peso": 3,
+     "aplicacion": "Capa con relieve revelada por mask-image radial en la posición del puntero."
+    },
+    {
+     "campo": "movimiento",
+     "peso": 2,
+     "aplicacion": "El fondo responde al cursor como si fuera un material."
+    },
+    {
+     "campo": "grafico",
+     "peso": 1,
+     "aplicacion": "Relieve en SVG o imagen con sombras."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [
+    "dis-031",
+    "dis-049"
+   ],
+   "huella": "0b75ebf17491",
+   "clasificada": "2026-11-13"
+  },
+  "dis-046": {
+   "campos": [
+    {
+     "campo": "grafico",
+     "peso": 3,
+     "aplicacion": "Minijuego pequeño en canvas dentro de la página de error."
+    },
+    {
+     "campo": "producto",
+     "peso": 2,
+     "aplicacion": "Un callejón sin salida convertido en personalidad de marca."
+    },
+    {
+     "campo": "frontend",
+     "peso": 1,
+     "aplicacion": "Ruta comodín de Angular con un botón claro para volver al inicio."
+    },
+    {
+     "campo": "escuela",
+     "peso": 1,
+     "aplicacion": "Ejercicio corto de canvas."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [],
+   "huella": "89e1757e81b4",
+   "clasificada": "2026-11-13"
+  },
+  "dis-047": {
+   "campos": [
+    {
+     "campo": "movimiento",
+     "peso": 3,
+     "aplicacion": "La sección siguiente entra con un borde irregular que se rasga con el scroll."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "clip-path polygon animado y mix-blend-mode difference para el titular."
+    }
+   ],
+   "nivel": "avanzado",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [],
+   "huella": "64f0edcc3d09",
+   "clasificada": "2026-11-13"
+  },
+  "dis-048": {
+   "campos": [
+    {
+     "campo": "grafico",
+     "peso": 3,
+     "aplicacion": "Plano subdividido en Three.js con simulación de tela Verlet que el puntero arrastra."
+    },
+    {
+     "campo": "movimiento",
+     "peso": 1,
+     "aplicacion": "La física es el momento animado del héroe."
+    },
+    {
+     "campo": "producto",
+     "peso": 1,
+     "aplicacion": "Moda, textiles y marcas experimentales."
+    }
+   ],
+   "nivel": "avanzado",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [
+    "dis-016",
+    "dis-035"
+   ],
+   "huella": "f51914ba6d03",
+   "clasificada": "2026-11-13"
+  },
+  "dis-049": {
+   "campos": [
+    {
+     "campo": "grafico",
+     "peso": 3,
+     "aplicacion": "Distorsión de agua con feTurbulence y feDisplacementMap, o un shader WebGL."
+    },
+    {
+     "campo": "movimiento",
+     "peso": 2,
+     "aplicacion": "La onda aparece donde pasa o hace clic el cursor."
+    },
+    {
+     "campo": "frontend",
+     "peso": 1,
+     "aplicacion": "La versión sencilla es un filtro SVG sobre la imagen."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [
+    "dis-031",
+    "dis-045"
+   ],
+   "huella": "6d70282d2c62",
+   "clasificada": "2026-11-13"
+  },
+  "dis-050": {
+   "campos": [
+    {
+     "campo": "ux-ui",
+     "peso": 3,
+     "aplicacion": "Un objeto real del negocio como motivo de bordes, insignias, botones y estados."
+    },
+    {
+     "campo": "producto",
+     "peso": 2,
+     "aplicacion": "Identidad memorable para un negocio local."
+    },
+    {
+     "campo": "movil",
+     "peso": 1,
+     "aplicacion": "Sellos de lealtad o tickets como motivo de la app."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [
+    "dis-003"
+   ],
+   "choca_con": [],
+   "huella": "fd4640586f2a",
+   "clasificada": "2026-11-13"
+  },
+  "dis-051": {
+   "campos": [
+    {
+     "campo": "ux-ui",
+     "peso": 3,
+     "aplicacion": "Una sola acción con botón relleno por pantalla; las demás en contorno."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "Clases boton-primario y boton-secundario, con el mismo color de acción en todo el sitio."
+    },
+    {
+     "campo": "movil",
+     "peso": 2,
+     "aplicacion": "Una acción principal por pantalla en apps."
+    },
+    {
+     "campo": "producto",
+     "peso": 1,
+     "aplicacion": "El ojo aprende qué color significa avanzar."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [
+    "dis-006",
+    "dis-043",
+    "dis-054"
+   ],
+   "choca_con": [],
+   "huella": "51d226c24857",
+   "clasificada": "2026-11-13"
+  },
+  "dis-052": {
+   "campos": [
+    {
+     "campo": "producto",
+     "peso": 3,
+     "aplicacion": "El pie prueba que el negocio existe: dirección, horario, legal, redes y boletín."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "Pie en columnas que se apilan en teléfono."
+    },
+    {
+     "campo": "accesibilidad-seo",
+     "peso": 2,
+     "aplicacion": "Nombre, dirección y horario consistentes ayudan al SEO local."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [
+    "dis-054"
+   ],
+   "choca_con": [],
+   "nota": "Usada en Boca del Cielo.",
+   "huella": "9ec8c925a1d3",
+   "clasificada": "2026-11-13"
+  },
+  "dis-053": {
+   "campos": [
+    {
+     "campo": "ux-ui",
+     "peso": 3,
+     "aplicacion": "Convención de navegación: el logo siempre regresa al inicio."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "Logo envuelto en routerLink a la raíz."
+    },
+    {
+     "campo": "accesibilidad-seo",
+     "peso": 2,
+     "aplicacion": "aria-label Inicio en el enlace del logo."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [],
+   "huella": "50d638f4c422",
+   "clasificada": "2026-11-13"
+  },
+  "dis-054": {
+   "campos": [
+    {
+     "campo": "producto",
+     "peso": 3,
+     "aplicacion": "Decidir la única frase y la única imagen del héroe; las demás ofertas van abajo."
+    },
+    {
+     "campo": "ux-ui",
+     "peso": 2,
+     "aplicacion": "Un momento tipográfico en lugar de un carrusel."
+    },
+    {
+     "campo": "devops",
+     "peso": 1,
+     "aplicacion": "Sin slider hay menos JavaScript y el primer pantallazo carga antes."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [
+    "dis-022",
+    "dis-051",
+    "dis-052"
+   ],
+   "choca_con": [],
+   "nota": "Usada en Boca del Cielo.",
+   "huella": "a1f96cdfa5dc",
+   "clasificada": "2026-11-13"
+  },
+  "dis-055": {
+   "campos": [
+    {
+     "campo": "ia",
+     "peso": 3,
+     "aplicacion": "Skills de Claude Code para diseñar, animar o auditar una interfaz."
+    },
+    {
+     "campo": "ux-ui",
+     "peso": 2,
+     "aplicacion": "Auditoría de interfaz y criterio de diseño aplicados por el agente."
+    },
+    {
+     "campo": "movimiento",
+     "peso": 1,
+     "aplicacion": "Skills de easing, GSAP ScrollTrigger y Lottie para pulir animaciones."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "depende",
+   "combina_con": [],
+   "choca_con": [],
+   "nota": "Revisar el contenido de una skill antes de instalarla.",
+   "huella": "fee8ebda288f",
+   "clasificada": "2026-11-13"
+  },
+  "dis-056": {
+   "campos": [
+    {
+     "campo": "grafico",
+     "peso": 3,
+     "aplicacion": "Volumen inflado desde una máscara 2D, con normales, texto rasterizado y reflejos tipo vidrio."
+    },
+    {
+     "campo": "producto",
+     "peso": 1,
+     "aplicacion": "Pieza generativa para portafolio o fechas especiales."
+    }
+   ],
+   "nivel": "avanzado",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [],
+   "nota": "Usada en mémoires.",
+   "huella": "1037224af2df",
+   "clasificada": "2026-11-13"
+  },
+  "dis-057": {
+   "campos": [
+    {
+     "campo": "frontend",
+     "peso": 3,
+     "aplicacion": "perspective y preserve-3d; cada tarjeta con rotateY y translateZ."
+    },
+    {
+     "campo": "movimiento",
+     "peso": 2,
+     "aplicacion": "El mazo sube, se voltea, se abre en abanico y forma un anillo que gira."
+    },
+    {
+     "campo": "grafico",
+     "peso": 2,
+     "aplicacion": "3D sin WebGL, solo con transformaciones CSS."
+    },
+    {
+     "campo": "producto",
+     "peso": 1,
+     "aplicacion": "Héroe o pantalla de carga de portafolios y galerías."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [],
+   "huella": "ed48a1feb159",
+   "clasificada": "2026-11-13"
+  },
+  "dis-058": {
+   "campos": [
+    {
+     "campo": "movimiento",
+     "peso": 3,
+     "aplicacion": "Vocabulario de scroll: elegir dos o tres de las ocho animaciones básicas."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "animation-timeline: view(), position sticky y máscaras por línea."
+    },
+    {
+     "campo": "accesibilidad-seo",
+     "peso": 1,
+     "aplicacion": "La barra de progreso de lectura orienta en páginas largas."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [
+    "dis-023",
+    "dis-036"
+   ],
+   "choca_con": [],
+   "huella": "597239bc1abf",
+   "clasificada": "2026-11-13"
+  },
+  "dis-059": {
+   "campos": [
+    {
+     "campo": "movimiento",
+     "peso": 3,
+     "aplicacion": "Acciones pequeñas que se sienten físicas: arrancar, apilar, resaltar."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "Pointer events, cubic-bezier con rebote y background-size animado."
+    },
+    {
+     "campo": "ux-ui",
+     "peso": 2,
+     "aplicacion": "Confirmaciones y estados que merecen sentirse, sin frenar lo repetitivo."
+    },
+    {
+     "campo": "movil",
+     "peso": 2,
+     "aplicacion": "Gestos y confirmaciones táctiles en apps."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [],
+   "huella": "920832ee2a20",
+   "clasificada": "2026-11-13"
+  },
+  "dis-060": {
+   "campos": [
+    {
+     "campo": "frontend",
+     "peso": 3,
+     "aplicacion": "Fuente variable con eje wght animado por letra con animation-delay."
+    },
+    {
+     "campo": "movimiento",
+     "peso": 2,
+     "aplicacion": "Una ola de grosor recorre el texto de la marquesina."
+    },
+    {
+     "campo": "ux-ui",
+     "peso": 1,
+     "aplicacion": "Banda decorativa entre secciones; no para textos que hay que leer."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [],
+   "huella": "f90dff4dfc43",
+   "clasificada": "2026-11-13"
+  },
+  "dis-061": {
+   "campos": [
+    {
+     "campo": "grafico",
+     "peso": 3,
+     "aplicacion": "Spline para escenas 3D y Unicorn Studio para fondos con shaders, sin programarlos."
+    },
+    {
+     "campo": "frontend",
+     "peso": 1,
+     "aplicacion": "Insertar como embed o componente web con carga diferida."
+    },
+    {
+     "campo": "devops",
+     "peso": 1,
+     "aplicacion": "Imagen de respaldo y nada pesado en el primer pantallazo."
+    },
+    {
+     "campo": "producto",
+     "peso": 1,
+     "aplicacion": "Efecto premium rápido; revisar la licencia antes de usarlo con un cliente."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "depende",
+   "combina_con": [],
+   "choca_con": [],
+   "huella": "8514b6528626",
+   "clasificada": "2026-11-13"
+  },
+  "dis-062": {
+   "campos": [
+    {
+     "campo": "frontend",
+     "peso": 3,
+     "aplicacion": "Reconstruir un sitio de referencia y cambiar un valor a la vez para ver qué se rompe."
+    },
+    {
+     "campo": "ux-ui",
+     "peso": 2,
+     "aplicacion": "Entender por qué funciona un espaciado, un easing o un tamaño."
+    },
+    {
+     "campo": "escuela",
+     "peso": 2,
+     "aplicacion": "Método de estudio con comparación de antes y después."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [],
+   "huella": "6eb32d9a997e",
+   "clasificada": "2026-11-13"
+  },
+  "dis-063": {
+   "campos": [
+    {
+     "campo": "frontend",
+     "peso": 3,
+     "aplicacion": "CSS grid con áreas: navegación, bloque central escalonado y datos en las esquinas."
+    },
+    {
+     "campo": "ux-ui",
+     "peso": 2,
+     "aplicacion": "El héroe se planea por zonas alrededor de una sola foto."
+    },
+    {
+     "campo": "producto",
+     "peso": 2,
+     "aplicacion": "Héroe de producto con una imagen protagonista."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [
+    "dis-002"
+   ],
+   "choca_con": [
+    "dis-005"
+   ],
+   "huella": "e2c94ff97b2c",
+   "clasificada": "2026-11-13"
+  },
+  "dis-064": {
+   "campos": [
+    {
+     "campo": "ux-ui",
+     "peso": 3,
+     "aplicacion": "Resolver tamaños y jerarquía con bloques grises antes del contenido real."
+    },
+    {
+     "campo": "datos",
+     "peso": 2,
+     "aplicacion": "Decidir qué indicador es grande antes de elegir gráficas."
+    },
+    {
+     "campo": "escuela",
+     "peso": 2,
+     "aplicacion": "Wireframes para el SRS y prototipos de interfaz."
+    },
+    {
+     "campo": "frontend",
+     "peso": 1,
+     "aplicacion": "Maquetar la cuadrícula con rectángulos antes de construir componentes."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [
+    "dis-019",
+    "dis-040"
+   ],
+   "choca_con": [],
+   "huella": "344671a88213",
+   "clasificada": "2026-11-13"
+  },
+  "dis-065": {
+   "campos": [
+    {
+     "campo": "producto",
+     "peso": 3,
+     "aplicacion": "Presentar un tablero como panel flotante dentro de la foto del lugar que controla."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "Panel con backdrop-filter: blur(), borde de 1 px semitransparente y sombra amplia."
+    },
+    {
+     "campo": "datos",
+     "peso": 1,
+     "aplicacion": "Tableros de hogar inteligente o control de dispositivos."
+    },
+    {
+     "campo": "escuela",
+     "peso": 1,
+     "aplicacion": "Lámina para exponer un tablero en su contexto."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [
+    "dis-040"
+   ],
+   "choca_con": [],
+   "huella": "2247d7790f9f",
+   "clasificada": "2026-11-13"
+  },
+  "dis-066": {
+   "campos": [
+    {
+     "campo": "ux-ui",
+     "peso": 3,
+     "aplicacion": "Una sola fuente display para el título principal y una neutra para el resto."
+    },
+    {
+     "campo": "producto",
+     "peso": 2,
+     "aplicacion": "Marcas con carácter, pósters, portadas y héroes."
+    },
+    {
+     "campo": "escuela",
+     "peso": 1,
+     "aplicacion": "Portadas de exposición, revisando la licencia."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "pago",
+   "combina_con": [],
+   "choca_con": [
+    "dis-004"
+   ],
+   "nota": "Casi todas son comerciales.",
+   "huella": "fed4c627e3d7",
+   "clasificada": "2026-11-13"
+  }
+ },
+ "actualizado": "2026-11-13"
+}

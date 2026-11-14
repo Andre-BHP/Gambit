@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+*.tmp
+.env
+.claude/
+.impeccable/hook.cache.json
+.impeccable/*.local.json
+CLAUDE.md
+PROMPT_INICIAL.md
