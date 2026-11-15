@@ -282,6 +282,37 @@
    ],
    "creada": "2026-11-13",
    "actualizada": "2026-11-14"
+  },
+  {
+   "id": "mano-estudio-ia",
+   "nombre": "Estudiar con IA",
+   "objetivo": "Preparar exámenes y entregables del semestre con IA sin perder la confianza en lo que se aprende: cada tarea con su herramienta, el material de cada materia en un solo lugar y las afirmaciones revisadas antes de usarlas.",
+   "tipo": "libre",
+   "cartas": [
+    {
+     "id": "age-006",
+     "rol": "elegir: una herramienta por tarea (investigar, resumir, presentar)"
+    },
+    {
+     "id": "pro-001",
+     "rol": "estudiar: un cuaderno de NotebookLM por materia con todo su material"
+    },
+    {
+     "id": "cie-002",
+     "rol": "verificar: revisar en quién se hizo un estudio antes de citarlo"
+    }
+   ],
+   "por_que": "Van en el orden en que se estudia: primero se decide con qué herramienta se hace cada cosa, luego se concentra el material de la materia para repasar con cuestionarios y flashcards, y al final se revisa la evidencia antes de llevar una afirmación a un reporte o a una exposición.",
+   "conflictos": "No usar un solo chat para todo. Aunque NotebookLM responde con tus fuentes, puede resumir mal: revisar lo que entra a un entregable. No citar un estudio sin ver su población y su muestra.",
+   "dificultad_total": 1,
+   "stack": "NotebookLM + Perplexity + Gamma",
+   "listo": [
+    "Cada materia tiene su cuaderno con presentaciones, lecturas y fotos del pizarrón.",
+    "Hay al menos un cuestionario o un juego de flashcards por tema antes del examen.",
+    "Las fuentes de investigación vienen con cita y se revisó a quién aplica cada estudio.",
+    "Lo que entra a un reporte se verificó contra el material original."
+   ],
+   "creada": "2026-11-14"
   }
  ],
  "actualizado": "2026-11-14"
