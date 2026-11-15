@@ -17,7 +17,7 @@ import unicodedata
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
-BARAJA_DEF = Path(r"C:\Users\andre\OneDrive\Documentos\Uatu\baraja\baraja.json")
+BARAJA_DEF = Path(r"C:\Users\andre\OneDrive\Documentos\Baraja\Uatu\baraja\baraja.json")
 MARCADOR = "__GAMBIT_DATOS__"
 ESQUELETO_LOCAL = (
     '<!doctype html>\n<html lang="es">\n<head>\n<meta charset="utf-8">\n'
