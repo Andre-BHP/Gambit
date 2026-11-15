@@ -44,7 +44,7 @@
    },
    "rango": "7",
    "palo_naipe": "picas",
-   "puesto": 51,
+   "puesto": 55,
    "familia": "desarrollo"
   },
   "age-002": {
@@ -82,7 +82,7 @@
    },
    "rango": "2",
    "palo_naipe": "picas",
-   "puesto": 92,
+   "puesto": 97,
    "familia": "desarrollo"
   },
   "age-003": {
@@ -123,9 +123,9 @@
     "facilidad": 6.0,
     "costo": 10.0
    },
-   "rango": "10",
+   "rango": "9",
    "palo_naipe": "picas",
-   "puesto": 34,
+   "puesto": 38,
    "familia": "desarrollo"
   },
   "age-004": {
@@ -169,7 +169,7 @@
    },
    "rango": "5",
    "palo_naipe": "picas",
-   "puesto": 71,
+   "puesto": 75,
    "familia": "desarrollo"
   },
   "age-005": {
@@ -210,10 +210,130 @@
     "facilidad": 10.0,
     "costo": 7.0
    },
-   "rango": "6",
+   "rango": "5",
    "palo_naipe": "picas",
-   "puesto": 64,
+   "puesto": 68,
    "familia": "desarrollo"
+  },
+  "age-006": {
+   "campos": [
+    {
+     "campo": "ia-general",
+     "peso": 3,
+     "aplicacion": "Elegir la herramienta de IA por tarea: Perplexity para investigar, NotebookLM para resumir, Fathom para reuniones, Gamma para presentar."
+    },
+    {
+     "campo": "escuela",
+     "peso": 2,
+     "aplicacion": "Investigar con fuentes citadas para el marco teórico y preparar la exposición con Gamma."
+    },
+    {
+     "campo": "productividad",
+     "peso": 2,
+     "aplicacion": "Armar un flujo de estudio o trabajo partiendo del objetivo, no de un solo chat para todo."
+    },
+    {
+     "campo": "ia",
+     "peso": 1,
+     "aplicacion": "n8n y Make para automatizar tareas entre sistemas."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "depende",
+   "combina_con": [
+    "age-005",
+    "pro-001"
+   ],
+   "choca_con": [],
+   "impacto": 4,
+   "carga": "ligera",
+   "huella": "4dc6ac01732d",
+   "clasificada": "2026-11-14",
+   "potencia": {
+    "total": 81,
+    "utilidad": 35.0,
+    "impacto": 24.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 7.0
+   },
+   "rango": "K",
+   "palo_naipe": "picas",
+   "puesto": 15,
+   "familia": "general"
+  },
+  "cie-001": {
+   "campos": [
+    {
+     "campo": "ciencia-salud",
+     "peso": 3,
+     "aplicacion": "Dormir del lado izquierdo ayuda a quien tiene reflujo diagnosticado; no es una regla para todos."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [
+    "cie-002"
+   ],
+   "choca_con": [],
+   "nota": "Ejemplo concreto de cie-002: el estudio se hizo en pacientes con ERGE.",
+   "impacto": 2,
+   "carga": "ligera",
+   "huella": "a6a22192b79c",
+   "clasificada": "2026-11-14",
+   "potencia": {
+    "total": 48,
+    "utilidad": 10.5,
+    "impacto": 12.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "2",
+   "palo_naipe": "corazones",
+   "puesto": 95,
+   "familia": "general"
+  },
+  "cie-002": {
+   "campos": [
+    {
+     "campo": "ciencia-salud",
+     "peso": 3,
+     "aplicacion": "Antes de creer un consejo de salud, revisar en quién se hizo el estudio, cuántos participaron y cómo."
+    },
+    {
+     "campo": "actualidad",
+     "peso": 2,
+     "aplicacion": "Filtrar afirmaciones de redes que dicen que hay estudios."
+    },
+    {
+     "campo": "escuela",
+     "peso": 1,
+     "aplicacion": "Revisar población y muestra al citar un estudio en un reporte."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [
+    "cie-001"
+   ],
+   "choca_con": [],
+   "impacto": 4,
+   "carga": "ligera",
+   "huella": "98e4509f970f",
+   "clasificada": "2026-11-14",
+   "potencia": {
+    "total": 77,
+    "utilidad": 28.0,
+    "impacto": 24.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "J",
+   "palo_naipe": "corazones",
+   "puesto": 22,
+   "familia": "general"
   },
   "dis-001": {
    "campos": [
@@ -258,7 +378,7 @@
    },
    "rango": "10",
    "palo_naipe": "diamantes",
-   "puesto": 30,
+   "puesto": 34,
    "familia": "desarrollo"
   },
   "dis-002": {
@@ -299,9 +419,9 @@
     "facilidad": 10.0,
     "costo": 10.0
    },
-   "rango": "8",
+   "rango": "7",
    "palo_naipe": "diamantes",
-   "puesto": 50,
+   "puesto": 54,
    "familia": "desarrollo"
   },
   "dis-003": {
@@ -348,7 +468,7 @@
    },
    "rango": "J",
    "palo_naipe": "corazones",
-   "puesto": 22,
+   "puesto": 26,
    "familia": "desarrollo"
   },
   "dis-004": {
@@ -394,7 +514,7 @@
    },
    "rango": "J",
    "palo_naipe": "corazones",
-   "puesto": 23,
+   "puesto": 27,
    "familia": "desarrollo"
   },
   "dis-005": {
@@ -437,9 +557,9 @@
     "facilidad": 10.0,
     "costo": 10.0
    },
-   "rango": "K",
+   "rango": "Q",
    "palo_naipe": "corazones",
-   "puesto": 13,
+   "puesto": 16,
    "familia": "desarrollo"
   },
   "dis-006": {
@@ -490,9 +610,9 @@
     "facilidad": 10.0,
     "costo": 10.0
    },
-   "rango": "A",
+   "rango": "K",
    "palo_naipe": "corazones",
-   "puesto": 4,
+   "puesto": 5,
    "familia": "desarrollo"
   },
   "dis-007": {
@@ -535,7 +655,7 @@
    },
    "rango": "4",
    "palo_naipe": "treboles",
-   "puesto": 73,
+   "puesto": 77,
    "familia": "desarrollo"
   },
   "dis-008": {
@@ -576,7 +696,7 @@
    },
    "rango": "6",
    "palo_naipe": "corazones",
-   "puesto": 59,
+   "puesto": 63,
    "familia": "desarrollo"
   },
   "dis-009": {
@@ -624,7 +744,7 @@
    },
    "rango": "K",
    "palo_naipe": "corazones",
-   "puesto": 11,
+   "puesto": 12,
    "familia": "desarrollo"
   },
   "dis-010": {
@@ -675,7 +795,7 @@
    },
    "rango": "8",
    "palo_naipe": "treboles",
-   "puesto": 48,
+   "puesto": 52,
    "familia": "desarrollo"
   },
   "dis-011": {
@@ -721,7 +841,7 @@
    },
    "rango": "4",
    "palo_naipe": "treboles",
-   "puesto": 78,
+   "puesto": 82,
    "familia": "desarrollo"
   },
   "dis-012": {
@@ -764,7 +884,7 @@
    },
    "rango": "6",
    "palo_naipe": "corazones",
-   "puesto": 61,
+   "puesto": 65,
    "familia": "desarrollo"
   },
   "dis-013": {
@@ -805,7 +925,7 @@
    },
    "rango": "5",
    "palo_naipe": "treboles",
-   "puesto": 66,
+   "puesto": 70,
    "familia": "desarrollo"
   },
   "dis-014": {
@@ -851,7 +971,7 @@
    },
    "rango": "8",
    "palo_naipe": "treboles",
-   "puesto": 40,
+   "puesto": 44,
    "familia": "desarrollo"
   },
   "dis-015": {
@@ -890,9 +1010,9 @@
     "facilidad": 2.0,
     "costo": 8.0
    },
-   "rango": "2",
+   "rango": "3",
    "palo_naipe": "treboles",
-   "puesto": 87,
+   "puesto": 91,
    "familia": "desarrollo"
   },
   "dis-016": {
@@ -943,9 +1063,9 @@
     "facilidad": 10.0,
     "costo": 8.0
    },
-   "rango": "Q",
+   "rango": "J",
    "palo_naipe": "treboles",
-   "puesto": 21,
+   "puesto": 25,
    "familia": "desarrollo"
   },
   "dis-017": {
@@ -984,7 +1104,7 @@
    },
    "rango": "2",
    "palo_naipe": "picas",
-   "puesto": 93,
+   "puesto": 98,
    "familia": "desarrollo"
   },
   "dis-018": {
@@ -1028,7 +1148,7 @@
    },
    "rango": "8",
    "palo_naipe": "picas",
-   "puesto": 46,
+   "puesto": 50,
    "familia": "desarrollo"
   },
   "dis-019": {
@@ -1114,7 +1234,7 @@
    },
    "rango": "8",
    "palo_naipe": "diamantes",
-   "puesto": 49,
+   "puesto": 53,
    "familia": "desarrollo"
   },
   "dis-021": {
@@ -1168,7 +1288,7 @@
    },
    "rango": "Q",
    "palo_naipe": "treboles",
-   "puesto": 14,
+   "puesto": 17,
    "familia": "desarrollo"
   },
   "dis-022": {
@@ -1212,7 +1332,7 @@
    },
    "rango": "8",
    "palo_naipe": "corazones",
-   "puesto": 41,
+   "puesto": 45,
    "familia": "desarrollo"
   },
   "dis-023": {
@@ -1304,7 +1424,7 @@
    },
    "rango": "3",
    "palo_naipe": "picas",
-   "puesto": 80,
+   "puesto": 84,
    "familia": "desarrollo"
   },
   "dis-025": {
@@ -1348,9 +1468,9 @@
     "facilidad": 10.0,
     "costo": 10.0
    },
-   "rango": "A",
+   "rango": "K",
    "palo_naipe": "treboles",
-   "puesto": 5,
+   "puesto": 6,
    "familia": "desarrollo"
   },
   "dis-026": {
@@ -1398,7 +1518,7 @@
    },
    "rango": "5",
    "palo_naipe": "treboles",
-   "puesto": 67,
+   "puesto": 71,
    "familia": "desarrollo"
   },
   "dis-027": {
@@ -1448,9 +1568,9 @@
     "facilidad": 10.0,
     "costo": 10.0
    },
-   "rango": "A",
+   "rango": "K",
    "palo_naipe": "treboles",
-   "puesto": 6,
+   "puesto": 7,
    "familia": "desarrollo"
   },
   "dis-028": {
@@ -1499,7 +1619,7 @@
    },
    "rango": "Q",
    "palo_naipe": "diamantes",
-   "puesto": 15,
+   "puesto": 18,
    "familia": "desarrollo"
   },
   "dis-029": {
@@ -1540,7 +1660,7 @@
    },
    "rango": "8",
    "palo_naipe": "treboles",
-   "puesto": 42,
+   "puesto": 46,
    "familia": "desarrollo"
   },
   "dis-030": {
@@ -1584,7 +1704,7 @@
    },
    "rango": "8",
    "palo_naipe": "picas",
-   "puesto": 43,
+   "puesto": 47,
    "familia": "desarrollo"
   },
   "dis-031": {
@@ -1632,7 +1752,7 @@
    },
    "rango": "3",
    "palo_naipe": "treboles",
-   "puesto": 81,
+   "puesto": 85,
    "familia": "desarrollo"
   },
   "dis-032": {
@@ -1678,7 +1798,7 @@
    },
    "rango": "Q",
    "palo_naipe": "treboles",
-   "puesto": 16,
+   "puesto": 19,
    "familia": "desarrollo"
   },
   "dis-033": {
@@ -1717,9 +1837,9 @@
     "facilidad": 6.0,
     "costo": 10.0
    },
-   "rango": "7",
+   "rango": "6",
    "palo_naipe": "treboles",
-   "puesto": 55,
+   "puesto": 59,
    "familia": "desarrollo"
   },
   "dis-034": {
@@ -1763,7 +1883,7 @@
    },
    "rango": "3",
    "palo_naipe": "treboles",
-   "puesto": 82,
+   "puesto": 86,
    "familia": "desarrollo"
   },
   "dis-035": {
@@ -1808,7 +1928,7 @@
    },
    "rango": "5",
    "palo_naipe": "treboles",
-   "puesto": 68,
+   "puesto": 72,
    "familia": "desarrollo"
   },
   "dis-036": {
@@ -1854,7 +1974,7 @@
    },
    "rango": "6",
    "palo_naipe": "treboles",
-   "puesto": 62,
+   "puesto": 66,
    "familia": "desarrollo"
   },
   "dis-037": {
@@ -1895,9 +2015,9 @@
     "facilidad": 6.0,
     "costo": 10.0
    },
-   "rango": "7",
+   "rango": "6",
    "palo_naipe": "corazones",
-   "puesto": 56,
+   "puesto": 60,
    "familia": "desarrollo"
   },
   "dis-038": {
@@ -1940,7 +2060,7 @@
    },
    "rango": "6",
    "palo_naipe": "corazones",
-   "puesto": 63,
+   "puesto": 67,
    "familia": "desarrollo"
   },
   "dis-039": {
@@ -1983,7 +2103,7 @@
    },
    "rango": "8",
    "palo_naipe": "corazones",
-   "puesto": 44,
+   "puesto": 48,
    "familia": "desarrollo"
   },
   "dis-040": {
@@ -2083,7 +2203,7 @@
    },
    "rango": "4",
    "palo_naipe": "corazones",
-   "puesto": 79,
+   "puesto": 83,
    "familia": "desarrollo"
   },
   "dis-042": {
@@ -2127,7 +2247,7 @@
    },
    "rango": "4",
    "palo_naipe": "treboles",
-   "puesto": 74,
+   "puesto": 78,
    "familia": "desarrollo"
   },
   "dis-043": {
@@ -2177,7 +2297,7 @@
    },
    "rango": "K",
    "palo_naipe": "corazones",
-   "puesto": 12,
+   "puesto": 13,
    "familia": "desarrollo"
   },
   "dis-044": {
@@ -2226,9 +2346,9 @@
     "facilidad": 10.0,
     "costo": 10.0
    },
-   "rango": "A",
+   "rango": "K",
    "palo_naipe": "treboles",
-   "puesto": 7,
+   "puesto": 8,
    "familia": "desarrollo"
   },
   "dis-045": {
@@ -2273,7 +2393,7 @@
    },
    "rango": "4",
    "palo_naipe": "corazones",
-   "puesto": 75,
+   "puesto": 79,
    "familia": "desarrollo"
   },
   "dis-046": {
@@ -2319,7 +2439,7 @@
    },
    "rango": "6",
    "palo_naipe": "treboles",
-   "puesto": 60,
+   "puesto": 64,
    "familia": "desarrollo"
   },
   "dis-047": {
@@ -2355,7 +2475,7 @@
    },
    "rango": "2",
    "palo_naipe": "treboles",
-   "puesto": 89,
+   "puesto": 93,
    "familia": "desarrollo"
   },
   "dis-048": {
@@ -2399,7 +2519,7 @@
    },
    "rango": "2",
    "palo_naipe": "treboles",
-   "puesto": 90,
+   "puesto": 94,
    "familia": "desarrollo"
   },
   "dis-049": {
@@ -2444,7 +2564,7 @@
    },
    "rango": "3",
    "palo_naipe": "treboles",
-   "puesto": 83,
+   "puesto": 87,
    "familia": "desarrollo"
   },
   "dis-050": {
@@ -2486,9 +2606,9 @@
     "facilidad": 10.0,
     "costo": 10.0
    },
-   "rango": "Q",
+   "rango": "J",
    "palo_naipe": "diamantes",
-   "puesto": 19,
+   "puesto": 23,
    "familia": "desarrollo"
   },
   "dis-051": {
@@ -2587,7 +2707,7 @@
    },
    "rango": "K",
    "palo_naipe": "diamantes",
-   "puesto": 10,
+   "puesto": 11,
    "familia": "desarrollo"
   },
   "dis-053": {
@@ -2628,7 +2748,7 @@
    },
    "rango": "10",
    "palo_naipe": "treboles",
-   "puesto": 26,
+   "puesto": 30,
    "familia": "desarrollo"
   },
   "dis-054": {
@@ -2679,7 +2799,7 @@
    },
    "rango": "K",
    "palo_naipe": "diamantes",
-   "puesto": 8,
+   "puesto": 9,
    "familia": "desarrollo"
   },
   "dis-055": {
@@ -2724,7 +2844,7 @@
    },
    "rango": "7",
    "palo_naipe": "picas",
-   "puesto": 52,
+   "puesto": 56,
    "familia": "desarrollo"
   },
   "dis-056": {
@@ -2763,7 +2883,7 @@
    },
    "rango": "2",
    "palo_naipe": "treboles",
-   "puesto": 91,
+   "puesto": 96,
    "familia": "desarrollo"
   },
   "dis-057": {
@@ -2809,7 +2929,7 @@
    },
    "rango": "9",
    "palo_naipe": "treboles",
-   "puesto": 36,
+   "puesto": 40,
    "familia": "desarrollo"
   },
   "dis-058": {
@@ -2854,7 +2974,7 @@
    },
    "rango": "8",
    "palo_naipe": "treboles",
-   "puesto": 45,
+   "puesto": 49,
    "familia": "desarrollo"
   },
   "dis-059": {
@@ -2902,7 +3022,7 @@
    },
    "rango": "10",
    "palo_naipe": "treboles",
-   "puesto": 31,
+   "puesto": 35,
    "familia": "desarrollo"
   },
   "dis-060": {
@@ -2943,7 +3063,7 @@
    },
    "rango": "4",
    "palo_naipe": "corazones",
-   "puesto": 76,
+   "puesto": 80,
    "familia": "desarrollo"
   },
   "dis-061": {
@@ -2989,7 +3109,7 @@
    },
    "rango": "5",
    "palo_naipe": "picas",
-   "puesto": 72,
+   "puesto": 76,
    "familia": "desarrollo"
   },
   "dis-062": {
@@ -3032,7 +3152,7 @@
    },
    "rango": "10",
    "palo_naipe": "picas",
-   "puesto": 27,
+   "puesto": 31,
    "familia": "desarrollo"
   },
   "dis-063": {
@@ -3077,7 +3197,7 @@
    },
    "rango": "10",
    "palo_naipe": "diamantes",
-   "puesto": 28,
+   "puesto": 32,
    "familia": "desarrollo"
   },
   "dis-064": {
@@ -3127,7 +3247,7 @@
    },
    "rango": "K",
    "palo_naipe": "picas",
-   "puesto": 9,
+   "puesto": 10,
    "familia": "desarrollo"
   },
   "dis-065": {
@@ -3175,7 +3295,7 @@
    },
    "rango": "9",
    "palo_naipe": "diamantes",
-   "puesto": 37,
+   "puesto": 41,
    "familia": "desarrollo"
   },
   "dis-066": {
@@ -3219,7 +3339,7 @@
    },
    "rango": "3",
    "palo_naipe": "corazones",
-   "puesto": 84,
+   "puesto": 88,
    "familia": "desarrollo"
   },
   "dis-067": {
@@ -3268,7 +3388,7 @@
    },
    "rango": "7",
    "palo_naipe": "treboles",
-   "puesto": 53,
+   "puesto": 57,
    "familia": "desarrollo"
   },
   "dis-068": {
@@ -3316,7 +3436,7 @@
    },
    "rango": "9",
    "palo_naipe": "treboles",
-   "puesto": 38,
+   "puesto": 42,
    "familia": "desarrollo"
   },
   "dis-069": {
@@ -3363,7 +3483,7 @@
    },
    "rango": "Q",
    "palo_naipe": "treboles",
-   "puesto": 17,
+   "puesto": 20,
    "familia": "desarrollo"
   },
   "dis-070": {
@@ -3405,7 +3525,7 @@
    },
    "rango": "10",
    "palo_naipe": "treboles",
-   "puesto": 29,
+   "puesto": 33,
    "familia": "desarrollo"
   },
   "dis-071": {
@@ -3451,7 +3571,7 @@
    },
    "rango": "10",
    "palo_naipe": "treboles",
-   "puesto": 32,
+   "puesto": 36,
    "familia": "desarrollo"
   },
   "dis-072": {
@@ -3498,7 +3618,7 @@
    },
    "rango": "Q",
    "palo_naipe": "treboles",
-   "puesto": 18,
+   "puesto": 21,
    "familia": "desarrollo"
   },
   "dis-073": {
@@ -3538,9 +3658,9 @@
     "facilidad": 10.0,
     "costo": 10.0
    },
-   "rango": "Q",
+   "rango": "J",
    "palo_naipe": "diamantes",
-   "puesto": 20,
+   "puesto": 24,
    "familia": "desarrollo"
   },
   "dis-074": {
@@ -3586,7 +3706,7 @@
    },
    "rango": "J",
    "palo_naipe": "treboles",
-   "puesto": 24,
+   "puesto": 28,
    "familia": "desarrollo"
   },
   "dis-075": {
@@ -3632,7 +3752,7 @@
    },
    "rango": "8",
    "palo_naipe": "corazones",
-   "puesto": 47,
+   "puesto": 51,
    "familia": "desarrollo"
   },
   "dis-076": {
@@ -3671,9 +3791,9 @@
     "facilidad": 6.0,
     "costo": 10.0
    },
-   "rango": "6",
+   "rango": "5",
    "palo_naipe": "treboles",
-   "puesto": 65,
+   "puesto": 69,
    "familia": "desarrollo"
   },
   "dis-077": {
@@ -3714,7 +3834,7 @@
    },
    "rango": "6",
    "palo_naipe": "treboles",
-   "puesto": 58,
+   "puesto": 62,
    "familia": "desarrollo"
   },
   "dis-078": {
@@ -3758,7 +3878,7 @@
    },
    "rango": "10",
    "palo_naipe": "treboles",
-   "puesto": 33,
+   "puesto": 37,
    "familia": "desarrollo"
   },
   "dis-079": {
@@ -3806,9 +3926,9 @@
     "facilidad": 6.0,
     "costo": 3.0
    },
-   "rango": "7",
+   "rango": "6",
    "palo_naipe": "treboles",
-   "puesto": 57,
+   "puesto": 61,
    "familia": "desarrollo"
   },
   "dis-080": {
@@ -3849,7 +3969,7 @@
    },
    "rango": "4",
    "palo_naipe": "treboles",
-   "puesto": 77,
+   "puesto": 81,
    "familia": "desarrollo"
   },
   "dis-081": {
@@ -3883,7 +4003,7 @@
    },
    "rango": "2",
    "palo_naipe": "treboles",
-   "puesto": 94,
+   "puesto": 99,
    "familia": "desarrollo"
   },
   "dis-082": {
@@ -3927,7 +4047,7 @@
    },
    "rango": "7",
    "palo_naipe": "treboles",
-   "puesto": 54,
+   "puesto": 58,
    "familia": "desarrollo"
   },
   "dis-083": {
@@ -3968,7 +4088,7 @@
    },
    "rango": "3",
    "palo_naipe": "treboles",
-   "puesto": 85,
+   "puesto": 89,
    "familia": "desarrollo"
   },
   "dis-084": {
@@ -4007,7 +4127,7 @@
    },
    "rango": "5",
    "palo_naipe": "picas",
-   "puesto": 69,
+   "puesto": 73,
    "familia": "desarrollo"
   },
   "dis-085": {
@@ -4046,7 +4166,7 @@
    },
    "rango": "2",
    "palo_naipe": "picas",
-   "puesto": 88,
+   "puesto": 92,
    "familia": "desarrollo"
   },
   "dis-086": {
@@ -4091,7 +4211,7 @@
    },
    "rango": "9",
    "palo_naipe": "diamantes",
-   "puesto": 39,
+   "puesto": 43,
    "familia": "desarrollo"
   },
   "dis-087": {
@@ -4137,9 +4257,9 @@
     "facilidad": 10.0,
     "costo": 5.0
    },
-   "rango": "10",
+   "rango": "9",
    "palo_naipe": "picas",
-   "puesto": 35,
+   "puesto": 39,
    "familia": "desarrollo"
   },
   "dis-088": {
@@ -4187,7 +4307,7 @@
    },
    "rango": "5",
    "palo_naipe": "picas",
-   "puesto": 70,
+   "puesto": 74,
    "familia": "desarrollo"
   },
   "dis-089": {
@@ -4234,7 +4354,7 @@
    },
    "rango": "J",
    "palo_naipe": "picas",
-   "puesto": 25,
+   "puesto": 29,
    "familia": "desarrollo"
   },
   "dis-090": {
@@ -4285,6 +4405,94 @@
    "puesto": 3,
    "familia": "desarrollo"
   },
+  "dis-091": {
+   "campos": [
+    {
+     "campo": "ux-ui",
+     "peso": 3,
+     "aplicacion": "Cuarta heurística de Nielsen: la misma palabra, ícono o acción significa lo mismo en todo el producto."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "Componentes y clases compartidas para que nombres, íconos y colores de acción no cambien entre vistas."
+    },
+    {
+     "campo": "accesibilidad-seo",
+     "peso": 2,
+     "aplicacion": "Seguir las convenciones de la plataforma, como enlaces que se distinguen y logo que lleva al inicio."
+    },
+    {
+     "campo": "movil",
+     "peso": 1,
+     "aplicacion": "Respetar los patrones de Android e iOS en vez de inventar gestos."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [
+    "dis-051",
+    "dis-053"
+   ],
+   "choca_con": [],
+   "impacto": 4,
+   "carga": "ligera",
+   "huella": "44abc8253d84",
+   "clasificada": "2026-11-14",
+   "potencia": {
+    "total": 84,
+    "utilidad": 35.0,
+    "impacto": 24.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "K",
+   "palo_naipe": "treboles",
+   "puesto": 14,
+   "familia": "desarrollo"
+  },
+  "pro-001": {
+   "campos": [
+    {
+     "campo": "escuela",
+     "peso": 3,
+     "aplicacion": "Repasar para exámenes con cuestionarios y Audio Overview de las presentaciones del profesor."
+    },
+    {
+     "campo": "productividad",
+     "peso": 3,
+     "aplicacion": "Un cuaderno de NotebookLM por materia con todo el material; resúmenes, cuestionarios y flashcards de tus propias fuentes."
+    },
+    {
+     "campo": "ia-general",
+     "peso": 2,
+     "aplicacion": "IA que responde solo con las fuentes que subes, así inventa menos; aun así revisar."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [
+    "age-006"
+   ],
+   "choca_con": [],
+   "impacto": 5,
+   "carga": "ligera",
+   "huella": "9e3b4b273781",
+   "clasificada": "2026-11-14",
+   "potencia": {
+    "total": 90,
+    "utilidad": 35.0,
+    "impacto": 30.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "A",
+   "palo_naipe": "picas",
+   "puesto": 4,
+   "familia": "general"
+  },
   "tec-001": {
    "campos": [
     {
@@ -4322,7 +4530,7 @@
    },
    "rango": "3",
    "palo_naipe": "picas",
-   "puesto": 86,
+   "puesto": 90,
    "familia": "general"
   }
  },
