@@ -7,3 +7,4 @@ __pycache__/
 .impeccable/*.local.json
 CLAUDE.md
 PROMPT_INICIAL.md
+ENCARGO_*.md

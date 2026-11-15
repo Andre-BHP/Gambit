@@ -13,6 +13,7 @@ import json
 import os
 import re
 import sys
+import unicodedata
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
@@ -45,6 +46,39 @@ NIVELES = ("estudiante", "intermedio", "avanzado")
 COSTOS = ("gratis", "pago", "depende")
 TIPOS = ("escalera", "color", "par", "libre")
 MIN_CARTAS, MAX_CARTAS = 3, 7
+# --- Naipes -------------------------------------------------------------------
+# Regla de palos (encargo 2): cada carta de Uatu se juega con un palo frances.
+#   corazones  lo que se siente: color, tipografia, imagen y material
+#   diamantes  lo que vende: composicion y presentacion
+#   treboles   lo que se mueve: movimiento, interaccion, 3D y canvas
+#   picas      lo que da poder: proceso, herramientas y agentes de IA
+# Orden de decision: 1) "naipe" puesto a mano en la clasificacion, 2) palo de Uatu
+# en PALO_A_NAIPE, 3) mazo en MAZO_A_NAIPE, 4) pistas por palabra en el palo y el
+# mazo, 5) picas (un mazo nuevo de backend o productividad es "lo que da poder").
+# Comodines: cartas de regla general que valen en cualquier mano; van sin rango.
+RANGOS = ("2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A")
+NAIPES = {
+    "corazones": ("♥", "Lo que se siente: color, tipografía, imagen y material"),
+    "diamantes": ("♦", "Lo que vende: composición y presentación"),
+    "treboles": ("♣", "Lo que se mueve: movimiento, interacción, 3D y canvas"),
+    "picas": ("♠", "Lo que da poder: proceso, herramientas y agentes de IA"),
+}
+PALO_A_NAIPE = {
+    "color": "corazones", "tipografia": "corazones", "imagen-y-material": "corazones",
+    "composicion": "diamantes", "presentacion": "diamantes",
+    "movimiento": "treboles", "interaccion": "treboles", "3d-y-canvas": "treboles",
+    "proceso": "picas", "herramientas": "picas", "arquitectura": "picas", "casos-de-uso": "picas",
+}
+MAZO_A_NAIPE = {"agentes-ia": "picas"}
+PISTAS_NAIPE = (
+    ("corazones", ("color", "tipo", "imagen", "material", "visual", "ilustr", "foto", "marca")),
+    ("diamantes", ("compos", "present", "layout", "maquet", "venta", "market", "conver", "copy")),
+    ("treboles", ("movim", "anim", "interac", "3d", "canvas", "shader", "juego", "scroll")),
+)
+# Potencia de 0 a 100: utilidad 35, impacto 30, evidencia 15, facilidad 10, costo y peso 10.
+PESOS_POTENCIA = (("utilidad", 35), ("impacto", 30), ("evidencia", 15), ("facilidad", 10), ("costo", 10))
+CARGAS = ("ligera", "media", "pesada")
+TAM_ESCALERA = 7
 CAMPOS_HUELLA = ("mazo", "palo", "nombre", "idea", "como", "cuando", "evitar",
                  "dificultad", "stack", "etiquetas")
 
@@ -252,6 +286,8 @@ def validar_clasificacion(entrada, ids_baraja):
     ambos = set(relaciones["combina_con"]) & set(relaciones["choca_con"])
     if ambos:
         err.append(pref + "combina y choca a la vez con " + ", ".join(sorted(ambos)))
+    puntos, err_puntos = validar_puntos(entrada, pref)
+    err += err_puntos
     if err:
         return None, err
     limpios.sort(key=lambda x: (-x["peso"], CAMPOS_ID.index(x["campo"])))
@@ -261,6 +297,7 @@ def validar_clasificacion(entrada, ids_baraja):
     nota = " ".join(str(entrada.get("nota") or "").split())
     if nota:
         limpia["nota"] = nota
+    limpia.update(puntos)
     return limpia, []
 
 
@@ -270,7 +307,8 @@ def cmd_clasificar(ctx, args, entrada=None):
         datos = datos.get("cartas", [datos] if "id" in datos else [])
     if not isinstance(datos, list) or not datos:
         raise ErrorGambit("Se espera una lista de clasificaciones.")
-    por_id = {c["id"]: c for c in ctx.cartas()}
+    cartas = ctx.cartas()
+    por_id = {c["id"]: c for c in cartas}
     errores, listas = [], {}
     for e in datos:
         limpia, err = validar_clasificacion(e, por_id)
@@ -287,8 +325,13 @@ def cmd_clasificar(ctx, args, entrada=None):
         nuevas += cid not in clas["cartas"]
         limpia["huella"] = huella(por_id[cid])
         limpia["clasificada"] = hoy()
+        previa = clas["cartas"].get(cid, {})
+        for clave in ("impacto", "carga", "usada_en", "comodin", "naipe"):
+            if clave in previa and clave not in limpia:
+                limpia[clave] = previa[clave]
         clas["cartas"][cid] = limpia
     clas["cartas"] = dict(sorted(clas["cartas"].items()))
+    recalcular(clas, cartas)
     clas["actualizado"] = hoy()
     guardar_json(ctx.ruta_clas, clas)
     faltan = len([i for i in por_id if i not in clas["cartas"]])
@@ -455,6 +498,10 @@ def texto_brief(mano, por_id, clas):
 def cmd_mano(ctx, args, entrada=None):
     por_id = {c["id"]: c for c in ctx.cartas()}
     clas = ctx.clasificacion()["cartas"]
+    if args.accion == "escalera":
+        if not args.id:
+            raise ErrorGambit("Falta el campo: mano escalera CAMPO.")
+        return cmd_escalera(ctx, args.id)
     if args.accion == "crear":
         datos = leer_entrada(entrada)
         lote = datos if isinstance(datos, list) else [datos]
@@ -518,6 +565,247 @@ def cmd_manos(ctx, args):
     return 0
 
 
+# ------------------------------------------------------------------ potencia
+
+def slug(texto):
+    t = unicodedata.normalize("NFD", str(texto or "")).encode("ascii", "ignore").decode().lower()
+    return re.sub(r"[^a-z0-9]+", "-", t).strip("-")
+
+
+def naipe_de(carta, k=None):
+    """Palo frances de una carta, segun la regla documentada arriba."""
+    puesto = (k or {}).get("naipe")
+    if puesto in NAIPES:
+        return puesto
+    palo, mazo = slug(carta.get("palo")), slug(carta.get("mazo"))
+    if palo in PALO_A_NAIPE:
+        return PALO_A_NAIPE[palo]
+    if mazo in MAZO_A_NAIPE:
+        return MAZO_A_NAIPE[mazo]
+    for texto in (palo, mazo):
+        for naipe, pistas in PISTAS_NAIPE:
+            if any(p in texto for p in pistas):
+                return naipe
+    return "picas"
+
+
+def partes_potencia(carta, k=None):
+    """Desglose de la potencia. Sin clasificacion usa solo los datos de Uatu (provisional)."""
+    k = k or {}
+    campos = k.get("campos") or []
+    if campos:
+        suma = sum(c.get("peso", 0) for c in campos)
+        utilidad = 35 * min(1.0, (suma + len(campos) - 1) / 10)
+    else:
+        utilidad = 35 * 0.4
+    impacto = 30 * (k.get("impacto") or 3) / 5
+    fuentes = carta.get("fuentes") or []
+    creadores = {f.get("creador") for f in fuentes if f.get("creador")}
+    evidencia = (0, 5, 7, 8)[min(len(fuentes), 3)]
+    evidencia += 2 if len(creadores) >= 2 else 0
+    evidencia += 5 if k.get("usada_en") else 0
+    facilidad = {1: 10, 2: 6, 3: 2}.get(carta.get("dificultad"), 6)
+    costo = {"gratis": 6, "depende": 3, "pago": 0}.get(k.get("costo"), 3)
+    costo += {"ligera": 4, "media": 2, "pesada": 0}.get(k.get("carga"), 2)
+    partes = {"utilidad": round(utilidad, 1), "impacto": round(impacto, 1),
+              "evidencia": float(min(15, evidencia)), "facilidad": float(facilidad), "costo": float(costo)}
+    partes["exacto"] = round(sum(partes.values()), 1)
+    partes["total"] = int(round(partes["exacto"]))
+    partes["provisional"] = not campos or not k.get("impacto")
+    return partes
+
+
+def tabla_potencia(cartas, clas):
+    """id -> potencia, rango por percentil, palo de naipe y puesto en el ranking."""
+    tabla = {}
+    for c in cartas:
+        k = clas.get(c["id"]) or {}
+        t = partes_potencia(c, k)
+        t["naipe"] = naipe_de(c, k)
+        t["comodin"] = bool(k.get("comodin"))
+        t["rango"], t["puesto"] = "", 0
+        tabla[c["id"]] = t
+    normales = sorted((i for i, t in tabla.items() if not t["comodin"]),
+                      key=lambda i: (-tabla[i]["exacto"], i))
+    n = len(normales)
+    for puesto, cid in enumerate(normales, 1):
+        t = tabla[cid]
+        menores = sum(1 for o in normales if tabla[o]["exacto"] < t["exacto"])
+        t["rango"] = RANGOS[min(len(RANGOS) - 1, int(menores * len(RANGOS) / n))]
+        t["puesto"] = puesto
+    return tabla
+
+
+def escalera_campo(campo, cartas, clas, tabla, todas=False):
+    """Las cartas de un campo de menor a mayor potencia; las ultimas 7 son la escalera."""
+    pesos = {}
+    for c in cartas:
+        if tabla[c["id"]]["comodin"]:
+            continue
+        for cp in (clas.get(c["id"]) or {}).get("campos", []):
+            if cp["campo"] == campo:
+                pesos[c["id"]] = cp["peso"]
+    orden = sorted(pesos, key=lambda i: (pesos[i] >= 2, tabla[i]["exacto"], i))
+    resto, mano = orden[:-TAM_ESCALERA], orden[-TAM_ESCALERA:]
+    mano.sort(key=lambda i: (tabla[i]["exacto"], i))
+    return resto + mano if todas else mano
+
+
+def etiqueta_naipe(t):
+    return "comodín" if t["comodin"] else f"{t['rango']}{NAIPES[t['naipe']][0]}"
+
+
+def validar_puntos(entrada, pref, ids_baraja=None):
+    """Campos opcionales de potencia: impacto, carga, usada_en, comodin y naipe."""
+    err, puntos = [], {}
+    if "impacto" in entrada:
+        if entrada["impacto"] not in (1, 2, 3, 4, 5):
+            err.append(pref + f"impacto inválido: {entrada['impacto']!r} (1 a 5)")
+        puntos["impacto"] = entrada["impacto"]
+    if "carga" in entrada:
+        if entrada["carga"] not in CARGAS:
+            err.append(pref + f"carga inválida: {entrada['carga']!r} ({', '.join(CARGAS)})")
+        puntos["carga"] = entrada["carga"]
+    if "usada_en" in entrada:
+        usada = entrada["usada_en"] or []
+        if not isinstance(usada, list):
+            err.append(pref + "usada_en debe ser una lista de proyectos")
+            usada = []
+        puntos["usada_en"] = [" ".join(str(x).split()) for x in usada if str(x).strip()]
+    if "comodin" in entrada:
+        puntos["comodin"] = bool(entrada["comodin"])
+    if entrada.get("naipe"):
+        if entrada["naipe"] not in NAIPES:
+            err.append(pref + f"naipe inválido: {entrada['naipe']!r} ({', '.join(NAIPES)})")
+        puntos["naipe"] = entrada["naipe"]
+    return puntos, err
+
+
+def recalcular(clas, cartas):
+    """Guarda en cada clasificacion su potencia, rango, palo y puesto (los percentiles se mueven)."""
+    tabla = tabla_potencia(cartas, clas["cartas"])
+    for cid, k in clas["cartas"].items():
+        t = tabla.get(cid)
+        if not t:
+            continue
+        k["potencia"] = {"total": t["total"], **{f: t[f] for f, _ in PESOS_POTENCIA}}
+        k["rango"], k["palo_naipe"], k["puesto"] = t["rango"], t["naipe"], t["puesto"]
+    return tabla
+
+
+def cmd_puntuar(ctx, args, entrada=None):
+    datos = leer_entrada(entrada)
+    if isinstance(datos, dict):
+        datos = [datos]
+    cartas = ctx.cartas()
+    por_id = {c["id"]: c for c in cartas}
+    clas = ctx.clasificacion()
+    errores, listos = [], {}
+    for e in datos:
+        cid = e.get("id") if isinstance(e, dict) else None
+        if cid not in por_id:
+            errores.append(f"{cid!r}: no existe en la baraja")
+            continue
+        if cid not in clas["cartas"]:
+            errores.append(f"{cid}: aún no está clasificada; usa clasificar primero")
+            continue
+        puntos, err = validar_puntos(e, f"{cid}: ")
+        errores += err
+        listos[cid] = puntos
+    if errores:
+        raise ErrorGambit("No se guardó nada. Errores:\n- " + "\n- ".join(errores))
+    for cid, puntos in listos.items():
+        clas["cartas"][cid].update(puntos)
+    recalcular(clas, cartas)
+    clas["actualizado"] = hoy()
+    guardar_json(ctx.ruta_clas, clas)
+    sin = sum(1 for k in clas["cartas"].values() if not k.get("impacto"))
+    print(f"Puntuadas {len(listos)}. Sin impacto: {sin}. Potencia y rangos recalculados.")
+    return 0
+
+
+def linea_ranking(c, t, clas):
+    prin = [cp["campo"] for cp in (clas.get(c["id"]) or {}).get("campos", []) if cp["peso"] == 3]
+    marca = " (provisional)" if t["provisional"] else ""
+    puesto = f"{t['puesto']:>3}" if t["puesto"] else "  ·"
+    return (f"{puesto} {etiqueta_naipe(t):<8} {t['total']:>3} {c['id']} {c.get('nombre', '')}"
+            f"{' [' + ', '.join(prin) + ']' if prin else ''}{marca}")
+
+
+def cmd_potencia(ctx, args):
+    cartas = ctx.cartas()
+    clas = ctx.clasificacion()
+    if not args.id:
+        tabla = recalcular(clas, cartas)
+        clas["actualizado"] = hoy()
+        guardar_json(ctx.ruta_clas, clas)
+        print(f"Potencia recalculada para {len(tabla)} cartas.")
+        for r in reversed(RANGOS):
+            ids = [i for i, t in tabla.items() if t["rango"] == r]
+            print(f"  {r:>2}: {len(ids)}")
+        comodines = [i for i, t in tabla.items() if t["comodin"]]
+        print("  comodines: " + (", ".join(comodines) or "ninguno"))
+        prov = [i for i, t in tabla.items() if t["provisional"]]
+        if prov:
+            print("  provisionales: " + ", ".join(prov))
+        return 0
+    por_id = {c["id"]: c for c in cartas}
+    if args.id not in por_id:
+        raise ErrorGambit(f"No existe en la baraja: {args.id}")
+    t = tabla_potencia(cartas, clas["cartas"])[args.id]
+    c = por_id[args.id]
+    print(f"{c['id']} · {c.get('nombre', '')}")
+    print(f"{etiqueta_naipe(t)} · potencia {t['total']} de 100"
+          + (f" · puesto {t['puesto']}" if t["puesto"] else "")
+          + (" · provisional" if t["provisional"] else ""))
+    for factor, maximo in PESOS_POTENCIA:
+        print(f"  {factor:<10} {t[factor]:>5} de {maximo}")
+    return 0
+
+
+def cmd_ranking(ctx, args):
+    cartas = ctx.cartas()
+    clas = ctx.clasificacion()["cartas"]
+    if args.campo and args.campo not in CAMPOS_ID:
+        raise ErrorGambit(f"Campo fuera del catálogo: {args.campo}")
+    if args.palo and args.palo not in NAIPES:
+        raise ErrorGambit(f"Palo inválido: {args.palo}. Opciones: {', '.join(NAIPES)}")
+    tabla = tabla_potencia(cartas, clas)
+    lista = [c for c in cartas if not tabla[c["id"]]["comodin"]]
+    if args.campo:
+        lista = [c for c in lista
+                 if any(cp["campo"] == args.campo for cp in (clas.get(c["id"]) or {}).get("campos", []))]
+    if args.palo:
+        lista = [c for c in lista if tabla[c["id"]]["naipe"] == args.palo]
+    lista.sort(key=lambda c: tabla[c["id"]]["puesto"])
+    for c in lista[: args.n]:
+        print(linea_ranking(c, tabla[c["id"]], clas))
+    if not lista:
+        print("Sin cartas.")
+    if not args.campo and not args.palo:
+        for c in cartas:
+            if tabla[c["id"]]["comodin"]:
+                print(linea_ranking(c, tabla[c["id"]], clas))
+    return 0
+
+
+def cmd_escalera(ctx, campo):
+    if campo not in CAMPOS_ID:
+        raise ErrorGambit(f"Campo fuera del catálogo: {campo}. Opciones: {', '.join(CAMPOS_ID)}")
+    cartas = ctx.cartas()
+    clas = ctx.clasificacion()["cartas"]
+    tabla = tabla_potencia(cartas, clas)
+    por_id = {c["id"]: c for c in cartas}
+    mano = escalera_campo(campo, cartas, clas, tabla)
+    print(f"Escalera de {campo}: de menor a mayor potencia")
+    for cid in mano:
+        t = tabla[cid]
+        print(f"  {etiqueta_naipe(t):<4} {t['total']:>3} {cid} {por_id[cid].get('nombre', '')}")
+    if not mano:
+        print("  Sin cartas en este campo.")
+    return 0
+
+
 # --------------------------------------------------------------------- stats
 
 def contar(valores):
@@ -559,10 +847,16 @@ def datos_demo(ctx):
     cartas = ctx.cartas()
     clas = ctx.clasificacion()["cartas"]
     por_id = {c["id"]: c for c in cartas}
+    tabla = tabla_potencia(cartas, clas)
     salida = []
     for c in cartas:
         k = clas.get(c["id"], {})
+        t = tabla[c["id"]]
         salida.append({
+            "naipe": t["naipe"], "rango": t["rango"], "comodin": t["comodin"], "puesto": t["puesto"],
+            "pot": {"total": t["total"], "provisional": t["provisional"],
+                    **{f: t[f] for f, _ in PESOS_POTENCIA}},
+            "carga": k.get("carga", ""), "usada": k.get("usada_en", []),
             "id": c["id"], "mazo": c.get("mazo", ""), "palo": c.get("palo", ""),
             "nombre": c.get("nombre", ""), "idea": c.get("idea", ""), "como": c.get("como", ""),
             "cuando": c.get("cuando", ""), "evitar": c.get("evitar", ""),
@@ -582,7 +876,13 @@ def datos_demo(ctx):
         mm["brief"] = texto_brief(m, por_id, clas)
         mm["choques"] = [list(p) for p in choques_declarados([c["id"] for c in m["cartas"]], clas)]
         manos.append(mm)
+    todas = sorted((i for i, t in tabla.items() if not t["comodin"]),
+                   key=lambda i: (tabla[i]["exacto"], i))
+    barajas = {c: escalera_campo(c, cartas, clas, tabla, todas=True) for c in CAMPOS_ID}
     return {"generado": hoy(), "cartas": salida, "manos": manos,
+            "baraja": todas, "barajas": barajas, "rangos": list(RANGOS),
+            "naipes": [{"id": a, "simbolo": b[0], "nombre": b[1]} for a, b in NAIPES.items()],
+            "pesos": [{"id": a, "max": b} for a, b in PESOS_POTENCIA],
             "campos": [{"id": a, "nombre": b} for a, b in CAMPOS],
             "limites": {"min": MIN_CARTAS, "max": MAX_CARTAS}}
 
@@ -625,8 +925,15 @@ def construir_parser():
     s.add_parser("clasificar", help="guarda clasificaciones (JSON por stdin)")
     x = s.add_parser("campos", help="catálogo o cartas de un campo")
     x.add_argument("campo", nargs="?")
-    x = s.add_parser("mano", help="crear (stdin), ver, brief o borrar una mano")
-    x.add_argument("accion", choices=("crear", "ver", "brief", "borrar"))
+    s.add_parser("puntuar", help="guarda impacto, carga, usada_en y comodin (JSON por stdin)")
+    x = s.add_parser("potencia", help="sin id recalcula y guarda; con id muestra el desglose")
+    x.add_argument("id", nargs="?")
+    x = s.add_parser("ranking", help="cartas de mayor a menor potencia")
+    x.add_argument("--campo")
+    x.add_argument("--palo")
+    x.add_argument("--n", type=int, default=20)
+    x = s.add_parser("mano", help="crear (stdin), ver, brief, borrar o escalera CAMPO")
+    x.add_argument("accion", choices=("crear", "ver", "brief", "borrar", "escalera"))
     x.add_argument("id", nargs="?")
     s.add_parser("manos", help="lista de manos")
     s.add_parser("demo", help="genera demo/index.html")
@@ -652,6 +959,12 @@ def main(argv=None, entrada=None):
             return cmd_manos(ctx, args)
         if args.cmd == "demo":
             return cmd_demo(ctx, args)
+        if args.cmd == "puntuar":
+            return cmd_puntuar(ctx, args, entrada)
+        if args.cmd == "potencia":
+            return cmd_potencia(ctx, args)
+        if args.cmd == "ranking":
+            return cmd_ranking(ctx, args)
         if args.cmd == "stats":
             return cmd_stats(ctx, args)
     except ErrorGambit as e:

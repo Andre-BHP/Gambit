@@ -247,6 +247,133 @@ class TestManos(Base):
         self.assertIn("tipo inválido", err)
 
 
+class TestPotencia(Base):
+    def test_calculo_con_desglose(self):
+        self.correr("clasificar", entrada=[clas(
+            "dis-001", campos=[{"campo": "frontend", "peso": 3, "aplicacion": "a"},
+                               {"campo": "ux-ui", "peso": 2, "aplicacion": "b"}],
+            impacto=4, carga="ligera", usada_en=["Proyecto real"])])
+        d = json.loads((self.datos / "clasificacion.json").read_text(encoding="utf-8"))
+        p = d["cartas"]["dis-001"]["potencia"]
+        self.assertEqual(p, {"total": 75, "utilidad": 21.0, "impacto": 24.0, "evidencia": 10.0,
+                             "facilidad": 10.0, "costo": 10.0})
+        _, out, _ = self.correr("potencia", "dis-001")
+        self.assertIn("potencia 75 de 100", out)
+        self.assertIn("utilidad", out)
+
+    def test_provisional_solo_con_datos_de_uatu(self):
+        t = gambit.partes_potencia(self.cartas[0], None)
+        self.assertTrue(t["provisional"])
+        self.assertEqual(t["total"], 52)
+
+    def test_percentiles_reparten_los_trece_rangos(self):
+        combos = [(i, d) for i in range(1, 6) for d in (3, 2, 1)][:13]
+        cartas = [carta(f"dis-{n:03d}", dificultad=d) for n, (_, d) in enumerate(combos, 1)]
+        k = {c["id"]: {"campos": [{"campo": "frontend", "peso": 3}], "impacto": i, "costo": "gratis",
+                       "carga": "ligera"} for c, (i, _) in zip(cartas, combos)}
+        tabla = gambit.tabla_potencia(cartas, k)
+        orden = sorted(tabla, key=lambda i: tabla[i]["exacto"])
+        self.assertEqual([tabla[i]["rango"] for i in orden], list(gambit.RANGOS))
+        self.assertEqual(sorted(t["puesto"] for t in tabla.values()), list(range(1, 14)))
+        self.assertEqual(tabla[orden[-1]]["puesto"], 1)
+
+    def test_empates_comparten_rango(self):
+        cartas = [carta("dis-001"), carta("dis-002")]
+        tabla = gambit.tabla_potencia(cartas, {})
+        self.assertEqual(tabla["dis-001"]["rango"], tabla["dis-002"]["rango"])
+
+    def test_carta_nueva_recibe_rango_sin_romper_las_demas(self):
+        self.clasificar_todas()
+        self.correr("puntuar", entrada=[{"id": "dis-001", "impacto": 5, "carga": "ligera"},
+                                        {"id": "dis-002", "impacto": 2, "carga": "pesada"},
+                                        {"id": "dis-003", "impacto": 3, "carga": "media"},
+                                        {"id": "age-001", "impacto": 4, "carga": "media"}])
+        self.cartas.append(carta("bac-001", "apis", "backend", dificultad=3))
+        self.escribir_baraja()
+        codigo, _, err = self.correr("demo")
+        self.assertEqual(codigo, 0, err)
+        datos = json.loads(self.demo.read_text(encoding="utf-8").split('id="datos">')[1].split("</script>")[0])
+        por_id = {c["id"]: c for c in datos["cartas"]}
+        self.assertEqual(len(por_id), 5)
+        for c in por_id.values():
+            self.assertIn(c["rango"], gambit.RANGOS)
+            self.assertGreater(c["puesto"], 0)
+        self.assertTrue(por_id["bac-001"]["pot"]["provisional"])
+        self.assertFalse(por_id["dis-001"]["pot"]["provisional"])
+        self.assertEqual(por_id["bac-001"]["naipe"], "picas")
+        self.assertEqual(por_id["dis-001"]["puesto"], 1)
+        self.assertEqual(sorted(datos["baraja"]), sorted(por_id))
+
+    def test_comodin_va_sin_rango(self):
+        self.clasificar_todas()
+        self.correr("puntuar", entrada=[{"id": "dis-001", "impacto": 5, "comodin": True}])
+        d = json.loads((self.datos / "clasificacion.json").read_text(encoding="utf-8"))
+        self.assertEqual(d["cartas"]["dis-001"]["rango"], "")
+        self.assertEqual(d["cartas"]["dis-001"]["puesto"], 0)
+        self.assertEqual(sorted(k["puesto"] for i, k in d["cartas"].items() if i != "dis-001"), [1, 2, 3])
+        _, out, _ = self.correr("ranking")
+        self.assertIn("comodín", out)
+
+    def test_puntuar_valida(self):
+        self.clasificar_todas()
+        codigo, _, err = self.correr("puntuar", entrada=[{"id": "dis-001", "impacto": 9, "carga": "enorme"}])
+        self.assertEqual(codigo, 1)
+        self.assertIn("impacto inválido", err)
+        self.assertIn("carga inválida", err)
+        self.cartas.append(carta("bac-001", "apis", "backend"))
+        self.escribir_baraja()
+        codigo, _, err = self.correr("puntuar", entrada=[{"id": "bac-001", "impacto": 3}])
+        self.assertEqual(codigo, 1)
+        self.assertIn("aún no está clasificada", err)
+
+    def test_reclasificar_conserva_la_puntuacion(self):
+        self.clasificar_todas()
+        self.correr("puntuar", entrada=[{"id": "dis-001", "impacto": 5, "carga": "ligera", "usada_en": ["X"]}])
+        self.correr("clasificar", entrada=[clas("dis-001", "ux-ui")])
+        d = json.loads((self.datos / "clasificacion.json").read_text(encoding="utf-8"))
+        k = d["cartas"]["dis-001"]
+        self.assertEqual((k["impacto"], k["carga"], k["usada_en"]), (5, "ligera", ["X"]))
+        self.assertEqual(k["campos"][0]["campo"], "ux-ui")
+
+    def test_palo_de_naipe(self):
+        casos = [(carta("x-1", "tipografía"), "corazones"), (carta("x-2", "presentación"), "diamantes"),
+                 (carta("x-3", "3d y canvas"), "treboles"), (carta("x-4", "casos de uso", "agentes ia"), "picas"),
+                 (carta("x-5", "apis", "backend"), "picas"), (carta("x-6", "copy de ventas", "marketing"), "diamantes"),
+                 (carta("x-7", "animaciones", "apps móviles"), "treboles")]
+        for c, esperado in casos:
+            self.assertEqual(gambit.naipe_de(c), esperado, c["palo"])
+        self.assertEqual(gambit.naipe_de(carta("x-8", "apis", "backend"), {"naipe": "corazones"}), "corazones")
+
+    def test_ranking_y_escalera(self):
+        self.clasificar_todas()
+        self.correr("puntuar", entrada=[{"id": "dis-002", "impacto": 5}, {"id": "dis-003", "impacto": 1}])
+        codigo, out, _ = self.correr("ranking", "--campo", "movimiento")
+        self.assertEqual(codigo, 0)
+        self.assertLess(out.index("dis-002"), out.index("dis-003"))
+        self.assertNotIn("dis-001", out)
+        codigo, out, _ = self.correr("mano", "escalera", "movimiento")
+        self.assertEqual(codigo, 0)
+        self.assertLess(out.index("dis-003"), out.index("dis-002"))
+        codigo, _, err = self.correr("mano", "escalera", "magia")
+        self.assertEqual(codigo, 1)
+        self.assertIn("Campo fuera del catálogo", err)
+        codigo, _, err = self.correr("ranking", "--palo", "oros")
+        self.assertEqual(codigo, 1)
+
+    def test_escalera_toma_las_siete_mas_fuertes(self):
+        cartas = [carta(f"dis-{n:03d}", dificultad=1 + n % 3) for n in range(1, 11)]
+        k = {c["id"]: {"campos": [{"campo": "frontend", "peso": 3}], "impacto": 1 + n % 5}
+             for n, c in enumerate(cartas)}
+        tabla = gambit.tabla_potencia(cartas, k)
+        mano = gambit.escalera_campo("frontend", cartas, k, tabla)
+        self.assertEqual(len(mano), 7)
+        totales = [tabla[i]["exacto"] for i in mano]
+        self.assertEqual(totales, sorted(totales))
+        fuera = [tabla[c["id"]]["exacto"] for c in cartas if c["id"] not in mano]
+        self.assertLessEqual(max(fuera), min(totales))
+        self.assertEqual(len(gambit.escalera_campo("frontend", cartas, k, tabla, todas=True)), 10)
+
+
 class TestDemo(Base):
     def test_genera_html_con_datos(self):
         self.clasificar_todas()

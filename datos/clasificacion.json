@@ -24,11 +24,27 @@
    "combina_con": [
     "age-002",
     "age-003",
-    "age-004"
+    "age-004",
+    "age-005"
    ],
    "choca_con": [],
    "huella": "bef70d7af8b5",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-14",
+   "impacto": 4,
+   "carga": "media",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 68,
+    "utilidad": 28.0,
+    "impacto": 24.0,
+    "evidencia": 5.0,
+    "facilidad": 6.0,
+    "costo": 5.0
+   },
+   "rango": "7",
+   "palo_naipe": "picas",
+   "puesto": 51
   },
   "age-002": {
    "campos": [
@@ -50,7 +66,22 @@
    ],
    "choca_con": [],
    "huella": "48ec55e5bade",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 3,
+   "carga": "pesada",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 46,
+    "utilidad": 17.5,
+    "impacto": 18.0,
+    "evidencia": 5.0,
+    "facilidad": 2.0,
+    "costo": 3.0
+   },
+   "rango": "2",
+   "palo_naipe": "picas",
+   "puesto": 92
   },
   "age-003": {
    "campos": [
@@ -77,7 +108,22 @@
    ],
    "choca_con": [],
    "huella": "8c9b2299528f",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 4,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 73,
+    "utilidad": 28.0,
+    "impacto": 24.0,
+    "evidencia": 5.0,
+    "facilidad": 6.0,
+    "costo": 10.0
+   },
+   "rango": "10",
+   "palo_naipe": "picas",
+   "puesto": 34
   },
   "age-004": {
    "campos": [
@@ -105,7 +151,64 @@
    "choca_con": [],
    "nota": "Las cifras de la fuente son promoción de un reto de pago; no citarlas como dato.",
    "huella": "8f9f1423af6d",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 3,
+   "carga": "media",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 62,
+    "utilidad": 28.0,
+    "impacto": 18.0,
+    "evidencia": 5.0,
+    "facilidad": 6.0,
+    "costo": 5.0
+   },
+   "rango": "5",
+   "palo_naipe": "picas",
+   "puesto": 71
+  },
+  "age-005": {
+   "campos": [
+    {
+     "campo": "ia",
+     "peso": 3,
+     "aplicacion": "Repositorios de skills, plugins y servidores MCP para ampliar lo que hace Claude Code."
+    },
+    {
+     "campo": "devops",
+     "peso": 1,
+     "aplicacion": "Tratar cada skill de terceros como una dependencia: revisar código y permisos antes de instalar."
+    },
+    {
+     "campo": "escuela",
+     "peso": 1,
+     "aplicacion": "Skills de video y documentos para armar entregables y exposiciones."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "depende",
+   "combina_con": [
+    "age-001",
+    "dis-055",
+    "dis-087"
+   ],
+   "choca_con": [],
+   "impacto": 3,
+   "carga": "ligera",
+   "huella": "5ef3d3fa6f61",
+   "clasificada": "2026-11-14",
+   "potencia": {
+    "total": 64,
+    "utilidad": 24.5,
+    "impacto": 18.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 7.0
+   },
+   "rango": "6",
+   "palo_naipe": "picas",
+   "puesto": 64
   },
   "dis-001": {
    "campos": [
@@ -135,7 +238,22 @@
    "combina_con": [],
    "choca_con": [],
    "huella": "4956e3a77fb3",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 3,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 74,
+    "utilidad": 35.0,
+    "impacto": 18.0,
+    "evidencia": 5.0,
+    "facilidad": 6.0,
+    "costo": 10.0
+   },
+   "rango": "10",
+   "palo_naipe": "diamantes",
+   "puesto": 30
   },
   "dis-002": {
    "campos": [
@@ -162,7 +280,22 @@
    ],
    "choca_con": [],
    "huella": "963e9af7858e",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 2,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 68,
+    "utilidad": 31.5,
+    "impacto": 12.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "8",
+   "palo_naipe": "diamantes",
+   "puesto": 50
   },
   "dis-003": {
    "campos": [
@@ -193,7 +326,22 @@
     "dis-006"
    ],
    "huella": "3f98546bff5f",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 3,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 75,
+    "utilidad": 28.0,
+    "impacto": 18.0,
+    "evidencia": 9.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "J",
+   "palo_naipe": "corazones",
+   "puesto": 22
   },
   "dis-004": {
    "campos": [
@@ -223,7 +371,22 @@
     "dis-066"
    ],
    "huella": "705fe7ff5d5e",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 3,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 75,
+    "utilidad": 28.0,
+    "impacto": 18.0,
+    "evidencia": 9.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "J",
+   "palo_naipe": "corazones",
+   "puesto": 23
   },
   "dis-005": {
    "campos": [
@@ -252,7 +415,22 @@
     "dis-063"
    ],
    "huella": "4a8d23ec2229",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 3,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 80,
+    "utilidad": 31.5,
+    "impacto": 18.0,
+    "evidencia": 10.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "K",
+   "palo_naipe": "corazones",
+   "puesto": 13
   },
   "dis-006": {
    "campos": [
@@ -289,7 +467,22 @@
     "dis-003"
    ],
    "huella": "f8260de9ccb6",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 4,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 89,
+    "utilidad": 35.0,
+    "impacto": 24.0,
+    "evidencia": 10.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "A",
+   "palo_naipe": "corazones",
+   "puesto": 4
   },
   "dis-007": {
    "campos": [
@@ -316,7 +509,22 @@
    ],
    "choca_con": [],
    "huella": "f3f6de00ad62",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 2,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 61,
+    "utilidad": 28.0,
+    "impacto": 12.0,
+    "evidencia": 5.0,
+    "facilidad": 6.0,
+    "costo": 10.0
+   },
+   "rango": "4",
+   "palo_naipe": "treboles",
+   "puesto": 73
   },
   "dis-008": {
    "campos": [
@@ -341,7 +549,22 @@
    "combina_con": [],
    "choca_con": [],
    "huella": "26f31b8efffe",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 3,
+   "carga": "media",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 66,
+    "utilidad": 28.0,
+    "impacto": 18.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 5.0
+   },
+   "rango": "6",
+   "palo_naipe": "corazones",
+   "puesto": 59
   },
   "dis-009": {
    "campos": [
@@ -373,7 +596,22 @@
    ],
    "choca_con": [],
    "huella": "82be963b3bdb",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 4,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 84,
+    "utilidad": 35.0,
+    "impacto": 24.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "K",
+   "palo_naipe": "corazones",
+   "puesto": 11
   },
   "dis-010": {
    "campos": [
@@ -408,7 +646,22 @@
     "dis-035"
    ],
    "huella": "2ef7391c7102",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 4,
+   "carga": "pesada",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 69,
+    "utilidad": 35.0,
+    "impacto": 24.0,
+    "evidencia": 5.0,
+    "facilidad": 2.0,
+    "costo": 3.0
+   },
+   "rango": "8",
+   "palo_naipe": "treboles",
+   "puesto": 48
   },
   "dis-011": {
    "campos": [
@@ -438,7 +691,22 @@
    "combina_con": [],
    "choca_con": [],
    "huella": "65ea465982a4",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 3,
+   "carga": "pesada",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 60,
+    "utilidad": 35.0,
+    "impacto": 18.0,
+    "evidencia": 5.0,
+    "facilidad": 2.0,
+    "costo": 0.0
+   },
+   "rango": "4",
+   "palo_naipe": "treboles",
+   "puesto": 78
   },
   "dis-012": {
    "campos": [
@@ -465,7 +733,22 @@
    ],
    "choca_con": [],
    "huella": "1ad368a980cf",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 2,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 65,
+    "utilidad": 28.0,
+    "impacto": 12.0,
+    "evidencia": 9.0,
+    "facilidad": 6.0,
+    "costo": 10.0
+   },
+   "rango": "6",
+   "palo_naipe": "corazones",
+   "puesto": 61
   },
   "dis-013": {
    "campos": [
@@ -490,7 +773,22 @@
    "combina_con": [],
    "choca_con": [],
    "huella": "19f7125c898a",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 2,
+   "carga": "media",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 64,
+    "utilidad": 28.0,
+    "impacto": 12.0,
+    "evidencia": 10.0,
+    "facilidad": 6.0,
+    "costo": 8.0
+   },
+   "rango": "5",
+   "palo_naipe": "treboles",
+   "puesto": 66
   },
   "dis-014": {
    "campos": [
@@ -512,11 +810,30 @@
    ],
    "nivel": "intermedio",
    "costo": "gratis",
-   "combina_con": [],
+   "combina_con": [
+    "dis-083"
+   ],
    "choca_con": [],
    "nota": "Usada en mémoires.",
    "huella": "4288b0252b71",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-14",
+   "impacto": 2,
+   "carga": "ligera",
+   "usada_en": [
+    "mémoires"
+   ],
+   "comodin": false,
+   "potencia": {
+    "total": 71,
+    "utilidad": 28.0,
+    "impacto": 12.0,
+    "evidencia": 15.0,
+    "facilidad": 6.0,
+    "costo": 10.0
+   },
+   "rango": "8",
+   "palo_naipe": "treboles",
+   "puesto": 40
   },
   "dis-015": {
    "campos": [
@@ -541,7 +858,22 @@
    "combina_con": [],
    "choca_con": [],
    "huella": "b82e3c8c18dd",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 2,
+   "carga": "media",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 54,
+    "utilidad": 24.5,
+    "impacto": 12.0,
+    "evidencia": 8.0,
+    "facilidad": 2.0,
+    "costo": 8.0
+   },
+   "rango": "2",
+   "palo_naipe": "treboles",
+   "puesto": 87
   },
   "dis-016": {
    "campos": [
@@ -578,7 +910,22 @@
     "dis-048"
    ],
    "huella": "41520a85204e",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 3,
+   "carga": "media",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 76,
+    "utilidad": 35.0,
+    "impacto": 18.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 8.0
+   },
+   "rango": "Q",
+   "palo_naipe": "treboles",
+   "puesto": 21
   },
   "dis-017": {
    "campos": [
@@ -596,11 +943,27 @@
    "nivel": "intermedio",
    "costo": "depende",
    "combina_con": [
-    "dis-016"
+    "dis-016",
+    "dis-088"
    ],
    "choca_con": [],
    "huella": "d5d20fb8dbee",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-14",
+   "impacto": 2,
+   "carga": "media",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 46,
+    "utilidad": 17.5,
+    "impacto": 12.0,
+    "evidencia": 5.0,
+    "facilidad": 6.0,
+    "costo": 5.0
+   },
+   "rango": "2",
+   "palo_naipe": "picas",
+   "puesto": 93
   },
   "dis-018": {
    "campos": [
@@ -627,8 +990,23 @@
    ],
    "choca_con": [],
    "nota": "Los prompts de pago casi siempre son ganchos; revisar antes de comprar.",
-   "huella": "fca560e0f6de",
-   "clasificada": "2026-11-13"
+   "huella": "2f4f61775d7b",
+   "clasificada": "2026-11-14",
+   "impacto": 3,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 70,
+    "utilidad": 24.5,
+    "impacto": 18.0,
+    "evidencia": 10.0,
+    "facilidad": 10.0,
+    "costo": 7.0
+   },
+   "rango": "8",
+   "palo_naipe": "picas",
+   "puesto": 46
   },
   "dis-019": {
    "campos": [
@@ -662,7 +1040,22 @@
    ],
    "choca_con": [],
    "huella": "379b3a0516e6",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 5,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": true,
+   "potencia": {
+    "total": 95,
+    "utilidad": 35.0,
+    "impacto": 30.0,
+    "evidencia": 10.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "",
+   "palo_naipe": "picas",
+   "puesto": 0
   },
   "dis-020": {
    "campos": [
@@ -682,7 +1075,22 @@
    "combina_con": [],
    "choca_con": [],
    "huella": "8b5575093054",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 3,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 69,
+    "utilidad": 21.0,
+    "impacto": 18.0,
+    "evidencia": 10.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "8",
+   "palo_naipe": "diamantes",
+   "puesto": 49
   },
   "dis-021": {
    "campos": [
@@ -718,7 +1126,24 @@
    ],
    "nota": "Usada en mémoires.",
    "huella": "b09dc3fb7169",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 3,
+   "carga": "ligera",
+   "usada_en": [
+    "mémoires"
+   ],
+   "comodin": false,
+   "potencia": {
+    "total": 79,
+    "utilidad": 35.0,
+    "impacto": 18.0,
+    "evidencia": 10.0,
+    "facilidad": 6.0,
+    "costo": 10.0
+   },
+   "rango": "Q",
+   "palo_naipe": "treboles",
+   "puesto": 14
   },
   "dis-022": {
    "campos": [
@@ -746,7 +1171,22 @@
    ],
    "choca_con": [],
    "huella": "35aa1fd938b4",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 3,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 71,
+    "utilidad": 28.0,
+    "impacto": 18.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "8",
+   "palo_naipe": "corazones",
+   "puesto": 41
   },
   "dis-023": {
    "campos": [
@@ -776,12 +1216,31 @@
    "combina_con": [
     "dis-016",
     "dis-021",
-    "dis-058"
+    "dis-058",
+    "dis-067",
+    "dis-079"
    ],
    "choca_con": [],
    "nota": "Regla de oro de todas las manos.",
    "huella": "01af6f15ce05",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-14",
+   "impacto": 5,
+   "carga": "ligera",
+   "usada_en": [
+    "mémoires"
+   ],
+   "comodin": true,
+   "potencia": {
+    "total": 100,
+    "utilidad": 35.0,
+    "impacto": 30.0,
+    "evidencia": 15.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "",
+   "palo_naipe": "picas",
+   "puesto": 0
   },
   "dis-024": {
    "campos": [
@@ -801,8 +1260,23 @@
    "combina_con": [],
    "choca_con": [],
    "nota": "Todas son de React: solo referencia, no instalar.",
-   "huella": "3e3b6d082e44",
-   "clasificada": "2026-11-13"
+   "huella": "f2d7a2c953c4",
+   "clasificada": "2026-11-14",
+   "impacto": 2,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 59,
+    "utilidad": 21.0,
+    "impacto": 12.0,
+    "evidencia": 10.0,
+    "facilidad": 6.0,
+    "costo": 10.0
+   },
+   "rango": "3",
+   "palo_naipe": "picas",
+   "puesto": 80
   },
   "dis-025": {
    "campos": [
@@ -832,7 +1306,22 @@
    "combina_con": [],
    "choca_con": [],
    "huella": "8182e87efc11",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 4,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 89,
+    "utilidad": 35.0,
+    "impacto": 24.0,
+    "evidencia": 10.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "A",
+   "palo_naipe": "treboles",
+   "puesto": 5
   },
   "dis-026": {
    "campos": [
@@ -864,7 +1353,22 @@
    ],
    "choca_con": [],
    "huella": "cc0a1e045b0a",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 2,
+   "carga": "media",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 64,
+    "utilidad": 35.0,
+    "impacto": 12.0,
+    "evidencia": 7.0,
+    "facilidad": 2.0,
+    "costo": 8.0
+   },
+   "rango": "5",
+   "palo_naipe": "treboles",
+   "puesto": 67
   },
   "dis-027": {
    "campos": [
@@ -898,7 +1402,24 @@
    "choca_con": [],
    "nota": "Usada en Boca del Cielo.",
    "huella": "d676885b0183",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 4,
+   "carga": "ligera",
+   "usada_en": [
+    "Boca del Cielo"
+   ],
+   "comodin": false,
+   "potencia": {
+    "total": 89,
+    "utilidad": 35.0,
+    "impacto": 24.0,
+    "evidencia": 10.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "A",
+   "palo_naipe": "treboles",
+   "puesto": 6
   },
   "dis-028": {
    "campos": [
@@ -929,7 +1450,24 @@
    "choca_con": [],
    "nota": "Usada en mémoires (álbum horizontal).",
    "huella": "32d69d25108f",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 3,
+   "carga": "ligera",
+   "usada_en": [
+    "mémoires"
+   ],
+   "comodin": false,
+   "potencia": {
+    "total": 79,
+    "utilidad": 35.0,
+    "impacto": 18.0,
+    "evidencia": 10.0,
+    "facilidad": 6.0,
+    "costo": 10.0
+   },
+   "rango": "Q",
+   "palo_naipe": "diamantes",
+   "puesto": 15
   },
   "dis-029": {
    "campos": [
@@ -954,7 +1492,22 @@
    "combina_con": [],
    "choca_con": [],
    "huella": "f7846021bcf5",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 3,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 71,
+    "utilidad": 28.0,
+    "impacto": 18.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "8",
+   "palo_naipe": "treboles",
+   "puesto": 42
   },
   "dis-030": {
    "campos": [
@@ -976,11 +1529,28 @@
    ],
    "nivel": "estudiante",
    "costo": "gratis",
-   "combina_con": [],
+   "combina_con": [
+    "dis-089"
+   ],
    "choca_con": [],
    "nota": "La carta no declara riesgo; verificar la librería antes de depender de ella.",
    "huella": "58919ca6f8a5",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-14",
+   "impacto": 3,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 71,
+    "utilidad": 28.0,
+    "impacto": 18.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "8",
+   "palo_naipe": "picas",
+   "puesto": 43
   },
   "dis-031": {
    "campos": [
@@ -1008,10 +1578,26 @@
    "choca_con": [
     "dis-041",
     "dis-045",
-    "dis-049"
+    "dis-049",
+    "dis-068"
    ],
    "huella": "e17ca437aa72",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-14",
+   "impacto": 2,
+   "carga": "media",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 59,
+    "utilidad": 28.0,
+    "impacto": 12.0,
+    "evidencia": 5.0,
+    "facilidad": 6.0,
+    "costo": 8.0
+   },
+   "rango": "3",
+   "palo_naipe": "treboles",
+   "puesto": 81
   },
   "dis-032": {
    "campos": [
@@ -1041,7 +1627,22 @@
    "combina_con": [],
    "choca_con": [],
    "huella": "a2185054a217",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 3,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 78,
+    "utilidad": 35.0,
+    "impacto": 18.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "Q",
+   "palo_naipe": "treboles",
+   "puesto": 16
   },
   "dis-033": {
    "campos": [
@@ -1066,7 +1667,22 @@
    "combina_con": [],
    "choca_con": [],
    "huella": "9b435f641503",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 3,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 67,
+    "utilidad": 28.0,
+    "impacto": 18.0,
+    "evidencia": 5.0,
+    "facilidad": 6.0,
+    "costo": 10.0
+   },
+   "rango": "7",
+   "palo_naipe": "treboles",
+   "puesto": 55
   },
   "dis-034": {
    "campos": [
@@ -1089,9 +1705,27 @@
    "nivel": "intermedio",
    "costo": "gratis",
    "combina_con": [],
-   "choca_con": [],
+   "choca_con": [
+    "dis-067",
+    "dis-079"
+   ],
    "huella": "44d9cbba0ddf",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-14",
+   "impacto": 2,
+   "carga": "media",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 59,
+    "utilidad": 28.0,
+    "impacto": 12.0,
+    "evidencia": 5.0,
+    "facilidad": 6.0,
+    "costo": 8.0
+   },
+   "rango": "3",
+   "palo_naipe": "treboles",
+   "puesto": 82
   },
   "dis-035": {
    "campos": [
@@ -1120,7 +1754,22 @@
     "dis-048"
    ],
    "huella": "63215be06038",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 3,
+   "carga": "pesada",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 63,
+    "utilidad": 28.0,
+    "impacto": 18.0,
+    "evidencia": 9.0,
+    "facilidad": 2.0,
+    "costo": 6.0
+   },
+   "rango": "5",
+   "palo_naipe": "treboles",
+   "puesto": 68
   },
   "dis-036": {
    "campos": [
@@ -1145,11 +1794,27 @@
    "combina_con": [
     "dis-007",
     "dis-010",
-    "dis-058"
+    "dis-058",
+    "dis-088"
    ],
    "choca_con": [],
    "huella": "459bb1eaf6fd",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-14",
+   "impacto": 2,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 65,
+    "utilidad": 28.0,
+    "impacto": 12.0,
+    "evidencia": 9.0,
+    "facilidad": 6.0,
+    "costo": 10.0
+   },
+   "rango": "6",
+   "palo_naipe": "treboles",
+   "puesto": 62
   },
   "dis-037": {
    "campos": [
@@ -1176,7 +1841,22 @@
     "dis-038"
    ],
    "huella": "1e70c7d57b17",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 3,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 67,
+    "utilidad": 28.0,
+    "impacto": 18.0,
+    "evidencia": 5.0,
+    "facilidad": 6.0,
+    "costo": 10.0
+   },
+   "rango": "7",
+   "palo_naipe": "corazones",
+   "puesto": 56
   },
   "dis-038": {
    "campos": [
@@ -1203,7 +1883,22 @@
     "dis-037"
    ],
    "huella": "ef2cd81f3c2c",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 2,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 65,
+    "utilidad": 28.0,
+    "impacto": 12.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "6",
+   "palo_naipe": "corazones",
+   "puesto": 63
   },
   "dis-039": {
    "campos": [
@@ -1225,10 +1920,27 @@
    ],
    "nivel": "estudiante",
    "costo": "gratis",
-   "combina_con": [],
+   "combina_con": [
+    "dis-069"
+   ],
    "choca_con": [],
    "huella": "5657ae64f1ca",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-14",
+   "impacto": 3,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 71,
+    "utilidad": 28.0,
+    "impacto": 18.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "8",
+   "palo_naipe": "corazones",
+   "puesto": 44
   },
   "dis-040": {
    "campos": [
@@ -1258,12 +1970,31 @@
    "combina_con": [
     "dis-027",
     "dis-064",
-    "dis-065"
+    "dis-065",
+    "dis-069",
+    "dis-090"
    ],
    "choca_con": [],
    "nota": "Usada en Boca del Cielo.",
    "huella": "20a02bb2b27f",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-14",
+   "impacto": 4,
+   "carga": "ligera",
+   "usada_en": [
+    "Boca del Cielo"
+   ],
+   "comodin": false,
+   "potencia": {
+    "total": 93,
+    "utilidad": 35.0,
+    "impacto": 24.0,
+    "evidencia": 14.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "A",
+   "palo_naipe": "diamantes",
+   "puesto": 1
   },
   "dis-041": {
    "campos": [
@@ -1291,8 +2022,23 @@
     "dis-031"
    ],
    "nota": "Vidrio: no mezclar con identidades de papel o tinta.",
-   "huella": "db15fee47e8f",
-   "clasificada": "2026-11-13"
+   "huella": "463e8b26502e",
+   "clasificada": "2026-11-14",
+   "impacto": 2,
+   "carga": "media",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 60,
+    "utilidad": 28.0,
+    "impacto": 12.0,
+    "evidencia": 10.0,
+    "facilidad": 2.0,
+    "costo": 8.0
+   },
+   "rango": "4",
+   "palo_naipe": "corazones",
+   "puesto": 79
   },
   "dis-042": {
    "campos": [
@@ -1315,10 +2061,27 @@
    "nivel": "intermedio",
    "costo": "gratis",
    "combina_con": [],
-   "choca_con": [],
+   "choca_con": [
+    "dis-080"
+   ],
    "nota": "No usar en sistemas de trabajo como un ERP.",
    "huella": "c427a3aa1ee3",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-14",
+   "impacto": 2,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 61,
+    "utilidad": 28.0,
+    "impacto": 12.0,
+    "evidencia": 5.0,
+    "facilidad": 6.0,
+    "costo": 10.0
+   },
+   "rango": "4",
+   "palo_naipe": "treboles",
+   "puesto": 74
   },
   "dis-043": {
    "campos": [
@@ -1352,7 +2115,22 @@
    ],
    "choca_con": [],
    "huella": "57699a270ae8",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 4,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 84,
+    "utilidad": 35.0,
+    "impacto": 24.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "K",
+   "palo_naipe": "corazones",
+   "puesto": 12
   },
   "dis-044": {
    "campos": [
@@ -1379,11 +2157,30 @@
    ],
    "nivel": "estudiante",
    "costo": "gratis",
-   "combina_con": [],
+   "combina_con": [
+    "dis-089"
+   ],
    "choca_con": [],
    "nota": "Usada en Boca del Cielo.",
    "huella": "4edbba718adf",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-14",
+   "impacto": 4,
+   "carga": "ligera",
+   "usada_en": [
+    "Boca del Cielo"
+   ],
+   "comodin": false,
+   "potencia": {
+    "total": 89,
+    "utilidad": 35.0,
+    "impacto": 24.0,
+    "evidencia": 10.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "A",
+   "palo_naipe": "treboles",
+   "puesto": 7
   },
   "dis-045": {
    "campos": [
@@ -1408,10 +2205,26 @@
    "combina_con": [],
    "choca_con": [
     "dis-031",
-    "dis-049"
+    "dis-049",
+    "dis-068"
    ],
    "huella": "0b75ebf17491",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-14",
+   "impacto": 2,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 61,
+    "utilidad": 28.0,
+    "impacto": 12.0,
+    "evidencia": 5.0,
+    "facilidad": 6.0,
+    "costo": 10.0
+   },
+   "rango": "4",
+   "palo_naipe": "corazones",
+   "puesto": 75
   },
   "dis-046": {
    "campos": [
@@ -1441,7 +2254,22 @@
    "combina_con": [],
    "choca_con": [],
    "huella": "89e1757e81b4",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 2,
+   "carga": "media",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 66,
+    "utilidad": 35.0,
+    "impacto": 12.0,
+    "evidencia": 5.0,
+    "facilidad": 6.0,
+    "costo": 8.0
+   },
+   "rango": "6",
+   "palo_naipe": "treboles",
+   "puesto": 60
   },
   "dis-047": {
    "campos": [
@@ -1461,7 +2289,22 @@
    "combina_con": [],
    "choca_con": [],
    "huella": "64f0edcc3d09",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 2,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 50,
+    "utilidad": 21.0,
+    "impacto": 12.0,
+    "evidencia": 5.0,
+    "facilidad": 2.0,
+    "costo": 10.0
+   },
+   "rango": "2",
+   "palo_naipe": "treboles",
+   "puesto": 89
   },
   "dis-048": {
    "campos": [
@@ -1489,7 +2332,22 @@
     "dis-035"
    ],
    "huella": "f51914ba6d03",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 2,
+   "carga": "pesada",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 50,
+    "utilidad": 24.5,
+    "impacto": 12.0,
+    "evidencia": 5.0,
+    "facilidad": 2.0,
+    "costo": 6.0
+   },
+   "rango": "2",
+   "palo_naipe": "treboles",
+   "puesto": 90
   },
   "dis-049": {
    "campos": [
@@ -1514,10 +2372,26 @@
    "combina_con": [],
    "choca_con": [
     "dis-031",
-    "dis-045"
+    "dis-045",
+    "dis-068"
    ],
    "huella": "6d70282d2c62",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-14",
+   "impacto": 2,
+   "carga": "media",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 59,
+    "utilidad": 28.0,
+    "impacto": 12.0,
+    "evidencia": 5.0,
+    "facilidad": 6.0,
+    "costo": 8.0
+   },
+   "rango": "3",
+   "palo_naipe": "treboles",
+   "puesto": 83
   },
   "dis-050": {
    "campos": [
@@ -1540,11 +2414,27 @@
    "nivel": "estudiante",
    "costo": "gratis",
    "combina_con": [
-    "dis-003"
+    "dis-003",
+    "dis-070"
    ],
    "choca_con": [],
    "huella": "fd4640586f2a",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-14",
+   "impacto": 4,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 77,
+    "utilidad": 28.0,
+    "impacto": 24.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "Q",
+   "palo_naipe": "diamantes",
+   "puesto": 19
   },
   "dis-051": {
    "campos": [
@@ -1574,11 +2464,29 @@
    "combina_con": [
     "dis-006",
     "dis-043",
-    "dis-054"
+    "dis-054",
+    "dis-072",
+    "dis-073",
+    "dis-090"
    ],
    "choca_con": [],
    "huella": "51d226c24857",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-14",
+   "impacto": 5,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 90,
+    "utilidad": 35.0,
+    "impacto": 30.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "A",
+   "palo_naipe": "diamantes",
+   "puesto": 2
   },
   "dis-052": {
    "campos": [
@@ -1606,7 +2514,24 @@
    "choca_con": [],
    "nota": "Usada en Boca del Cielo.",
    "huella": "9ec8c925a1d3",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 4,
+   "carga": "ligera",
+   "usada_en": [
+    "Boca del Cielo"
+   ],
+   "comodin": false,
+   "potencia": {
+    "total": 86,
+    "utilidad": 31.5,
+    "impacto": 24.0,
+    "evidencia": 10.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "K",
+   "palo_naipe": "diamantes",
+   "puesto": 10
   },
   "dis-053": {
    "campos": [
@@ -1631,7 +2556,22 @@
    "combina_con": [],
    "choca_con": [],
    "huella": "50d638f4c422",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 3,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 74,
+    "utilidad": 31.5,
+    "impacto": 18.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "10",
+   "palo_naipe": "treboles",
+   "puesto": 26
   },
   "dis-054": {
    "campos": [
@@ -1656,12 +2596,32 @@
    "combina_con": [
     "dis-022",
     "dis-051",
-    "dis-052"
+    "dis-052",
+    "dis-073",
+    "dis-075",
+    "dis-079"
    ],
    "choca_con": [],
    "nota": "Usada en Boca del Cielo.",
    "huella": "a1f96cdfa5dc",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-14",
+   "impacto": 5,
+   "carga": "ligera",
+   "usada_en": [
+    "Boca del Cielo"
+   ],
+   "comodin": false,
+   "potencia": {
+    "total": 88,
+    "utilidad": 28.0,
+    "impacto": 30.0,
+    "evidencia": 10.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "K",
+   "palo_naipe": "diamantes",
+   "puesto": 8
   },
   "dis-055": {
    "campos": [
@@ -1683,11 +2643,29 @@
    ],
    "nivel": "estudiante",
    "costo": "depende",
-   "combina_con": [],
+   "combina_con": [
+    "age-005",
+    "dis-087"
+   ],
    "choca_con": [],
    "nota": "Revisar el contenido de una skill antes de instalarla.",
    "huella": "fee8ebda288f",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-14",
+   "impacto": 3,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 68,
+    "utilidad": 28.0,
+    "impacto": 18.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 7.0
+   },
+   "rango": "7",
+   "palo_naipe": "picas",
+   "puesto": 52
   },
   "dis-056": {
    "campos": [
@@ -1708,7 +2686,24 @@
    "choca_con": [],
    "nota": "Usada en mémoires.",
    "huella": "1037224af2df",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 2,
+   "carga": "pesada",
+   "usada_en": [
+    "mémoires"
+   ],
+   "comodin": false,
+   "potencia": {
+    "total": 48,
+    "utilidad": 17.5,
+    "impacto": 12.0,
+    "evidencia": 10.0,
+    "facilidad": 2.0,
+    "costo": 6.0
+   },
+   "rango": "2",
+   "palo_naipe": "treboles",
+   "puesto": 91
   },
   "dis-057": {
    "campos": [
@@ -1738,7 +2733,22 @@
    "combina_con": [],
    "choca_con": [],
    "huella": "ed48a1feb159",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 2,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 72,
+    "utilidad": 35.0,
+    "impacto": 12.0,
+    "evidencia": 9.0,
+    "facilidad": 6.0,
+    "costo": 10.0
+   },
+   "rango": "9",
+   "palo_naipe": "treboles",
+   "puesto": 36
   },
   "dis-058": {
    "campos": [
@@ -1762,11 +2772,27 @@
    "costo": "gratis",
    "combina_con": [
     "dis-023",
-    "dis-036"
+    "dis-036",
+    "dis-070"
    ],
    "choca_con": [],
    "huella": "597239bc1abf",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-14",
+   "impacto": 3,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 71,
+    "utilidad": 28.0,
+    "impacto": 18.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "8",
+   "palo_naipe": "treboles",
+   "puesto": 45
   },
   "dis-059": {
    "campos": [
@@ -1793,10 +2819,27 @@
    ],
    "nivel": "intermedio",
    "costo": "gratis",
-   "combina_con": [],
+   "combina_con": [
+    "dis-071"
+   ],
    "choca_con": [],
    "huella": "920832ee2a20",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-14",
+   "impacto": 3,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 74,
+    "utilidad": 35.0,
+    "impacto": 18.0,
+    "evidencia": 5.0,
+    "facilidad": 6.0,
+    "costo": 10.0
+   },
+   "rango": "10",
+   "palo_naipe": "treboles",
+   "puesto": 31
   },
   "dis-060": {
    "campos": [
@@ -1821,7 +2864,22 @@
    "combina_con": [],
    "choca_con": [],
    "huella": "f90dff4dfc43",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 2,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 61,
+    "utilidad": 28.0,
+    "impacto": 12.0,
+    "evidencia": 5.0,
+    "facilidad": 6.0,
+    "costo": 10.0
+   },
+   "rango": "4",
+   "palo_naipe": "corazones",
+   "puesto": 76
   },
   "dis-061": {
    "campos": [
@@ -1851,7 +2909,22 @@
    "combina_con": [],
    "choca_con": [],
    "huella": "8514b6528626",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 2,
+   "carga": "pesada",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 62,
+    "utilidad": 31.5,
+    "impacto": 12.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 3.0
+   },
+   "rango": "5",
+   "palo_naipe": "picas",
+   "puesto": 72
   },
   "dis-062": {
    "campos": [
@@ -1873,10 +2946,27 @@
    ],
    "nivel": "estudiante",
    "costo": "gratis",
-   "combina_con": [],
+   "combina_con": [
+    "dis-088"
+   ],
    "choca_con": [],
    "huella": "6eb32d9a997e",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-14",
+   "impacto": 3,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 74,
+    "utilidad": 31.5,
+    "impacto": 18.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "10",
+   "palo_naipe": "picas",
+   "puesto": 27
   },
   "dis-063": {
    "campos": [
@@ -1905,7 +2995,22 @@
     "dis-005"
    ],
    "huella": "e2c94ff97b2c",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 3,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 74,
+    "utilidad": 31.5,
+    "impacto": 18.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "10",
+   "palo_naipe": "diamantes",
+   "puesto": 28
   },
   "dis-064": {
    "campos": [
@@ -1934,11 +3039,27 @@
    "costo": "gratis",
    "combina_con": [
     "dis-019",
-    "dis-040"
+    "dis-040",
+    "dis-090"
    ],
    "choca_con": [],
    "huella": "344671a88213",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-14",
+   "impacto": 4,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 88,
+    "utilidad": 35.0,
+    "impacto": 24.0,
+    "evidencia": 9.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "K",
+   "palo_naipe": "picas",
+   "puesto": 9
   },
   "dis-065": {
    "campos": [
@@ -1970,7 +3091,22 @@
    ],
    "choca_con": [],
    "huella": "2247d7790f9f",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 2,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 72,
+    "utilidad": 35.0,
+    "impacto": 12.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "9",
+   "palo_naipe": "diamantes",
+   "puesto": 37
   },
   "dis-066": {
    "campos": [
@@ -1998,8 +3134,1104 @@
    ],
    "nota": "Casi todas son comerciales.",
    "huella": "fed4c627e3d7",
-   "clasificada": "2026-11-13"
+   "clasificada": "2026-11-13",
+   "impacto": 2,
+   "carga": "ligera",
+   "usada_en": [],
+   "comodin": false,
+   "potencia": {
+    "total": 59,
+    "utilidad": 28.0,
+    "impacto": 12.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 4.0
+   },
+   "rango": "3",
+   "palo_naipe": "corazones",
+   "puesto": 84
+  },
+  "dis-067": {
+   "campos": [
+    {
+     "campo": "movimiento",
+     "peso": 3,
+     "aplicacion": "Secuencia de 1 a 2 s que termina exactamente en el logo y no se repite en la sesión."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "SVG animado o video corto, con sessionStorage para mostrarla una sola vez."
+    },
+    {
+     "campo": "producto",
+     "peso": 2,
+     "aplicacion": "Apertura de marca para lujo, perfumería o automotriz."
+    },
+    {
+     "campo": "accesibilidad-seo",
+     "peso": 1,
+     "aplicacion": "Botón para saltarla y sin intro con prefers-reduced-motion."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "gratis",
+   "combina_con": [
+    "dis-023"
+   ],
+   "choca_con": [
+    "dis-034",
+    "dis-079"
+   ],
+   "impacto": 2,
+   "carga": "media",
+   "huella": "15b92683a1bf",
+   "clasificada": "2026-11-14",
+   "potencia": {
+    "total": 68,
+    "utilidad": 35.0,
+    "impacto": 12.0,
+    "evidencia": 7.0,
+    "facilidad": 6.0,
+    "costo": 8.0
+   },
+   "rango": "7",
+   "palo_naipe": "treboles",
+   "puesto": 53
+  },
+  "dis-068": {
+   "campos": [
+    {
+     "campo": "frontend",
+     "peso": 3,
+     "aplicacion": "Capa negra con mask-image radial que sigue --x y --y del puntero."
+    },
+    {
+     "campo": "movimiento",
+     "peso": 2,
+     "aplicacion": "El cursor es la única luz y revela el producto."
+    },
+    {
+     "campo": "movil",
+     "peso": 1,
+     "aplicacion": "En táctil sigue el dedo o muestra la imagen completa."
+    },
+    {
+     "campo": "producto",
+     "peso": 1,
+     "aplicacion": "Revelar un producto con dramatismo, sin esconder texto."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [
+    "dis-031",
+    "dis-045",
+    "dis-049"
+   ],
+   "impacto": 2,
+   "carga": "ligera",
+   "huella": "529139450cf9",
+   "clasificada": "2026-11-14",
+   "potencia": {
+    "total": 72,
+    "utilidad": 35.0,
+    "impacto": 12.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "9",
+   "palo_naipe": "treboles",
+   "puesto": 38
+  },
+  "dis-069": {
+   "campos": [
+    {
+     "campo": "movimiento",
+     "peso": 3,
+     "aplicacion": "Conteo con requestAnimationFrame y easing de salida al entrar en pantalla."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "IntersectionObserver, tabular-nums y el valor final en el HTML."
+    },
+    {
+     "campo": "datos",
+     "peso": 2,
+     "aplicacion": "Indicadores de un tablero que cuentan una sola vez al cargar."
+    },
+    {
+     "campo": "producto",
+     "peso": 2,
+     "aplicacion": "Especificaciones, estadísticas y logros en una landing."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [
+    "dis-039",
+    "dis-040"
+   ],
+   "choca_con": [],
+   "impacto": 3,
+   "carga": "ligera",
+   "huella": "ab6930348acd",
+   "clasificada": "2026-11-14",
+   "potencia": {
+    "total": 78,
+    "utilidad": 35.0,
+    "impacto": 18.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "Q",
+   "palo_naipe": "treboles",
+   "puesto": 17
+  },
+  "dis-070": {
+   "campos": [
+    {
+     "campo": "movimiento",
+     "peso": 3,
+     "aplicacion": "Progreso del scroll mapeado a una cifra con las unidades de la marca."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "animation-timeline: scroll() o un signal, fijo en una esquina."
+    },
+    {
+     "campo": "producto",
+     "peso": 2,
+     "aplicacion": "Metáfora medible: altitud, profundidad, kilómetros o años."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [
+    "dis-050",
+    "dis-058"
+   ],
+   "choca_con": [],
+   "impacto": 3,
+   "carga": "ligera",
+   "huella": "e82626751480",
+   "clasificada": "2026-11-14",
+   "potencia": {
+    "total": 74,
+    "utilidad": 31.5,
+    "impacto": 18.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "10",
+   "palo_naipe": "treboles",
+   "puesto": 29
+  },
+  "dis-071": {
+   "campos": [
+    {
+     "campo": "movimiento",
+     "peso": 3,
+     "aplicacion": "FLIP de la imagen del producto hacia el ícono del carrito en menos de 600 ms."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "Medir, clonar y animar translate y scale; rebote del contador al llegar."
+    },
+    {
+     "campo": "producto",
+     "peso": 2,
+     "aplicacion": "Confirma el agregado y sugiere el siguiente artículo."
+    },
+    {
+     "campo": "movil",
+     "peso": 1,
+     "aplicacion": "La misma confirmación en tiendas móviles."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "gratis",
+   "combina_con": [
+    "dis-059"
+   ],
+   "choca_con": [],
+   "impacto": 3,
+   "carga": "ligera",
+   "huella": "1753cddde51a",
+   "clasificada": "2026-11-14",
+   "potencia": {
+    "total": 74,
+    "utilidad": 35.0,
+    "impacto": 18.0,
+    "evidencia": 5.0,
+    "facilidad": 6.0,
+    "costo": 10.0
+   },
+   "rango": "10",
+   "palo_naipe": "treboles",
+   "puesto": 32
+  },
+  "dis-072": {
+   "campos": [
+    {
+     "campo": "producto",
+     "peso": 3,
+     "aplicacion": "Explorar, personalizar y apartar en menos de 30 segundos sin salir de la página."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "Configurador por pasos con vista previa en vivo (signals) y calendario al final."
+    },
+    {
+     "campo": "ux-ui",
+     "peso": 2,
+     "aplicacion": "Máximo cuatro pasos y sin pedir registro antes de terminar."
+    },
+    {
+     "campo": "backend",
+     "peso": 1,
+     "aplicacion": "Guardar la configuración junto con la reserva."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "gratis",
+   "combina_con": [
+    "dis-051",
+    "dis-074"
+   ],
+   "choca_con": [],
+   "impacto": 4,
+   "carga": "media",
+   "huella": "ece1a2595c1e",
+   "clasificada": "2026-11-14",
+   "potencia": {
+    "total": 78,
+    "utilidad": 35.0,
+    "impacto": 24.0,
+    "evidencia": 5.0,
+    "facilidad": 6.0,
+    "costo": 8.0
+   },
+   "rango": "Q",
+   "palo_naipe": "treboles",
+   "puesto": 18
+  },
+  "dis-073": {
+   "campos": [
+    {
+     "campo": "producto",
+     "peso": 3,
+     "aplicacion": "Set de muestras y reseñas junto al botón de compra para quien todavía duda."
+    },
+    {
+     "campo": "ux-ui",
+     "peso": 2,
+     "aplicacion": "La muestra va subordinada en tamaño al producto principal."
+    },
+    {
+     "campo": "frontend",
+     "peso": 1,
+     "aplicacion": "Sección simple con la versión pequeña y un bloque de reseñas reales."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [
+    "dis-051",
+    "dis-054"
+   ],
+   "choca_con": [],
+   "impacto": 4,
+   "carga": "ligera",
+   "huella": "41e1ccedf170",
+   "clasificada": "2026-11-14",
+   "potencia": {
+    "total": 77,
+    "utilidad": 28.0,
+    "impacto": 24.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "Q",
+   "palo_naipe": "diamantes",
+   "puesto": 20
+  },
+  "dis-074": {
+   "campos": [
+    {
+     "campo": "ux-ui",
+     "peso": 3,
+     "aplicacion": "Mostrar el resultado real de la elección antes de pagar."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "Mapa con estados y panel inferior con la imagen del punto de vista y sus métricas."
+    },
+    {
+     "campo": "producto",
+     "peso": 2,
+     "aplicacion": "Reservas de cine, teatro, vuelos o habitaciones."
+    },
+    {
+     "campo": "movil",
+     "peso": 1,
+     "aplicacion": "El panel inferior funciona igual en teléfono."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "depende",
+   "combina_con": [
+    "dis-072"
+   ],
+   "choca_con": [],
+   "impacto": 4,
+   "carga": "media",
+   "huella": "0ea84f59c623",
+   "clasificada": "2026-11-14",
+   "potencia": {
+    "total": 75,
+    "utilidad": 35.0,
+    "impacto": 24.0,
+    "evidencia": 5.0,
+    "facilidad": 6.0,
+    "costo": 5.0
+   },
+   "rango": "J",
+   "palo_naipe": "treboles",
+   "puesto": 24
+  },
+  "dis-075": {
+   "campos": [
+    {
+     "campo": "producto",
+     "peso": 3,
+     "aplicacion": "Un escenario imposible por colección, con texto mínimo encima."
+    },
+    {
+     "campo": "ux-ui",
+     "peso": 1,
+     "aplicacion": "Dirección de arte que no opaque al producto."
+    },
+    {
+     "campo": "ia",
+     "peso": 1,
+     "aplicacion": "Escenarios generados con IA o renders 3D."
+    },
+    {
+     "campo": "devops",
+     "peso": 1,
+     "aplicacion": "Imágenes a pantalla completa servidas en AVIF o WebP."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "depende",
+   "combina_con": [
+    "dis-054"
+   ],
+   "choca_con": [],
+   "impacto": 3,
+   "carga": "media",
+   "huella": "9813a2fc30d7",
+   "clasificada": "2026-11-14",
+   "potencia": {
+    "total": 70,
+    "utilidad": 31.5,
+    "impacto": 18.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 5.0
+   },
+   "rango": "8",
+   "palo_naipe": "corazones",
+   "puesto": 47
+  },
+  "dis-076": {
+   "campos": [
+    {
+     "campo": "movimiento",
+     "peso": 3,
+     "aplicacion": "Burbuja con filtro gooey que sube con resorte al tocar una pestaña."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "Filtro SVG con feGaussianBlur y feColorMatrix, sin librerías."
+    },
+    {
+     "campo": "movil",
+     "peso": 2,
+     "aplicacion": "Barra de navegación inferior con personalidad."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [
+    "dis-077"
+   ],
+   "impacto": 2,
+   "carga": "ligera",
+   "huella": "88fcb3fffc1c",
+   "clasificada": "2026-11-14",
+   "potencia": {
+    "total": 64,
+    "utilidad": 31.5,
+    "impacto": 12.0,
+    "evidencia": 5.0,
+    "facilidad": 6.0,
+    "costo": 10.0
+   },
+   "rango": "6",
+   "palo_naipe": "treboles",
+   "puesto": 65
+  },
+  "dis-077": {
+   "campos": [
+    {
+     "campo": "movimiento",
+     "peso": 3,
+     "aplicacion": "Elegir una sola variante para marcar la pestaña activa, de menos de 400 ms."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "Píldora posicionada con transform según un signal."
+    },
+    {
+     "campo": "movil",
+     "peso": 2,
+     "aplicacion": "Navegación inferior de apps."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [
+    "dis-076"
+   ],
+   "impacto": 2,
+   "carga": "ligera",
+   "huella": "e52454d360da",
+   "clasificada": "2026-11-14",
+   "potencia": {
+    "total": 66,
+    "utilidad": 31.5,
+    "impacto": 12.0,
+    "evidencia": 7.0,
+    "facilidad": 6.0,
+    "costo": 10.0
+   },
+   "rango": "6",
+   "palo_naipe": "treboles",
+   "puesto": 58
+  },
+  "dis-078": {
+   "campos": [
+    {
+     "campo": "movimiento",
+     "peso": 3,
+     "aplicacion": "Seis aperturas de menú: push back, popover, gooey, fold down, botón a panel y paleta."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "scale y translate, rotateX por fila, View Transition o FLIP."
+    },
+    {
+     "campo": "ux-ui",
+     "peso": 2,
+     "aplicacion": "Elegir el patrón según la navegación y no esconder la principal en escritorio."
+    },
+    {
+     "campo": "movil",
+     "peso": 2,
+     "aplicacion": "Menús de apps: push back, popover o paleta de comandos."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [],
+   "impacto": 3,
+   "carga": "ligera",
+   "huella": "88f703f7f8f7",
+   "clasificada": "2026-11-14",
+   "potencia": {
+    "total": 74,
+    "utilidad": 35.0,
+    "impacto": 18.0,
+    "evidencia": 5.0,
+    "facilidad": 6.0,
+    "costo": 10.0
+   },
+   "rango": "10",
+   "palo_naipe": "treboles",
+   "puesto": 33
+  },
+  "dis-079": {
+   "campos": [
+    {
+     "campo": "movimiento",
+     "peso": 3,
+     "aplicacion": "Video sin bucle; el contenido entra en el evento ended."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "Queda en el último cuadro; el nombre de fondo va con mix-blend-mode: darken."
+    },
+    {
+     "campo": "producto",
+     "peso": 2,
+     "aplicacion": "Héroe con un sujeto que llega o se posa."
+    },
+    {
+     "campo": "devops",
+     "peso": 1,
+     "aplicacion": "Póster estático y video de menos de 6 s."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "depende",
+   "combina_con": [
+    "dis-023",
+    "dis-054"
+   ],
+   "choca_con": [
+    "dis-034",
+    "dis-067"
+   ],
+   "impacto": 3,
+   "carga": "pesada",
+   "huella": "b980ba3d785e",
+   "clasificada": "2026-11-14",
+   "potencia": {
+    "total": 67,
+    "utilidad": 35.0,
+    "impacto": 18.0,
+    "evidencia": 5.0,
+    "facilidad": 6.0,
+    "costo": 3.0
+   },
+   "rango": "7",
+   "palo_naipe": "treboles",
+   "puesto": 57
+  },
+  "dis-080": {
+   "campos": [
+    {
+     "campo": "frontend",
+     "peso": 3,
+     "aplicacion": "Avatar SVG cuyos ojos siguen el puntero con atan2 y cambian según el campo activo."
+    },
+    {
+     "campo": "movimiento",
+     "peso": 2,
+     "aplicacion": "El personaje reacciona a lo que se escribe."
+    },
+    {
+     "campo": "ux-ui",
+     "peso": 1,
+     "aplicacion": "Registro con personalidad que no tape los errores del formulario."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [
+    "dis-042"
+   ],
+   "impacto": 2,
+   "carga": "ligera",
+   "huella": "d550e94c9ce6",
+   "clasificada": "2026-11-14",
+   "potencia": {
+    "total": 61,
+    "utilidad": 28.0,
+    "impacto": 12.0,
+    "evidencia": 5.0,
+    "facilidad": 6.0,
+    "costo": 10.0
+   },
+   "rango": "4",
+   "palo_naipe": "treboles",
+   "puesto": 77
+  },
+  "dis-081": {
+   "campos": [
+    {
+     "campo": "grafico",
+     "peso": 3,
+     "aplicacion": "La matriz del QR como suelo de una escena voxel en Three.js que crece y se pliega."
+    },
+    {
+     "campo": "producto",
+     "peso": 1,
+     "aplicacion": "QR memorable para eventos, empaques o tarjetas, sin perder contraste."
+    }
+   ],
+   "nivel": "avanzado",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [],
+   "impacto": 2,
+   "carga": "pesada",
+   "huella": "c60e74aef2dd",
+   "clasificada": "2026-11-14",
+   "potencia": {
+    "total": 42,
+    "utilidad": 17.5,
+    "impacto": 12.0,
+    "evidencia": 5.0,
+    "facilidad": 2.0,
+    "costo": 6.0
+   },
+   "rango": "2",
+   "palo_naipe": "treboles",
+   "puesto": 94
+  },
+  "dis-082": {
+   "campos": [
+    {
+     "campo": "frontend",
+     "peso": 3,
+     "aplicacion": "Input range con una ilustración de fondo; el valor mueve un clip-path y un personaje."
+    },
+    {
+     "campo": "movimiento",
+     "peso": 2,
+     "aplicacion": "La escena pasa de noche a día al deslizar."
+    },
+    {
+     "campo": "movil",
+     "peso": 1,
+     "aplicacion": "Controles de apps lúdicas o de marca."
+    },
+    {
+     "campo": "accesibilidad-seo",
+     "peso": 1,
+     "aplicacion": "Conservar el teclado y el aria del input range."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [],
+   "impacto": 2,
+   "carga": "ligera",
+   "huella": "68e91f82fa6c",
+   "clasificada": "2026-11-14",
+   "potencia": {
+    "total": 68,
+    "utilidad": 35.0,
+    "impacto": 12.0,
+    "evidencia": 5.0,
+    "facilidad": 6.0,
+    "costo": 10.0
+   },
+   "rango": "7",
+   "palo_naipe": "treboles",
+   "puesto": 54
+  },
+  "dis-083": {
+   "campos": [
+    {
+     "campo": "grafico",
+     "peso": 3,
+     "aplicacion": "Sprites de texto en canvas con posición y velocidad; impulso radial al clic."
+    },
+    {
+     "campo": "movimiento",
+     "peso": 2,
+     "aplicacion": "Se dispersan y regresan despacio a su vuelo."
+    },
+    {
+     "campo": "producto",
+     "peso": 1,
+     "aplicacion": "Fondo lúdico para una página personal."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "gratis",
+   "combina_con": [
+    "dis-014"
+   ],
+   "choca_con": [],
+   "impacto": 2,
+   "carga": "media",
+   "huella": "21e662860dbc",
+   "clasificada": "2026-11-14",
+   "potencia": {
+    "total": 59,
+    "utilidad": 28.0,
+    "impacto": 12.0,
+    "evidencia": 5.0,
+    "facilidad": 6.0,
+    "costo": 8.0
+   },
+   "rango": "3",
+   "palo_naipe": "treboles",
+   "puesto": 85
+  },
+  "dis-084": {
+   "campos": [
+    {
+     "campo": "producto",
+     "peso": 3,
+     "aplicacion": "Títulos decorativos para pósters, redes o fondos animados."
+    },
+    {
+     "campo": "grafico",
+     "peso": 2,
+     "aplicacion": "Texto convertido en un jardín generativo que se exporta como imagen o video."
+    },
+    {
+     "campo": "escuela",
+     "peso": 1,
+     "aplicacion": "Portadas de exposición."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [],
+   "impacto": 1,
+   "carga": "ligera",
+   "huella": "d5ff9b2ba6e2",
+   "clasificada": "2026-11-14",
+   "potencia": {
+    "total": 63,
+    "utilidad": 28.0,
+    "impacto": 6.0,
+    "evidencia": 9.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "5",
+   "palo_naipe": "picas",
+   "puesto": 69
+  },
+  "dis-085": {
+   "campos": [
+    {
+     "campo": "producto",
+     "peso": 3,
+     "aplicacion": "Mockups de marca, stickers y piezas para redes."
+    },
+    {
+     "campo": "grafico",
+     "peso": 1,
+     "aplicacion": "Efecto foil sobre un logo sin programarlo."
+    },
+    {
+     "campo": "escuela",
+     "peso": 1,
+     "aplicacion": "Logo del proyecto para la portada."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "depende",
+   "combina_con": [],
+   "choca_con": [],
+   "nota": "La carta no declara riesgo.",
+   "impacto": 1,
+   "carga": "ligera",
+   "huella": "c9f98495eb0d",
+   "clasificada": "2026-11-14",
+   "potencia": {
+    "total": 52,
+    "utilidad": 24.5,
+    "impacto": 6.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 7.0
+   },
+   "rango": "2",
+   "palo_naipe": "picas",
+   "puesto": 88
+  },
+  "dis-086": {
+   "campos": [
+    {
+     "campo": "producto",
+     "peso": 3,
+     "aplicacion": "Elegir un estilo visual para explicar un tema con animación."
+    },
+    {
+     "campo": "ia",
+     "peso": 2,
+     "aplicacion": "Pedir la animación a Claude con el repositorio base del estilo."
+    },
+    {
+     "campo": "escuela",
+     "peso": 2,
+     "aplicacion": "Explicadores animados para exposiciones."
+    },
+    {
+     "campo": "movimiento",
+     "peso": 1,
+     "aplicacion": "Nueve lenguajes de animación para tomar uno."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [],
+   "nota": "La carta no declara riesgo; los repos se comparten a cambio de comentar.",
+   "impacto": 3,
+   "carga": "media",
+   "huella": "1dbf822fdfb9",
+   "clasificada": "2026-11-14",
+   "potencia": {
+    "total": 72,
+    "utilidad": 35.0,
+    "impacto": 18.0,
+    "evidencia": 5.0,
+    "facilidad": 6.0,
+    "costo": 8.0
+   },
+   "rango": "9",
+   "palo_naipe": "diamantes",
+   "puesto": 39
+  },
+  "dis-087": {
+   "campos": [
+    {
+     "campo": "ia",
+     "peso": 3,
+     "aplicacion": "Skill Anatomy de Claude Code: dibuja una máquina pieza por pieza con una línea."
+    },
+    {
+     "campo": "grafico",
+     "peso": 2,
+     "aplicacion": "Figura que se gira, se presiona y se desarma."
+    },
+    {
+     "campo": "escuela",
+     "peso": 2,
+     "aplicacion": "Explicar en una exposición cómo funciona algo con partes móviles."
+    },
+    {
+     "campo": "producto",
+     "peso": 1,
+     "aplicacion": "Explicador interactivo de un producto físico."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "depende",
+   "combina_con": [
+    "age-005",
+    "dis-055"
+   ],
+   "choca_con": [],
+   "nota": "Se instala con npx desde un repositorio de terceros: revisar antes.",
+   "impacto": 3,
+   "carga": "media",
+   "huella": "3c6060b6fec4",
+   "clasificada": "2026-11-14",
+   "potencia": {
+    "total": 73,
+    "utilidad": 35.0,
+    "impacto": 18.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 5.0
+   },
+   "rango": "10",
+   "palo_naipe": "picas",
+   "puesto": 35
+  },
+  "dis-088": {
+   "campos": [
+    {
+     "campo": "frontend",
+     "peso": 3,
+     "aplicacion": "Revisar el stack de un sitio que gusta y estudiar sus piezas por separado."
+    },
+    {
+     "campo": "movimiento",
+     "peso": 2,
+     "aplicacion": "GSAP, Lenis y Three.js son la base de muchos sitios premiados."
+    },
+    {
+     "campo": "grafico",
+     "peso": 1,
+     "aplicacion": "Three.js para las escenas de esos sitios."
+    },
+    {
+     "campo": "ia",
+     "peso": 1,
+     "aplicacion": "Repos de skills para que una IA construya con ese stack."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "depende",
+   "combina_con": [
+    "dis-017",
+    "dis-036",
+    "dis-062"
+   ],
+   "choca_con": [],
+   "nota": "La carta no declara riesgo.",
+   "impacto": 2,
+   "carga": "media",
+   "huella": "f87709698177",
+   "clasificada": "2026-11-14",
+   "potencia": {
+    "total": 63,
+    "utilidad": 35.0,
+    "impacto": 12.0,
+    "evidencia": 5.0,
+    "facilidad": 6.0,
+    "costo": 5.0
+   },
+   "rango": "5",
+   "palo_naipe": "picas",
+   "puesto": 70
+  },
+  "dis-089": {
+   "campos": [
+    {
+     "campo": "escuela",
+     "peso": 3,
+     "aplicacion": "Documentación navegable del proyecto en lugar de un PDF."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "Elegir la que use el mismo framework del producto."
+    },
+    {
+     "campo": "backend",
+     "peso": 1,
+     "aplicacion": "Documentar la API junto al código."
+    },
+    {
+     "campo": "devops",
+     "peso": 1,
+     "aplicacion": "Sitio estático y rápido de desplegar."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "depende",
+   "combina_con": [
+    "dis-030",
+    "dis-044"
+   ],
+   "choca_con": [],
+   "nota": "La carta no declara riesgo.",
+   "impacto": 3,
+   "carga": "ligera",
+   "huella": "5f0ab2ee231b",
+   "clasificada": "2026-11-14",
+   "potencia": {
+    "total": 75,
+    "utilidad": 35.0,
+    "impacto": 18.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 7.0
+   },
+   "rango": "J",
+   "palo_naipe": "picas",
+   "puesto": 25
+  },
+  "dis-090": {
+   "campos": [
+    {
+     "campo": "ux-ui",
+     "peso": 3,
+     "aplicacion": "Revisar qué se ve primero, segundo y tercero; quitar elementos antes que agregar."
+    },
+    {
+     "campo": "producto",
+     "peso": 2,
+     "aplicacion": "Un diseño aburrido suele ser falta de jerarquía, no de creatividad."
+    },
+    {
+     "campo": "escuela",
+     "peso": 2,
+     "aplicacion": "Lista de revisión antes de entregar diapositivas o reportes."
+    },
+    {
+     "campo": "frontend",
+     "peso": 1,
+     "aplicacion": "Contraste, espacio y tamaño en CSS antes que efectos."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [
+    "dis-040",
+    "dis-051",
+    "dis-064"
+   ],
+   "choca_con": [],
+   "impacto": 5,
+   "carga": "ligera",
+   "huella": "0711c5b6dc36",
+   "clasificada": "2026-11-14",
+   "potencia": {
+    "total": 90,
+    "utilidad": 35.0,
+    "impacto": 30.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "A",
+   "palo_naipe": "diamantes",
+   "puesto": 3
+  },
+  "tec-001": {
+   "campos": [
+    {
+     "campo": "producto",
+     "peso": 3,
+     "aplicacion": "Wi-Fi para visitas y enlaces en el mostrador de un negocio."
+    },
+    {
+     "campo": "movil",
+     "peso": 2,
+     "aplicacion": "Escribir la etiqueta con NFC Tools y disparar atajos del teléfono."
+    },
+    {
+     "campo": "escuela",
+     "peso": 1,
+     "aplicacion": "Enlace al proyecto en el stand de una exposición."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "pago",
+   "combina_con": [],
+   "choca_con": [],
+   "nota": "Mazo nuevo: tecnología cotidiana. Va a picas por regla (lo que da poder).",
+   "impacto": 2,
+   "carga": "ligera",
+   "huella": "d266546b844c",
+   "clasificada": "2026-11-14",
+   "potencia": {
+    "total": 59,
+    "utilidad": 28.0,
+    "impacto": 12.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 4.0
+   },
+   "rango": "3",
+   "palo_naipe": "picas",
+   "puesto": 86
   }
  },
- "actualizado": "2026-11-13"
+ "actualizado": "2026-11-14"
 }
