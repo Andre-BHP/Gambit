@@ -195,7 +195,7 @@
    "id": "mano-premium",
    "nombre": "Página de producto con efecto premium",
    "objetivo": "Página de un solo producto que se sienta cara: pocas decisiones, una foto protagonista y un único efecto memorable.",
-   "tipo": "escalera",
+   "tipo": "libre",
    "cartas": [
     {
      "id": "dis-063",
@@ -220,10 +220,14 @@
     {
      "id": "dis-029",
      "rol": "interacción: ver el producto en uso con un interruptor"
+    },
+    {
+     "id": "dis-073",
+     "rol": "cierre: muestras y reseñas junto al botón de compra"
     }
    ],
-   "por_que": "Escalera de composición a interacción. Lo premium sale de restar: una foto, una serif, un acento y un solo efecto grande. El video ligado al scroll es ese efecto; el interruptor no compite porque lo acciona la persona.",
-   "conflictos": "El video es el único momento animado. Si pesa demasiado, se cambia por un solo momento 3D (dis-016), nunca los dos. No mezclar la serif con una fuente display (dis-066) ni usar el acento en títulos.",
+   "por_que": "De la composición al cierre de venta. Lo premium sale de restar: una foto, una serif, un acento y un solo efecto grande. El video ligado al scroll es ese efecto; el interruptor no compite porque lo acciona la persona, y la opción de muestra con reseñas atiende a quien todavía duda justo antes de comprar.",
+   "conflictos": "El video es el único momento animado. Si pesa demasiado, se cambia por un solo momento 3D (dis-016), nunca los dos. No mezclar la serif con una fuente display (dis-066) ni usar el acento en títulos. La muestra va subordinada: no puede competir en tamaño con el producto principal.",
    "dificultad_total": 3,
    "stack": "Angular + CSS + video",
    "listo": [
@@ -231,9 +235,11 @@
     "El acento aparece únicamente en el botón de compra.",
     "El video tiene póster estático y no se reproduce con prefers-reduced-motion.",
     "Las dos fotos del interruptor comparten encuadre.",
-    "Las imágenes se sirven en AVIF o WebP."
+    "Las imágenes se sirven en AVIF o WebP.",
+    "La muestra y las reseñas reales están junto al botón de compra, sin competir con el producto."
    ],
-   "creada": "2026-11-13"
+   "creada": "2026-11-13",
+   "actualizada": "2026-11-14"
   },
   {
    "id": "mano-jarvis",
@@ -244,6 +250,10 @@
     {
      "id": "age-001",
      "rol": "plano: host, modelo, agente, conexiones y permisos"
+    },
+    {
+     "id": "age-005",
+     "rol": "capacidades: skills, plugins y MCP revisados antes de instalar"
     },
     {
      "id": "age-003",
@@ -258,8 +268,8 @@
      "rol": "operación: regla de escalamiento y resumen diario"
     }
    ],
-   "por_que": "Las cuatro cartas del mazo de agentes cubren el ciclo completo: la arquitectura, dónde vive lo aprendido, cómo se le habla y cuándo interrumpe al dueño. En ese orden se puede construir por etapas y probar cada una.",
-   "conflictos": "Permisos de solo lectura al inicio; nada de escritura a todo. Las acciones irreversibles (envíos, pagos) piden confirmación. Las cifras de la fuente de age-004 son promoción, no un dato.",
+   "por_que": "Las cinco cartas del mazo de agentes cubren el ciclo completo: la arquitectura, de dónde salen sus capacidades, dónde vive lo aprendido, cómo se le habla y cuándo interrumpe al dueño. En ese orden se puede construir por etapas y probar cada una.",
+   "conflictos": "Permisos de solo lectura al inicio; nada de escritura a todo. Las acciones irreversibles (envíos, pagos) piden confirmación. Las cifras de la fuente de age-004 son promoción, no un dato. No instalar skills ni servidores MCP de terceros sin revisar su código y permisos.",
    "dificultad_total": 3,
    "stack": "Claude Code + Agent SDK + MCP + Node/Express + MySQL",
    "listo": [
@@ -267,10 +277,12 @@
     "La memoria se puede leer y editar fuera del modelo.",
     "Una frase por voz o texto dispara una acción real de prueba.",
     "Existe un umbral escrito de qué decide el agente y qué escala.",
-    "Ninguna acción irreversible ocurre sin confirmación."
+    "Ninguna acción irreversible ocurre sin confirmación.",
+    "Cada skill o servidor MCP instalado fue revisado antes de usarse."
    ],
-   "creada": "2026-11-13"
+   "creada": "2026-11-13",
+   "actualizada": "2026-11-14"
   }
  ],
- "actualizado": "2026-11-13"
+ "actualizado": "2026-11-14"
 }
