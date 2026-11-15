@@ -40,8 +40,24 @@ CAMPOS = [
     ("accesibilidad-seo", "Accesibilidad, SEO y calidad web"),
     ("producto", "Producto, marketing, portafolio y presentación"),
     ("escuela", "Entregables académicos: reportes, SRS, diagramas, exposiciones"),
+    # Familia "Conocimiento general" (2026-11-15): cartas de temas generales que llegan por EGO.
+    ("ia-general", "IA para la vida diaria: asistentes, modelos y su uso fuera del código"),
+    ("tecnologia", "Tecnología: dispositivos, apps, hogar conectado y trucos del día a día"),
+    ("ciencia-salud", "Ciencia y salud: cuerpo, mente, bienestar y descubrimientos"),
+    ("finanzas", "Finanzas personales: dinero, ahorro, inversión y negocios"),
+    ("productividad", "Productividad: hábitos, estudio, organización y aprendizaje"),
+    ("actualidad", "Actualidad: noticias, tendencias y lo que pasa en el mundo"),
+    ("cultura", "Cultura: arte, música, cine, libros e historia"),
 ]
 CAMPOS_ID = [c[0] for c in CAMPOS]
+# Familias del catálogo. Una carta puede tener campos de las dos; su familia principal es la
+# del campo de mayor peso (empate: la de mayor suma de pesos; si sigue, desarrollo).
+FAMILIAS = (("desarrollo", "Desarrollo"), ("general", "Conocimiento general"))
+CAMPOS_GENERALES = ("ia-general", "tecnologia", "ciencia-salud", "finanzas", "productividad", "actualidad", "cultura")
+FAMILIA_DE = {c: ("general" if c in CAMPOS_GENERALES else "desarrollo") for c in CAMPOS_ID}
+# Sin clasificar, la familia se adivina por el mazo: estas palabras indican desarrollo.
+MAZOS_DESARROLLO = ("diseno", "web", "agente", "backend", "frontend", "movil", "base-de-datos",
+                    "devops", "program", "codigo", "api", "software")
 NIVELES = ("estudiante", "intermedio", "avanzado")
 COSTOS = ("gratis", "pago", "depende")
 TIPOS = ("escalera", "color", "par", "libre")
@@ -55,13 +71,18 @@ MIN_CARTAS, MAX_CARTAS = 3, 7
 # Orden de decision: 1) "naipe" puesto a mano en la clasificacion, 2) palo de Uatu
 # en PALO_A_NAIPE, 3) mazo en MAZO_A_NAIPE, 4) pistas por palabra en el palo y el
 # mazo, 5) picas (un mazo nuevo de backend o productividad es "lo que da poder").
+# Mazos de conocimiento general (EGO, 2026-11-15), por nombre exacto o por pista:
+#   corazones  ciencia y salud, bienestar, cultura, arte, música, cine, libros
+#   diamantes  finanzas, dinero, negocios, emprendimiento, marketing
+#   treboles   actualidad, noticias, tendencias, deporte, viajes
+#   picas      IA, tecnología, productividad, estudio y todo mazo sin pista
 # Comodines: cartas de regla general que valen en cualquier mano; van sin rango.
 RANGOS = ("2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A")
 NAIPES = {
-    "corazones": ("♥", "Lo que se siente: color, tipografía, imagen y material"),
-    "diamantes": ("♦", "Lo que vende: composición y presentación"),
-    "treboles": ("♣", "Lo que se mueve: movimiento, interacción, 3D y canvas"),
-    "picas": ("♠", "Lo que da poder: proceso, herramientas y agentes de IA"),
+    "corazones": ("♥", "Lo que se siente: color, tipografía, imagen y material; en general, ciencia, salud y cultura"),
+    "diamantes": ("♦", "Lo que vende: composición y presentación; en general, finanzas y negocios"),
+    "treboles": ("♣", "Lo que se mueve: movimiento, interacción, 3D y canvas; en general, actualidad y tendencias"),
+    "picas": ("♠", "Lo que da poder: proceso, herramientas y agentes de IA; en general, IA, tecnología y productividad"),
 }
 PALO_A_NAIPE = {
     "color": "corazones", "tipografia": "corazones", "imagen-y-material": "corazones",
@@ -69,13 +90,24 @@ PALO_A_NAIPE = {
     "movimiento": "treboles", "interaccion": "treboles", "3d-y-canvas": "treboles",
     "proceso": "picas", "herramientas": "picas", "arquitectura": "picas", "casos-de-uso": "picas",
 }
-MAZO_A_NAIPE = {"agentes-ia": "picas"}
+MAZO_A_NAIPE = {
+    "agentes-ia": "picas", "ia": "picas", "ia-general": "picas", "inteligencia-artificial": "picas",
+    "tecnologia": "picas", "tecnologia-cotidiana": "picas", "productividad": "picas",
+    "ciencia": "corazones", "salud": "corazones", "ciencia-y-salud": "corazones", "cultura": "corazones",
+    "finanzas": "diamantes", "finanzas-personales": "diamantes", "negocios": "diamantes",
+    "actualidad": "treboles", "noticias": "treboles",
+}
 PISTAS_NAIPE = (
-    ("corazones", ("color", "tipo", "imagen", "material", "visual", "ilustr", "foto", "marca")),
-    ("diamantes", ("compos", "present", "layout", "maquet", "venta", "market", "conver", "copy")),
-    ("treboles", ("movim", "anim", "interac", "3d", "canvas", "shader", "juego", "scroll")),
+    ("corazones", ("color", "tipo", "imagen", "material", "visual", "ilustr", "foto", "marca",
+                   "salud", "cienc", "bienestar", "cultur", "arte", "music", "cine", "libro", "histor")),
+    ("diamantes", ("compos", "present", "layout", "maquet", "venta", "market", "conver", "copy",
+                   "finanz", "dinero", "negocio", "emprend", "invers", "ahorro", "econom")),
+    ("treboles", ("movim", "anim", "interac", "3d", "canvas", "shader", "juego", "scroll",
+                  "actualidad", "noticia", "tendencia", "deport", "viaje")),
 )
 # Potencia de 0 a 100: utilidad 35, impacto 30, evidencia 15, facilidad 10, costo y peso 10.
+# Impacto (1 a 5, juicio de Gambit): en Desarrollo, cuánto mejora un producto real; en
+# Conocimiento general, cuánto le sirve a André en su vida, sus estudios o su trabajo.
 PESOS_POTENCIA = (("utilidad", 35), ("impacto", 30), ("evidencia", 15), ("facilidad", 10), ("costo", 10))
 CARGAS = ("ligera", "media", "pesada")
 TAM_ESCALERA = 7
@@ -360,10 +392,14 @@ def cartas_por_campo(cartas, clas):
 def cmd_campos(ctx, args):
     filas = cartas_por_campo(ctx.cartas(), ctx.clasificacion()["cartas"])
     if not args.campo:
-        for cid, nombre in CAMPOS:
-            lista = filas[cid]
-            prin = sum(1 for x in lista if x["peso"] == 3)
-            print(f"{cid:<18} {len(lista):>3} cartas ({prin} principales) · {nombre}")
+        for fam, titulo in FAMILIAS:
+            print(titulo)
+            for cid, nombre in CAMPOS:
+                if FAMILIA_DE[cid] != fam:
+                    continue
+                lista = filas[cid]
+                prin = sum(1 for x in lista if x["peso"] == 3)
+                print(f"  {cid:<18} {len(lista):>3} cartas ({prin} principales) · {nombre}")
         return 0
     if args.campo not in CAMPOS_ID:
         raise ErrorGambit(f"Campo fuera del catálogo: {args.campo}. Opciones: {', '.join(CAMPOS_ID)}")
@@ -572,6 +608,23 @@ def slug(texto):
     return re.sub(r"[^a-z0-9]+", "-", t).strip("-")
 
 
+def familia_de(carta, k=None):
+    """Familia principal de una carta (desarrollo o general) y todas las que toca."""
+    campos = (k or {}).get("campos") or []
+    if not campos:
+        mazo = slug(carta.get("mazo"))
+        fam = "desarrollo" if any(p in mazo for p in MAZOS_DESARROLLO) else "general"
+        return fam, [fam]
+    puntaje = {}
+    for cp in campos:
+        f = FAMILIA_DE.get(cp["campo"], "desarrollo")
+        maximo, suma = puntaje.get(f, (0, 0))
+        puntaje[f] = (max(maximo, cp["peso"]), suma + cp["peso"])
+    orden = [f for f, _ in FAMILIAS if f in puntaje]
+    principal = max(orden, key=lambda f: (puntaje[f], f == "desarrollo"))
+    return principal, orden
+
+
 def naipe_de(carta, k=None):
     """Palo frances de una carta, segun la regla documentada arriba."""
     puesto = (k or {}).get("naipe")
@@ -622,6 +675,7 @@ def tabla_potencia(cartas, clas):
         k = clas.get(c["id"]) or {}
         t = partes_potencia(c, k)
         t["naipe"] = naipe_de(c, k)
+        t["familia"], t["familias"] = familia_de(c, k)
         t["comodin"] = bool(k.get("comodin"))
         t["rango"], t["puesto"] = "", 0
         tabla[c["id"]] = t
@@ -690,6 +744,7 @@ def recalcular(clas, cartas):
             continue
         k["potencia"] = {"total": t["total"], **{f: t[f] for f, _ in PESOS_POTENCIA}}
         k["rango"], k["palo_naipe"], k["puesto"] = t["rango"], t["naipe"], t["puesto"]
+        k["familia"] = t["familia"]
     return tabla
 
 
@@ -757,7 +812,8 @@ def cmd_potencia(ctx, args):
     print(f"{c['id']} · {c.get('nombre', '')}")
     print(f"{etiqueta_naipe(t)} · potencia {t['total']} de 100"
           + (f" · puesto {t['puesto']}" if t["puesto"] else "")
-          + (" · provisional" if t["provisional"] else ""))
+          + (" · provisional" if t["provisional"] else "")
+          + f" · {dict(FAMILIAS)[t['familia']]}")
     for factor, maximo in PESOS_POTENCIA:
         print(f"  {factor:<10} {t[factor]:>5} de {maximo}")
     return 0
@@ -770,8 +826,12 @@ def cmd_ranking(ctx, args):
         raise ErrorGambit(f"Campo fuera del catálogo: {args.campo}")
     if args.palo and args.palo not in NAIPES:
         raise ErrorGambit(f"Palo inválido: {args.palo}. Opciones: {', '.join(NAIPES)}")
+    if args.familia and args.familia not in dict(FAMILIAS):
+        raise ErrorGambit(f"Familia inválida: {args.familia}. Opciones: {', '.join(dict(FAMILIAS))}")
     tabla = tabla_potencia(cartas, clas)
     lista = [c for c in cartas if not tabla[c["id"]]["comodin"]]
+    if args.familia:
+        lista = [c for c in lista if tabla[c["id"]]["familia"] == args.familia]
     if args.campo:
         lista = [c for c in lista
                  if any(cp["campo"] == args.campo for cp in (clas.get(c["id"]) or {}).get("campos", []))]
@@ -784,7 +844,7 @@ def cmd_ranking(ctx, args):
         print("Sin cartas.")
     if not args.campo and not args.palo:
         for c in cartas:
-            if tabla[c["id"]]["comodin"]:
+            if tabla[c["id"]]["comodin"] and (not args.familia or tabla[c["id"]]["familia"] == args.familia):
                 print(linea_ranking(c, tabla[c["id"]], clas))
     return 0
 
@@ -854,6 +914,7 @@ def datos_demo(ctx):
         t = tabla[c["id"]]
         salida.append({
             "naipe": t["naipe"], "rango": t["rango"], "comodin": t["comodin"], "puesto": t["puesto"],
+            "familia": t["familia"], "familias": t["familias"],
             "pot": {"total": t["total"], "provisional": t["provisional"],
                     **{f: t[f] for f, _ in PESOS_POTENCIA}},
             "carga": k.get("carga", ""), "usada": k.get("usada_en", []),
@@ -883,7 +944,8 @@ def datos_demo(ctx):
             "baraja": todas, "barajas": barajas, "rangos": list(RANGOS),
             "naipes": [{"id": a, "simbolo": b[0], "nombre": b[1]} for a, b in NAIPES.items()],
             "pesos": [{"id": a, "max": b} for a, b in PESOS_POTENCIA],
-            "campos": [{"id": a, "nombre": b} for a, b in CAMPOS],
+            "campos": [{"id": a, "nombre": b, "familia": FAMILIA_DE[a]} for a, b in CAMPOS],
+            "familias": [{"id": a, "nombre": b} for a, b in FAMILIAS],
             "limites": {"min": MIN_CARTAS, "max": MAX_CARTAS}}
 
 
@@ -931,6 +993,7 @@ def construir_parser():
     x = s.add_parser("ranking", help="cartas de mayor a menor potencia")
     x.add_argument("--campo")
     x.add_argument("--palo")
+    x.add_argument("--familia", help="desarrollo o general")
     x.add_argument("--n", type=int, default=20)
     x = s.add_parser("mano", help="crear (stdin), ver, brief, borrar o escalera CAMPO")
     x.add_argument("accion", choices=("crear", "ver", "brief", "borrar", "escalera"))

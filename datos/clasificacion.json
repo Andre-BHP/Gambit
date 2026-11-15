@@ -44,7 +44,8 @@
    },
    "rango": "7",
    "palo_naipe": "picas",
-   "puesto": 51
+   "puesto": 51,
+   "familia": "desarrollo"
   },
   "age-002": {
    "campos": [
@@ -81,7 +82,8 @@
    },
    "rango": "2",
    "palo_naipe": "picas",
-   "puesto": 92
+   "puesto": 92,
+   "familia": "desarrollo"
   },
   "age-003": {
    "campos": [
@@ -123,7 +125,8 @@
    },
    "rango": "10",
    "palo_naipe": "picas",
-   "puesto": 34
+   "puesto": 34,
+   "familia": "desarrollo"
   },
   "age-004": {
    "campos": [
@@ -166,7 +169,8 @@
    },
    "rango": "5",
    "palo_naipe": "picas",
-   "puesto": 71
+   "puesto": 71,
+   "familia": "desarrollo"
   },
   "age-005": {
    "campos": [
@@ -208,7 +212,8 @@
    },
    "rango": "6",
    "palo_naipe": "picas",
-   "puesto": 64
+   "puesto": 64,
+   "familia": "desarrollo"
   },
   "dis-001": {
    "campos": [
@@ -253,7 +258,8 @@
    },
    "rango": "10",
    "palo_naipe": "diamantes",
-   "puesto": 30
+   "puesto": 30,
+   "familia": "desarrollo"
   },
   "dis-002": {
    "campos": [
@@ -295,7 +301,8 @@
    },
    "rango": "8",
    "palo_naipe": "diamantes",
-   "puesto": 50
+   "puesto": 50,
+   "familia": "desarrollo"
   },
   "dis-003": {
    "campos": [
@@ -341,7 +348,8 @@
    },
    "rango": "J",
    "palo_naipe": "corazones",
-   "puesto": 22
+   "puesto": 22,
+   "familia": "desarrollo"
   },
   "dis-004": {
    "campos": [
@@ -386,7 +394,8 @@
    },
    "rango": "J",
    "palo_naipe": "corazones",
-   "puesto": 23
+   "puesto": 23,
+   "familia": "desarrollo"
   },
   "dis-005": {
    "campos": [
@@ -430,7 +439,8 @@
    },
    "rango": "K",
    "palo_naipe": "corazones",
-   "puesto": 13
+   "puesto": 13,
+   "familia": "desarrollo"
   },
   "dis-006": {
    "campos": [
@@ -482,7 +492,8 @@
    },
    "rango": "A",
    "palo_naipe": "corazones",
-   "puesto": 4
+   "puesto": 4,
+   "familia": "desarrollo"
   },
   "dis-007": {
    "campos": [
@@ -524,7 +535,8 @@
    },
    "rango": "4",
    "palo_naipe": "treboles",
-   "puesto": 73
+   "puesto": 73,
+   "familia": "desarrollo"
   },
   "dis-008": {
    "campos": [
@@ -564,7 +576,8 @@
    },
    "rango": "6",
    "palo_naipe": "corazones",
-   "puesto": 59
+   "puesto": 59,
+   "familia": "desarrollo"
   },
   "dis-009": {
    "campos": [
@@ -611,7 +624,8 @@
    },
    "rango": "K",
    "palo_naipe": "corazones",
-   "puesto": 11
+   "puesto": 11,
+   "familia": "desarrollo"
   },
   "dis-010": {
    "campos": [
@@ -661,7 +675,8 @@
    },
    "rango": "8",
    "palo_naipe": "treboles",
-   "puesto": 48
+   "puesto": 48,
+   "familia": "desarrollo"
   },
   "dis-011": {
    "campos": [
@@ -706,7 +721,8 @@
    },
    "rango": "4",
    "palo_naipe": "treboles",
-   "puesto": 78
+   "puesto": 78,
+   "familia": "desarrollo"
   },
   "dis-012": {
    "campos": [
@@ -748,7 +764,8 @@
    },
    "rango": "6",
    "palo_naipe": "corazones",
-   "puesto": 61
+   "puesto": 61,
+   "familia": "desarrollo"
   },
   "dis-013": {
    "campos": [
@@ -788,7 +805,8 @@
    },
    "rango": "5",
    "palo_naipe": "treboles",
-   "puesto": 66
+   "puesto": 66,
+   "familia": "desarrollo"
   },
   "dis-014": {
    "campos": [
@@ -833,7 +851,8 @@
    },
    "rango": "8",
    "palo_naipe": "treboles",
-   "puesto": 40
+   "puesto": 40,
+   "familia": "desarrollo"
   },
   "dis-015": {
    "campos": [
@@ -873,7 +892,8 @@
    },
    "rango": "2",
    "palo_naipe": "treboles",
-   "puesto": 87
+   "puesto": 87,
+   "familia": "desarrollo"
   },
   "dis-016": {
    "campos": [
@@ -925,7 +945,8 @@
    },
    "rango": "Q",
    "palo_naipe": "treboles",
-   "puesto": 21
+   "puesto": 21,
+   "familia": "desarrollo"
   },
   "dis-017": {
    "campos": [
@@ -963,7 +984,8 @@
    },
    "rango": "2",
    "palo_naipe": "picas",
-   "puesto": 93
+   "puesto": 93,
+   "familia": "desarrollo"
   },
   "dis-018": {
    "campos": [
@@ -1006,7 +1028,8 @@
    },
    "rango": "8",
    "palo_naipe": "picas",
-   "puesto": 46
+   "puesto": 46,
+   "familia": "desarrollo"
   },
   "dis-019": {
    "campos": [
@@ -1055,7 +1078,8 @@
    },
    "rango": "",
    "palo_naipe": "picas",
-   "puesto": 0
+   "puesto": 0,
+   "familia": "desarrollo"
   },
   "dis-020": {
    "campos": [
@@ -1090,7 +1114,8 @@
    },
    "rango": "8",
    "palo_naipe": "diamantes",
-   "puesto": 49
+   "puesto": 49,
+   "familia": "desarrollo"
   },
   "dis-021": {
    "campos": [
@@ -1143,7 +1168,8 @@
    },
    "rango": "Q",
    "palo_naipe": "treboles",
-   "puesto": 14
+   "puesto": 14,
+   "familia": "desarrollo"
   },
   "dis-022": {
    "campos": [
@@ -1186,7 +1212,8 @@
    },
    "rango": "8",
    "palo_naipe": "corazones",
-   "puesto": 41
+   "puesto": 41,
+   "familia": "desarrollo"
   },
   "dis-023": {
    "campos": [
@@ -1240,7 +1267,8 @@
    },
    "rango": "",
    "palo_naipe": "picas",
-   "puesto": 0
+   "puesto": 0,
+   "familia": "desarrollo"
   },
   "dis-024": {
    "campos": [
@@ -1276,7 +1304,8 @@
    },
    "rango": "3",
    "palo_naipe": "picas",
-   "puesto": 80
+   "puesto": 80,
+   "familia": "desarrollo"
   },
   "dis-025": {
    "campos": [
@@ -1321,7 +1350,8 @@
    },
    "rango": "A",
    "palo_naipe": "treboles",
-   "puesto": 5
+   "puesto": 5,
+   "familia": "desarrollo"
   },
   "dis-026": {
    "campos": [
@@ -1368,7 +1398,8 @@
    },
    "rango": "5",
    "palo_naipe": "treboles",
-   "puesto": 67
+   "puesto": 67,
+   "familia": "desarrollo"
   },
   "dis-027": {
    "campos": [
@@ -1419,7 +1450,8 @@
    },
    "rango": "A",
    "palo_naipe": "treboles",
-   "puesto": 6
+   "puesto": 6,
+   "familia": "desarrollo"
   },
   "dis-028": {
    "campos": [
@@ -1467,7 +1499,8 @@
    },
    "rango": "Q",
    "palo_naipe": "diamantes",
-   "puesto": 15
+   "puesto": 15,
+   "familia": "desarrollo"
   },
   "dis-029": {
    "campos": [
@@ -1507,7 +1540,8 @@
    },
    "rango": "8",
    "palo_naipe": "treboles",
-   "puesto": 42
+   "puesto": 42,
+   "familia": "desarrollo"
   },
   "dis-030": {
    "campos": [
@@ -1550,7 +1584,8 @@
    },
    "rango": "8",
    "palo_naipe": "picas",
-   "puesto": 43
+   "puesto": 43,
+   "familia": "desarrollo"
   },
   "dis-031": {
    "campos": [
@@ -1597,7 +1632,8 @@
    },
    "rango": "3",
    "palo_naipe": "treboles",
-   "puesto": 81
+   "puesto": 81,
+   "familia": "desarrollo"
   },
   "dis-032": {
    "campos": [
@@ -1642,7 +1678,8 @@
    },
    "rango": "Q",
    "palo_naipe": "treboles",
-   "puesto": 16
+   "puesto": 16,
+   "familia": "desarrollo"
   },
   "dis-033": {
    "campos": [
@@ -1682,7 +1719,8 @@
    },
    "rango": "7",
    "palo_naipe": "treboles",
-   "puesto": 55
+   "puesto": 55,
+   "familia": "desarrollo"
   },
   "dis-034": {
    "campos": [
@@ -1725,7 +1763,8 @@
    },
    "rango": "3",
    "palo_naipe": "treboles",
-   "puesto": 82
+   "puesto": 82,
+   "familia": "desarrollo"
   },
   "dis-035": {
    "campos": [
@@ -1769,7 +1808,8 @@
    },
    "rango": "5",
    "palo_naipe": "treboles",
-   "puesto": 68
+   "puesto": 68,
+   "familia": "desarrollo"
   },
   "dis-036": {
    "campos": [
@@ -1814,7 +1854,8 @@
    },
    "rango": "6",
    "palo_naipe": "treboles",
-   "puesto": 62
+   "puesto": 62,
+   "familia": "desarrollo"
   },
   "dis-037": {
    "campos": [
@@ -1856,7 +1897,8 @@
    },
    "rango": "7",
    "palo_naipe": "corazones",
-   "puesto": 56
+   "puesto": 56,
+   "familia": "desarrollo"
   },
   "dis-038": {
    "campos": [
@@ -1898,7 +1940,8 @@
    },
    "rango": "6",
    "palo_naipe": "corazones",
-   "puesto": 63
+   "puesto": 63,
+   "familia": "desarrollo"
   },
   "dis-039": {
    "campos": [
@@ -1940,7 +1983,8 @@
    },
    "rango": "8",
    "palo_naipe": "corazones",
-   "puesto": 44
+   "puesto": 44,
+   "familia": "desarrollo"
   },
   "dis-040": {
    "campos": [
@@ -1994,7 +2038,8 @@
    },
    "rango": "A",
    "palo_naipe": "diamantes",
-   "puesto": 1
+   "puesto": 1,
+   "familia": "desarrollo"
   },
   "dis-041": {
    "campos": [
@@ -2038,7 +2083,8 @@
    },
    "rango": "4",
    "palo_naipe": "corazones",
-   "puesto": 79
+   "puesto": 79,
+   "familia": "desarrollo"
   },
   "dis-042": {
    "campos": [
@@ -2081,7 +2127,8 @@
    },
    "rango": "4",
    "palo_naipe": "treboles",
-   "puesto": 74
+   "puesto": 74,
+   "familia": "desarrollo"
   },
   "dis-043": {
    "campos": [
@@ -2130,7 +2177,8 @@
    },
    "rango": "K",
    "palo_naipe": "corazones",
-   "puesto": 12
+   "puesto": 12,
+   "familia": "desarrollo"
   },
   "dis-044": {
    "campos": [
@@ -2180,7 +2228,8 @@
    },
    "rango": "A",
    "palo_naipe": "treboles",
-   "puesto": 7
+   "puesto": 7,
+   "familia": "desarrollo"
   },
   "dis-045": {
    "campos": [
@@ -2224,7 +2273,8 @@
    },
    "rango": "4",
    "palo_naipe": "corazones",
-   "puesto": 75
+   "puesto": 75,
+   "familia": "desarrollo"
   },
   "dis-046": {
    "campos": [
@@ -2269,7 +2319,8 @@
    },
    "rango": "6",
    "palo_naipe": "treboles",
-   "puesto": 60
+   "puesto": 60,
+   "familia": "desarrollo"
   },
   "dis-047": {
    "campos": [
@@ -2304,7 +2355,8 @@
    },
    "rango": "2",
    "palo_naipe": "treboles",
-   "puesto": 89
+   "puesto": 89,
+   "familia": "desarrollo"
   },
   "dis-048": {
    "campos": [
@@ -2347,7 +2399,8 @@
    },
    "rango": "2",
    "palo_naipe": "treboles",
-   "puesto": 90
+   "puesto": 90,
+   "familia": "desarrollo"
   },
   "dis-049": {
    "campos": [
@@ -2391,7 +2444,8 @@
    },
    "rango": "3",
    "palo_naipe": "treboles",
-   "puesto": 83
+   "puesto": 83,
+   "familia": "desarrollo"
   },
   "dis-050": {
    "campos": [
@@ -2434,7 +2488,8 @@
    },
    "rango": "Q",
    "palo_naipe": "diamantes",
-   "puesto": 19
+   "puesto": 19,
+   "familia": "desarrollo"
   },
   "dis-051": {
    "campos": [
@@ -2486,7 +2541,8 @@
    },
    "rango": "A",
    "palo_naipe": "diamantes",
-   "puesto": 2
+   "puesto": 2,
+   "familia": "desarrollo"
   },
   "dis-052": {
    "campos": [
@@ -2531,7 +2587,8 @@
    },
    "rango": "K",
    "palo_naipe": "diamantes",
-   "puesto": 10
+   "puesto": 10,
+   "familia": "desarrollo"
   },
   "dis-053": {
    "campos": [
@@ -2571,7 +2628,8 @@
    },
    "rango": "10",
    "palo_naipe": "treboles",
-   "puesto": 26
+   "puesto": 26,
+   "familia": "desarrollo"
   },
   "dis-054": {
    "campos": [
@@ -2621,7 +2679,8 @@
    },
    "rango": "K",
    "palo_naipe": "diamantes",
-   "puesto": 8
+   "puesto": 8,
+   "familia": "desarrollo"
   },
   "dis-055": {
    "campos": [
@@ -2665,7 +2724,8 @@
    },
    "rango": "7",
    "palo_naipe": "picas",
-   "puesto": 52
+   "puesto": 52,
+   "familia": "desarrollo"
   },
   "dis-056": {
    "campos": [
@@ -2703,7 +2763,8 @@
    },
    "rango": "2",
    "palo_naipe": "treboles",
-   "puesto": 91
+   "puesto": 91,
+   "familia": "desarrollo"
   },
   "dis-057": {
    "campos": [
@@ -2748,7 +2809,8 @@
    },
    "rango": "9",
    "palo_naipe": "treboles",
-   "puesto": 36
+   "puesto": 36,
+   "familia": "desarrollo"
   },
   "dis-058": {
    "campos": [
@@ -2792,7 +2854,8 @@
    },
    "rango": "8",
    "palo_naipe": "treboles",
-   "puesto": 45
+   "puesto": 45,
+   "familia": "desarrollo"
   },
   "dis-059": {
    "campos": [
@@ -2839,7 +2902,8 @@
    },
    "rango": "10",
    "palo_naipe": "treboles",
-   "puesto": 31
+   "puesto": 31,
+   "familia": "desarrollo"
   },
   "dis-060": {
    "campos": [
@@ -2879,7 +2943,8 @@
    },
    "rango": "4",
    "palo_naipe": "corazones",
-   "puesto": 76
+   "puesto": 76,
+   "familia": "desarrollo"
   },
   "dis-061": {
    "campos": [
@@ -2924,7 +2989,8 @@
    },
    "rango": "5",
    "palo_naipe": "picas",
-   "puesto": 72
+   "puesto": 72,
+   "familia": "desarrollo"
   },
   "dis-062": {
    "campos": [
@@ -2966,7 +3032,8 @@
    },
    "rango": "10",
    "palo_naipe": "picas",
-   "puesto": 27
+   "puesto": 27,
+   "familia": "desarrollo"
   },
   "dis-063": {
    "campos": [
@@ -3010,7 +3077,8 @@
    },
    "rango": "10",
    "palo_naipe": "diamantes",
-   "puesto": 28
+   "puesto": 28,
+   "familia": "desarrollo"
   },
   "dis-064": {
    "campos": [
@@ -3059,7 +3127,8 @@
    },
    "rango": "K",
    "palo_naipe": "picas",
-   "puesto": 9
+   "puesto": 9,
+   "familia": "desarrollo"
   },
   "dis-065": {
    "campos": [
@@ -3106,7 +3175,8 @@
    },
    "rango": "9",
    "palo_naipe": "diamantes",
-   "puesto": 37
+   "puesto": 37,
+   "familia": "desarrollo"
   },
   "dis-066": {
    "campos": [
@@ -3149,7 +3219,8 @@
    },
    "rango": "3",
    "palo_naipe": "corazones",
-   "puesto": 84
+   "puesto": 84,
+   "familia": "desarrollo"
   },
   "dis-067": {
    "campos": [
@@ -3197,7 +3268,8 @@
    },
    "rango": "7",
    "palo_naipe": "treboles",
-   "puesto": 53
+   "puesto": 53,
+   "familia": "desarrollo"
   },
   "dis-068": {
    "campos": [
@@ -3244,7 +3316,8 @@
    },
    "rango": "9",
    "palo_naipe": "treboles",
-   "puesto": 38
+   "puesto": 38,
+   "familia": "desarrollo"
   },
   "dis-069": {
    "campos": [
@@ -3290,7 +3363,8 @@
    },
    "rango": "Q",
    "palo_naipe": "treboles",
-   "puesto": 17
+   "puesto": 17,
+   "familia": "desarrollo"
   },
   "dis-070": {
    "campos": [
@@ -3331,7 +3405,8 @@
    },
    "rango": "10",
    "palo_naipe": "treboles",
-   "puesto": 29
+   "puesto": 29,
+   "familia": "desarrollo"
   },
   "dis-071": {
    "campos": [
@@ -3376,7 +3451,8 @@
    },
    "rango": "10",
    "palo_naipe": "treboles",
-   "puesto": 32
+   "puesto": 32,
+   "familia": "desarrollo"
   },
   "dis-072": {
    "campos": [
@@ -3422,7 +3498,8 @@
    },
    "rango": "Q",
    "palo_naipe": "treboles",
-   "puesto": 18
+   "puesto": 18,
+   "familia": "desarrollo"
   },
   "dis-073": {
    "campos": [
@@ -3463,7 +3540,8 @@
    },
    "rango": "Q",
    "palo_naipe": "diamantes",
-   "puesto": 20
+   "puesto": 20,
+   "familia": "desarrollo"
   },
   "dis-074": {
    "campos": [
@@ -3508,7 +3586,8 @@
    },
    "rango": "J",
    "palo_naipe": "treboles",
-   "puesto": 24
+   "puesto": 24,
+   "familia": "desarrollo"
   },
   "dis-075": {
    "campos": [
@@ -3553,7 +3632,8 @@
    },
    "rango": "8",
    "palo_naipe": "corazones",
-   "puesto": 47
+   "puesto": 47,
+   "familia": "desarrollo"
   },
   "dis-076": {
    "campos": [
@@ -3593,7 +3673,8 @@
    },
    "rango": "6",
    "palo_naipe": "treboles",
-   "puesto": 65
+   "puesto": 65,
+   "familia": "desarrollo"
   },
   "dis-077": {
    "campos": [
@@ -3633,7 +3714,8 @@
    },
    "rango": "6",
    "palo_naipe": "treboles",
-   "puesto": 58
+   "puesto": 58,
+   "familia": "desarrollo"
   },
   "dis-078": {
    "campos": [
@@ -3676,7 +3758,8 @@
    },
    "rango": "10",
    "palo_naipe": "treboles",
-   "puesto": 33
+   "puesto": 33,
+   "familia": "desarrollo"
   },
   "dis-079": {
    "campos": [
@@ -3725,7 +3808,8 @@
    },
    "rango": "7",
    "palo_naipe": "treboles",
-   "puesto": 57
+   "puesto": 57,
+   "familia": "desarrollo"
   },
   "dis-080": {
    "campos": [
@@ -3765,7 +3849,8 @@
    },
    "rango": "4",
    "palo_naipe": "treboles",
-   "puesto": 77
+   "puesto": 77,
+   "familia": "desarrollo"
   },
   "dis-081": {
    "campos": [
@@ -3798,7 +3883,8 @@
    },
    "rango": "2",
    "palo_naipe": "treboles",
-   "puesto": 94
+   "puesto": 94,
+   "familia": "desarrollo"
   },
   "dis-082": {
    "campos": [
@@ -3841,7 +3927,8 @@
    },
    "rango": "7",
    "palo_naipe": "treboles",
-   "puesto": 54
+   "puesto": 54,
+   "familia": "desarrollo"
   },
   "dis-083": {
    "campos": [
@@ -3881,7 +3968,8 @@
    },
    "rango": "3",
    "palo_naipe": "treboles",
-   "puesto": 85
+   "puesto": 85,
+   "familia": "desarrollo"
   },
   "dis-084": {
    "campos": [
@@ -3919,7 +4007,8 @@
    },
    "rango": "5",
    "palo_naipe": "picas",
-   "puesto": 69
+   "puesto": 69,
+   "familia": "desarrollo"
   },
   "dis-085": {
    "campos": [
@@ -3957,7 +4046,8 @@
    },
    "rango": "2",
    "palo_naipe": "picas",
-   "puesto": 88
+   "puesto": 88,
+   "familia": "desarrollo"
   },
   "dis-086": {
    "campos": [
@@ -4001,7 +4091,8 @@
    },
    "rango": "9",
    "palo_naipe": "diamantes",
-   "puesto": 39
+   "puesto": 39,
+   "familia": "desarrollo"
   },
   "dis-087": {
    "campos": [
@@ -4048,7 +4139,8 @@
    },
    "rango": "10",
    "palo_naipe": "picas",
-   "puesto": 35
+   "puesto": 35,
+   "familia": "desarrollo"
   },
   "dis-088": {
    "campos": [
@@ -4095,7 +4187,8 @@
    },
    "rango": "5",
    "palo_naipe": "picas",
-   "puesto": 70
+   "puesto": 70,
+   "familia": "desarrollo"
   },
   "dis-089": {
    "campos": [
@@ -4141,7 +4234,8 @@
    },
    "rango": "J",
    "palo_naipe": "picas",
-   "puesto": 25
+   "puesto": 25,
+   "familia": "desarrollo"
   },
   "dis-090": {
    "campos": [
@@ -4188,24 +4282,25 @@
    },
    "rango": "A",
    "palo_naipe": "diamantes",
-   "puesto": 3
+   "puesto": 3,
+   "familia": "desarrollo"
   },
   "tec-001": {
    "campos": [
     {
-     "campo": "producto",
+     "campo": "tecnologia",
      "peso": 3,
-     "aplicacion": "Wi-Fi para visitas y enlaces en el mostrador de un negocio."
+     "aplicacion": "Un sticker NFC escrito con NFC Tools comparte el Wi-Fi o abre un enlace al acercar el teléfono."
     },
     {
-     "campo": "movil",
+     "campo": "productividad",
      "peso": 2,
-     "aplicacion": "Escribir la etiqueta con NFC Tools y disparar atajos del teléfono."
+     "aplicacion": "Atajos en casa o en el escritorio que disparan una automatización con un toque."
     },
     {
-     "campo": "escuela",
+     "campo": "producto",
      "peso": 1,
-     "aplicacion": "Enlace al proyecto en el stand de una exposición."
+     "aplicacion": "Wi-Fi para clientes o enlace al menú en el mostrador de un negocio."
     }
    ],
    "nivel": "estudiante",
@@ -4213,10 +4308,10 @@
    "combina_con": [],
    "choca_con": [],
    "nota": "Mazo nuevo: tecnología cotidiana. Va a picas por regla (lo que da poder).",
-   "impacto": 2,
-   "carga": "ligera",
    "huella": "d266546b844c",
    "clasificada": "2026-11-14",
+   "impacto": 2,
+   "carga": "ligera",
    "potencia": {
     "total": 59,
     "utilidad": 28.0,
@@ -4227,7 +4322,8 @@
    },
    "rango": "3",
    "palo_naipe": "picas",
-   "puesto": 86
+   "puesto": 86,
+   "familia": "general"
   }
  },
  "actualizado": "2026-11-14"

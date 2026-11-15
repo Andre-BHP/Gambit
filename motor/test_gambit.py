@@ -374,6 +374,59 @@ class TestPotencia(Base):
         self.assertEqual(len(gambit.escalera_campo("frontend", cartas, k, tabla, todas=True)), 10)
 
 
+class TestFamilias(Base):
+    def test_campos_generales_validos(self):
+        self.cartas.append(carta("fin-001", "inversión", "finanzas"))
+        self.escribir_baraja()
+        codigo, _, err = self.correr("clasificar", entrada=[clas("fin-001", "finanzas", campos=[
+            {"campo": "finanzas", "peso": 3, "aplicacion": "a"},
+            {"campo": "productividad", "peso": 2, "aplicacion": "b"}])])
+        self.assertEqual(codigo, 0, err)
+        _, out, _ = self.correr("campos")
+        self.assertLess(out.index("Desarrollo"), out.index("Conocimiento general"))
+        self.assertLess(out.index("Conocimiento general"), out.index("finanzas"))
+        d = json.loads((self.datos / "clasificacion.json").read_text(encoding="utf-8"))
+        self.assertEqual(d["cartas"]["fin-001"]["familia"], "general")
+
+    def test_familia_principal_y_mixta(self):
+        c = carta("x-1")
+        k = {"campos": [{"campo": "ia-general", "peso": 3}, {"campo": "frontend", "peso": 2}]}
+        self.assertEqual(gambit.familia_de(c, k), ("general", ["desarrollo", "general"]))
+        k = {"campos": [{"campo": "ia-general", "peso": 2}, {"campo": "frontend", "peso": 2}]}
+        self.assertEqual(gambit.familia_de(c, k)[0], "desarrollo")
+        k = {"campos": [{"campo": "cultura", "peso": 2}, {"campo": "actualidad", "peso": 2}, {"campo": "frontend", "peso": 2}]}
+        self.assertEqual(gambit.familia_de(c, k)[0], "general")
+
+    def test_familia_sin_clasificar_por_mazo(self):
+        self.assertEqual(gambit.familia_de(carta("x-1"))[0], "desarrollo")
+        self.assertEqual(gambit.familia_de(carta("x-2", mazo="agentes ia"))[0], "desarrollo")
+        self.assertEqual(gambit.familia_de(carta("x-3", mazo="backend"))[0], "desarrollo")
+        self.assertEqual(gambit.familia_de(carta("x-4", mazo="finanzas"))[0], "general")
+        self.assertEqual(gambit.familia_de(carta("x-5", mazo="ciencia y salud"))[0], "general")
+
+    def test_palos_de_mazos_generales(self):
+        casos = [("ciencia y salud", "corazones"), ("cultura", "corazones"), ("finanzas", "diamantes"),
+                 ("negocios", "diamantes"), ("actualidad", "treboles"), ("ia", "picas"),
+                 ("tecnología", "picas"), ("productividad", "picas"), ("música", "corazones"),
+                 ("emprendimiento", "diamantes"), ("noticias del día", "treboles"), ("otro tema", "picas")]
+        for mazo, esperado in casos:
+            self.assertEqual(gambit.naipe_de(carta("x-1", "consejos", mazo)), esperado, mazo)
+
+    def test_ranking_por_familia(self):
+        self.cartas.append(carta("fin-001", "inversión", "finanzas"))
+        self.escribir_baraja()
+        self.clasificar_todas()
+        self.correr("clasificar", entrada=[clas("fin-001", "finanzas")])
+        _, out, _ = self.correr("ranking", "--familia", "general")
+        self.assertIn("fin-001", out)
+        self.assertNotIn("dis-001", out)
+        _, out, _ = self.correr("ranking", "--familia", "desarrollo")
+        self.assertNotIn("fin-001", out)
+        codigo, _, err = self.correr("ranking", "--familia", "otra")
+        self.assertEqual(codigo, 1)
+        self.assertIn("Familia inválida", err)
+
+
 class TestDemo(Base):
     def test_genera_html_con_datos(self):
         self.clasificar_todas()
@@ -389,7 +442,9 @@ class TestDemo(Base):
         self.assertEqual(datos["cartas"][0]["fuentes"][0]["creador"], "@alguien")
         self.assertEqual(datos["manos"][0]["id"], "mano-prueba")
         self.assertIn("BRIEF", datos["manos"][0]["brief"])
-        self.assertEqual(len(datos["campos"]), 12)
+        self.assertEqual(len(datos["campos"]), 19)
+        self.assertEqual([f["id"] for f in datos["familias"]], ["desarrollo", "general"])
+        self.assertEqual(datos["cartas"][0]["familia"], "desarrollo")
         pages = (self.dir / "docs" / "index.html").read_text(encoding="utf-8")
         self.assertTrue(pages.startswith("<!doctype html>"))
         self.assertIn('name="viewport"', pages)

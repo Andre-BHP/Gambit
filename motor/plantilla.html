@@ -201,9 +201,11 @@ div.naipe{cursor:default}
 
 /* ranking */
 .rk-filtros{display:grid;gap:10px}
-.rk-palos{display:flex;flex-wrap:wrap;gap:6px}
-.rk-palos button{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:4px 12px;border-radius:20px;border:1px solid var(--linea);background:var(--carta);cursor:pointer;font:600 .84rem var(--f-texto)}
-.rk-palos button[aria-pressed="true"]{background:var(--tinta);color:var(--carta);border-color:var(--tinta)}
+.rk-palos,.familias{display:flex;flex-wrap:wrap;gap:6px}
+.familias{margin-top:8px}
+.rk-palos button,.familias button{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:4px 12px;border-radius:20px;border:1px solid var(--linea);background:var(--carta);cursor:pointer;font:600 .84rem var(--f-texto)}
+.rk-palos button[aria-pressed="true"],.familias button[aria-pressed="true"]{background:var(--tinta);color:var(--carta);border-color:var(--tinta)}
+.familias b{font:400 .74rem var(--f-dato);opacity:.8}
 .top3{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px 22px;padding:4px 12px 14px}
 .top3 h3{font-size:.95rem;font-weight:700;margin-bottom:4px}
 .top3 li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px;align-items:baseline;padding:2px 0;font-size:.86rem}
@@ -468,6 +470,7 @@ dialog#abierta::backdrop{background:var(--velo)}
     <h1>Gambit</h1>
     <p class="cab-sub">La baraja de ideas que saca Uatu, repartida en naipes según su potencia.</p>
     <p class="cab-datos" id="cab-datos"></p>
+    <div class="familias" id="familias" role="group" aria-label="Familia de cartas"></div>
   </header>
 
   <nav class="pestanas" aria-label="Vistas">
@@ -537,7 +540,7 @@ dialog#abierta::backdrop{background:var(--velo)}
     </section>
 
     <section class="vista" id="v-ranking" aria-label="Ranking de potencia" hidden>
-      <p class="vista-intro">Potencia de 0 a 100: utilidad 35, impacto 30, evidencia 15, facilidad 10, costo y peso 10. El rango (2 a A) sale del percentil de cada carta dentro de la baraja; los comodines van aparte.</p>
+      <p class="vista-intro">Potencia de 0 a 100: utilidad 35, impacto 30, evidencia 15, facilidad 10, costo y peso 10. El impacto mide cuánto mejora un producto real en Desarrollo, y cuánto te sirve en tu vida, estudios o trabajo en Conocimiento general. El rango (2 a A) sale del percentil de cada carta dentro de toda la baraja; los comodines van aparte.</p>
       <div class="rk-filtros">
         <label class="campo-f">Campo<select id="rk-campo"><option value="">Todos</option></select></label>
         <div class="rk-palos" id="rk-palos" role="group" aria-label="Filtrar por palo"></div>
@@ -614,6 +617,11 @@ const TIPO = {escalera: 'una carta por etapa', color: 'variantes del mismo palo 
 const PALO_TXT = {corazones: 'corazones', diamantes: 'diamantes', treboles: 'tréboles', picas: 'picas'};
 const FACTOR = {utilidad: 'Utilidad', impacto: 'Impacto', evidencia: 'Evidencia', facilidad: 'Facilidad', costo: 'Costo y peso'};
 const N_RANGO = D.baraja.length;
+/* Familia activa: Desarrollo por omisión, para no mezclar la mano de desarrollo con la de finanzas. */
+let fam = 'desarrollo';
+try { const g = localStorage.getItem('gambit.familia'); if (g === 'todas' || D.familias.some(f => f.id === g)) fam = g; } catch (x) {}
+const enFam = c => !!c && (fam === 'todas' || c.familia === fam);
+const campoEnFam = cp => fam === 'todas' || cp.familia === fam;
 
 const e = s => String(s == null ? '' : s).replace(/[&<>"']/g, m => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[m]));
 const norm = s => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
@@ -852,9 +860,10 @@ dorso.addEventListener('click', ev => { const b = ev.target.closest('[data-ir]')
 /* ---------- vista: la mano ---------- */
 const fan = $('#abanico'), dibujoMano = $('.la-mano', fan), escena = $('#escena');
 /* Escalera de la baraja: la carta más fuerte de cada rango, del 2 al as. */
-const ESCALERA = D.rangos.map(r => D.cartas.filter(c => !c.comodin && c.rango === r).sort((a, b) => a.puesto - b.puesto)[0]).filter(Boolean).map(c => c.id);
+const escalera = () => D.rangos.map(r => D.cartas.filter(c => !c.comodin && c.rango === r && enFam(c)).sort((a, b) => a.puesto - b.puesto)[0]).filter(Boolean).map(c => c.id);
+const barajaFam = () => D.baraja.filter(i => enFam(C.get(i)));
 const ROTULO = {escalera: 'Escalera: la carta más fuerte de cada rango', todas: 'Toda la baraja, de menor a mayor potencia', campo: 'Las más fuertes del campo, de menor a mayor', guardada: 'Mano guardada, en orden de aplicación', azar: 'Mano al azar'};
-let mazo = ESCALERA.slice(), ini = Math.max(0, mazo.length - TAM), fuera = null, origen = 'escalera', arrastro = false;
+let mazo = escalera(), ini = Math.max(0, mazo.length - TAM), fuera = null, origen = 'escalera', arrastro = false;
 const visibles = () => mazo.slice(ini, ini + TAM);
 function pintaAbanico(modo){
   const vis = visibles(), n = vis.length, paso = n > 1 ? Math.min(9.34, 56 / (n - 1)) : 0;
@@ -883,7 +892,7 @@ function pintaAbanico(modo){
 function pintaLector(){
   const vis = visibles(), id = fuera && vis.includes(fuera) ? fuera : vis[vis.length - 1], c = C.get(id);
   const L = $('#lector');
-  if (!c) { L.innerHTML = `<p class="vacio">No hay cartas en esta selección.</p>`; $('#m-pos').textContent = ''; return; }
+  if (!c) { L.innerHTML = `<p class="vacio">No hay cartas en esta selección. ${fam === 'general' ? 'Las cartas de conocimiento general llegan cuando EGO le manda reels a Uatu.' : 'Prueba con otra familia o con otro campo.'}</p>`; $('#m-pos').textContent = ''; $('#m-ant').disabled = $('#m-sig').disabled = true; return; }
   L.innerHTML = `<div class="lec-cab">${rp(c)}<div><h2>${e(c.nombre)}</h2><p class="lec-meta">${e(c.id)} · ${puestoTxt(c)} · ${fuera === id ? 'fuera de la mano' : 'al frente'}</p></div></div>`
     + `<div class="barra" role="img" aria-label="Potencia ${c.pot.total} de 100"><i style="--v:${c.pot.total}%"></i><b>${c.pot.total}</b></div>`
     + `<p class="lec-idea">${e(c.idea)}</p>`
@@ -910,19 +919,19 @@ function infoGuardada(m){
 $('#m-campo').addEventListener('change', ev => {
   $('#m-guardada').value = ''; infoGuardada(null);
   const cp = ev.target.value;
-  if (!cp) ponMazo(ESCALERA, 'escalera', true);
-  else if (cp === '*') ponMazo(D.baraja, 'todas', true);
+  if (!cp) ponMazo(escalera(), 'escalera', true);
+  else if (cp === '*') ponMazo(barajaFam(), 'todas', true);
   else ponMazo(D.barajas[cp] || [], 'campo', true);
 });
 $('#m-guardada').addEventListener('change', ev => {
   const m = D.manos.find(x => x.id === ev.target.value);
   $('#m-campo').value = '';
   infoGuardada(m || null);
-  if (m) ponMazo(m.cartas.map(x => x.id), 'guardada', false); else ponMazo(ESCALERA, 'escalera', true);
+  if (m) ponMazo(m.cartas.map(x => x.id), 'guardada', false); else ponMazo(escalera(), 'escalera', true);
 });
 $('#m-repartir').onclick = () => {
   $('#m-campo').value = ''; $('#m-guardada').value = ''; infoGuardada(null);
-  const pool = D.baraja.slice(), mano7 = [];
+  const pool = barajaFam(), mano7 = [];
   while (mano7.length < TAM && pool.length) mano7.push(pool.splice(Math.random() * pool.length | 0, 1)[0]);
   mano7.sort((a, b) => C.get(b).puesto - C.get(a).puesto);
   ponMazo(mano7, 'azar', false);
@@ -961,10 +970,10 @@ document.addEventListener('click', ev => {
 });
 
 function pintaAparte(){
-  const com = D.cartas.filter(c => c.comodin), caja = $('#m-comodines');
+  const com = D.cartas.filter(c => c.comodin && enFam(c)), caja = $('#m-comodines');
   caja.hidden = !com.length;
   if (com.length) caja.innerHTML = `<h3 class="rot">Comodines</h3><p>Reglas generales que valen en cualquier mano. No llevan rango ni palo.</p><div class="mini">${com.map(c => naipe(c)).join('')}</div>`;
-  const sin = D.cartas.filter(sinClasificar), pila = $('#m-pila');
+  const sin = D.cartas.filter(c => sinClasificar(c) && enFam(c)), pila = $('#m-pila');
   pila.hidden = !sin.length;
   if (sin.length) pila.innerHTML = `<h3 class="rot">Por clasificar (${sin.length})</h3><p>Cartas nuevas de Uatu. Su rango es provisional hasta que Gambit las ordene por campo.</p><div class="mini">${sin.map(c => naipe(c)).join('')}</div>`;
   $('#palos').innerHTML = D.naipes.map(n => `<div><dt><span class="rp ${n.id === 'corazones' || n.id === 'diamantes' ? 'rojo' : ''}">${palo(n.id)}</span></dt><dd><b style="color:var(--tinta)">${mayus(PALO_TXT[n.id] || n.id)}.</b> ${e(n.nombre)}.</dd></div>`).join('');
@@ -973,16 +982,46 @@ function pintaAparte(){
 /* ---------- vista: mesa ---------- */
 function llenaFiltros(){
   const op = (v, t) => `<option value="${e(v)}">${e(t)}</option>`;
-  const campos = D.campos.map(c => op(c.id, campoPartes(c.id)[0])).join('');
-  ['#f-campo', '#arm-campo', '#rk-campo', '#m-campo'].forEach(s => $(s).insertAdjacentHTML('beforeend', campos));
+  opcionesCampo();
   $('#f-palo').insertAdjacentHTML('beforeend', D.naipes.map(n => op(n.id, mayus(PALO_TXT[n.id] || n.id))).join('') + op('comodin', 'Comodines'));
   $('#m-guardada').insertAdjacentHTML('beforeend', D.manos.map(m => op(m.id, m.nombre)).join(''));
   $('#rk-palos').innerHTML = D.naipes.map(n => `<button type="button" data-palo="${n.id}" aria-pressed="false"><span class="rp ${n.id === 'corazones' || n.id === 'diamantes' ? 'rojo' : ''}">${palo(n.id)}</span>${mayus(PALO_TXT[n.id] || n.id)}</button>`).join('');
 }
+/* Campos de la familia activa en los cuatro selectores; con "Todas", agrupados por familia. */
+function opcionesCampo(){
+  const op = c => `<option value="${e(c.id)}">${e(campoPartes(c.id)[0])}</option>`;
+  const cuerpo = fam === 'todas'
+    ? D.familias.map(f => `<optgroup label="${e(f.nombre)}">${D.campos.filter(c => c.familia === f.id).map(op).join('')}</optgroup>`).join('')
+    : D.campos.filter(campoEnFam).map(op).join('');
+  const primeras = {'#f-campo': '<option value="">Todos</option>', '#arm-campo': '<option value="">Todos</option>', '#rk-campo': '<option value="">Todos</option>',
+    '#m-campo': '<option value="">Escalera de la baraja</option><option value="*">Toda la baraja</option>'};
+  Object.keys(primeras).forEach(s => {
+    const sel = $(s), antes = sel.value;
+    sel.innerHTML = primeras[s] + cuerpo;
+    sel.value = Array.from(sel.options).some(o => o.value === antes) ? antes : '';
+  });
+}
+function pintaFamilias(){
+  const n = id => D.cartas.filter(c => id === 'todas' || c.familia === id).length;
+  $('#familias').innerHTML = D.familias.concat([{id: 'todas', nombre: 'Todas'}])
+    .map(f => `<button type="button" data-fam="${e(f.id)}" aria-pressed="${f.id === fam}">${e(f.nombre)} <b>${n(f.id)}</b></button>`).join('');
+}
+$('#familias').addEventListener('click', ev => {
+  const b = ev.target.closest('[data-fam]'); if (!b || b.dataset.fam === fam) return;
+  fam = b.dataset.fam;
+  try { localStorage.setItem('gambit.familia', fam); } catch (x) {}
+  pintaFamilias(); opcionesCampo(); pintaAparte();
+  $('#m-guardada').value = ''; infoGuardada(null);
+  $('#m-campo').value = ''; ponMazo(escalera(), 'escalera', true);
+  if (hecho.mesa) pintaMesa();
+  if (hecho.ranking) { pintaTop3(); pintaRanking(); }
+  if (hecho.armar) pintaFilas();
+  aviso(fam === 'todas' ? 'Mostrando las dos familias' : `Familia: ${D.familias.find(f => f.id === fam).nombre}`);
+});
 const porPotencia = (a, b) => b.pot.total - a.pot.total || (a.puesto || 0) - (b.puesto || 0) || a.id.localeCompare(b.id);
 function pintaMesa(){
   const q = norm($('#f-texto').value.trim()), cp = $('#f-campo').value, pl = $('#f-palo').value, df = $('#f-dif').value, vivo = $('#f-vivo').checked;
-  const lista = D.cartas.filter(c => (!q || q.split(/\s+/).every(t => c._txt.includes(t))) && (!cp || c.campos.some(x => x.campo === cp))
+  const lista = D.cartas.filter(c => enFam(c) && (!q || q.split(/\s+/).every(t => c._txt.includes(t))) && (!cp || c.campos.some(x => x.campo === cp))
     && (!pl || (pl === 'comodin' ? c.comodin : !c.comodin && c.naipe === pl)) && (!df || String(c.dificultad) === df) && (!vivo || DEMOS[c.id]));
   const sin = lista.filter(sinClasificar), com = lista.filter(c => c.comodin && !sinClasificar(c));
   const resto = lista.filter(c => !c.comodin && !sinClasificar(c)).sort(porPotencia);
@@ -991,7 +1030,7 @@ function pintaMesa(){
     + grupo('Comodines', 'Valen en cualquier mano; van sin rango.', com)
     + grupo('De mayor a menor potencia', '', resto))
     || `<p class="vacio">Ninguna carta coincide. Quita un filtro o prueba con otra palabra.</p>`;
-  $('#f-cuenta').textContent = `${lista.length} de ${D.cartas.length} cartas`;
+  $('#f-cuenta').textContent = `${lista.length} de ${D.cartas.filter(enFam).length} cartas`;
   const act = [cp, pl, df, vivo].filter(Boolean).length, fa = $('#f-activos');
   fa.hidden = !act; fa.textContent = act;
   if (act) $('#mas-f').open = true;
@@ -1004,7 +1043,7 @@ $('#filtros').addEventListener('reset', () => setTimeout(pintaMesa, 0));
 let rkPalo = '';
 function pintaRanking(){
   const cp = $('#rk-campo').value;
-  const lista = D.cartas.filter(c => !c.comodin && (!cp || c.campos.some(x => x.campo === cp)) && (!rkPalo || c.naipe === rkPalo)).sort((a, b) => a.puesto - b.puesto);
+  const lista = D.cartas.filter(c => !c.comodin && enFam(c) && (!cp || c.campos.some(x => x.campo === cp)) && (!rkPalo || c.naipe === rkPalo)).sort((a, b) => a.puesto - b.puesto);
   $('#rk-lista').innerHTML = lista.map((c, i) => {
     const prin = c.campos.filter(x => x.peso >= 2).map(x => campoCorto(x.campo) + (x.peso === 3 ? ' (principal)' : '')).join(' · ');
     return `<li><details><summary><span class="n">${i + 1}</span>${rp(c)}<span class="cuerpo"><span class="nom">${e(c.nombre)}</span>`
@@ -1012,10 +1051,11 @@ function pintaRanking(){
       + `<span class="camp">${e(c.id)}${prin ? ' · ' + e(prin) : ''}${c.pot.provisional ? ' · provisional' : ''}</span></span></summary>`
       + `<div class="abre"><p class="d-meta">${nombreNaipe(c)} · puesto general ${c.puesto} de ${N_RANGO}</p>${desglose(c)}<div class="fila"><button type="button" class="btn" data-ir="${e(c.id)}">Abrir carta</button></div></div></details></li>`;
   }).join('') || `<li><p class="vacio">Ninguna carta con ese campo y ese palo.</p></li>`;
-  $('#rk-cuenta').textContent = `${lista.length} de ${N_RANGO} cartas con rango` + (cp || rkPalo ? '' : ` · ${D.cartas.filter(c => c.comodin).length} comodines aparte`);
+  const comFam = D.cartas.filter(c => c.comodin && enFam(c)).length;
+  $('#rk-cuenta').textContent = `${lista.length} de ${N_RANGO} cartas con rango` + (cp || rkPalo || !comFam ? '' : ` · ${comFam} comodines aparte`);
 }
 function pintaTop3(){
-  $('#rk-top3').innerHTML = D.campos.map(cp => {
+  $('#rk-top3').innerHTML = D.campos.filter(campoEnFam).map(cp => {
     const top = (D.barajas[cp.id] || []).slice(-3).reverse().map(i => C.get(i)).filter(Boolean);
     return `<div><h3>${e(campoPartes(cp.id)[0])}</h3>${top.length ? `<ol>${top.map(c => `<li>${rp(c)}<button type="button" class="lnk" data-ir="${e(c.id)}">${e(c.nombre)} · ${c.pot.total}</button></li>`).join('')}</ol>` : `<p class="d-meta">Sin cartas todavía.</p>`}</div>`;
   }).join('');
@@ -1132,7 +1172,7 @@ function pintaArmar(){
 }
 function pintaFilas(){
   const q = norm($('#arm-texto').value.trim()), cp = $('#arm-campo').value, ids = mano.map(x => x.id);
-  const lista = D.cartas.filter(c => (!q || q.split(/\s+/).every(t => c._txt.includes(t))) && (!cp || c.campos.some(x => x.campo === cp))).sort(porPotencia);
+  const lista = D.cartas.filter(c => enFam(c) && (!q || q.split(/\s+/).every(t => c._txt.includes(t))) && (!cp || c.campos.some(x => x.campo === cp))).sort(porPotencia);
   $('#arm-filas').innerHTML = lista.map(c => {
     const dentro = ids.includes(c.id);
     const ch = dentro ? [] : ids.filter(i => C.get(i).choca.includes(c.id) || c.choca.includes(i));
@@ -1174,7 +1214,7 @@ function mostrar(){
   if (primera) primera = false; else window.scrollTo(0, 0);
 }
 window.addEventListener('hashchange', mostrar);
-pintaCabecera(); llenaFiltros(); pintaAparte();
+pintaCabecera(); pintaFamilias(); llenaFiltros(); pintaAparte();
 if (window.matchMedia('(min-width: 760px)').matches) { $('#mas-f').open = true; $('#rk-top').open = true; }
 const cta = $('#arm-cuenta'); cta.hidden = !mano.length; cta.textContent = mano.length;
 pintaAbanico('reparte');
