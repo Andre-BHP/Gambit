@@ -76,6 +76,8 @@ MIN_CARTAS, MAX_CARTAS = 3, 7
 #   diamantes  finanzas, dinero, negocios, emprendimiento, marketing
 #   treboles   actualidad, noticias, tendencias, deporte, viajes
 #   picas      IA, tecnología, productividad, estudio y todo mazo sin pista
+# Mazo "desarrollo web" (2026-11-15): conceptos de código como signals y reactividad,
+# lo que da poder a la arquitectura del frontend; va a picas.
 # Comodines: cartas de regla general que valen en cualquier mano; van sin rango.
 RANGOS = ("2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A")
 NAIPES = {
@@ -96,6 +98,7 @@ MAZO_A_NAIPE = {
     "ciencia": "corazones", "salud": "corazones", "ciencia-y-salud": "corazones", "cultura": "corazones",
     "finanzas": "diamantes", "finanzas-personales": "diamantes", "negocios": "diamantes",
     "actualidad": "treboles", "noticias": "treboles",
+    "desarrollo-web": "picas",
 }
 PISTAS_NAIPE = (
     ("corazones", ("color", "tipo", "imagen", "material", "visual", "ilustr", "foto", "marca",

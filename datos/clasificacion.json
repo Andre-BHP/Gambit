@@ -44,7 +44,7 @@
    },
    "rango": "7",
    "palo_naipe": "picas",
-   "puesto": 55,
+   "puesto": 58,
    "familia": "desarrollo"
   },
   "age-002": {
@@ -82,7 +82,7 @@
    },
    "rango": "2",
    "palo_naipe": "picas",
-   "puesto": 97,
+   "puesto": 100,
    "familia": "desarrollo"
   },
   "age-003": {
@@ -169,7 +169,7 @@
    },
    "rango": "5",
    "palo_naipe": "picas",
-   "puesto": 75,
+   "puesto": 78,
    "familia": "desarrollo"
   },
   "age-005": {
@@ -212,7 +212,7 @@
    },
    "rango": "5",
    "palo_naipe": "picas",
-   "puesto": 68,
+   "puesto": 71,
    "familia": "desarrollo"
   },
   "age-006": {
@@ -262,6 +262,53 @@
    "puesto": 15,
    "familia": "general"
   },
+  "age-007": {
+   "campos": [
+    {
+     "campo": "ia",
+     "peso": 3,
+     "aplicacion": "Agente modular en Telegram: conversa, transcribe audios y responde con voz; se le suman herramientas por módulo."
+    },
+    {
+     "campo": "backend",
+     "peso": 2,
+     "aplicacion": "Bot con token en .env, Firebase para datos y Docker para correrlo."
+    },
+    {
+     "campo": "ia-general",
+     "peso": 2,
+     "aplicacion": "Asistente personal en el teléfono, dentro de una app de mensajería."
+    },
+    {
+     "campo": "devops",
+     "peso": 1,
+     "aplicacion": "Contenedor Docker para mantener el bot encendido en un servidor."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "depende",
+   "combina_con": [
+    "age-001",
+    "age-002"
+   ],
+   "choca_con": [],
+   "huella": "f9bac8e50248",
+   "clasificada": "2026-11-15",
+   "potencia": {
+    "total": 69,
+    "utilidad": 35.0,
+    "impacto": 18.0,
+    "evidencia": 5.0,
+    "facilidad": 6.0,
+    "costo": 5.0
+   },
+   "rango": "7",
+   "palo_naipe": "picas",
+   "puesto": 54,
+   "familia": "desarrollo",
+   "impacto": 3,
+   "carga": "media"
+  },
   "cie-001": {
    "campos": [
     {
@@ -291,7 +338,7 @@
    },
    "rango": "2",
    "palo_naipe": "corazones",
-   "puesto": 95,
+   "puesto": 98,
    "familia": "general"
   },
   "cie-002": {
@@ -334,6 +381,84 @@
    "palo_naipe": "corazones",
    "puesto": 22,
    "familia": "general"
+  },
+  "cul-001": {
+   "campos": [
+    {
+     "campo": "cultura",
+     "peso": 3,
+     "aplicacion": "Practicar redacción en inglés con tareas por nivel y corrección automática."
+    },
+    {
+     "campo": "escuela",
+     "peso": 2,
+     "aplicacion": "Correos formales en inglés para la escuela, prácticas o trabajo."
+    },
+    {
+     "campo": "productividad",
+     "peso": 1,
+     "aplicacion": "Una tarea corta al día: escribir, revisar marcas, reescribir."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [],
+   "huella": "8b5c5f6fcce5",
+   "clasificada": "2026-11-15",
+   "potencia": {
+    "total": 71,
+    "utilidad": 28.0,
+    "impacto": 18.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 10.0
+   },
+   "rango": "8",
+   "palo_naipe": "corazones",
+   "puesto": 45,
+   "familia": "general",
+   "impacto": 3,
+   "carga": "ligera"
+  },
+  "des-001": {
+   "campos": [
+    {
+     "campo": "frontend",
+     "peso": 3,
+     "aplicacion": "signal, computed y effect en Angular standalone: estado que actualiza la vista sin suscripciones manuales."
+    },
+    {
+     "campo": "escuela",
+     "peso": 2,
+     "aplicacion": "PW2 pide Angular con signals: explicar las tres piezas en el reporte y el SRS."
+    },
+    {
+     "campo": "ux-ui",
+     "peso": 1,
+     "aplicacion": "Interfaces que reaccionan al instante al estado (filtros, contadores, carrito)."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "gratis",
+   "combina_con": [],
+   "choca_con": [],
+   "huella": "f1f260f163be",
+   "clasificada": "2026-11-15",
+   "potencia": {
+    "total": 73,
+    "utilidad": 28.0,
+    "impacto": 24.0,
+    "evidencia": 5.0,
+    "facilidad": 6.0,
+    "costo": 10.0
+   },
+   "rango": "9",
+   "palo_naipe": "picas",
+   "puesto": 39,
+   "familia": "desarrollo",
+   "impacto": 4,
+   "carga": "ligera"
   },
   "dis-001": {
    "campos": [
@@ -421,7 +546,7 @@
    },
    "rango": "7",
    "palo_naipe": "diamantes",
-   "puesto": 54,
+   "puesto": 57,
    "familia": "desarrollo"
   },
   "dis-003": {
@@ -655,7 +780,7 @@
    },
    "rango": "4",
    "palo_naipe": "treboles",
-   "puesto": 77,
+   "puesto": 80,
    "familia": "desarrollo"
   },
   "dis-008": {
@@ -696,7 +821,7 @@
    },
    "rango": "6",
    "palo_naipe": "corazones",
-   "puesto": 63,
+   "puesto": 66,
    "familia": "desarrollo"
   },
   "dis-009": {
@@ -793,9 +918,9 @@
     "facilidad": 2.0,
     "costo": 3.0
    },
-   "rango": "8",
+   "rango": "7",
    "palo_naipe": "treboles",
-   "puesto": 52,
+   "puesto": 55,
    "familia": "desarrollo"
   },
   "dis-011": {
@@ -841,7 +966,7 @@
    },
    "rango": "4",
    "palo_naipe": "treboles",
-   "puesto": 82,
+   "puesto": 85,
    "familia": "desarrollo"
   },
   "dis-012": {
@@ -884,7 +1009,7 @@
    },
    "rango": "6",
    "palo_naipe": "corazones",
-   "puesto": 65,
+   "puesto": 68,
    "familia": "desarrollo"
   },
   "dis-013": {
@@ -925,7 +1050,7 @@
    },
    "rango": "5",
    "palo_naipe": "treboles",
-   "puesto": 70,
+   "puesto": 73,
    "familia": "desarrollo"
   },
   "dis-014": {
@@ -971,7 +1096,7 @@
    },
    "rango": "8",
    "palo_naipe": "treboles",
-   "puesto": 44,
+   "puesto": 46,
    "familia": "desarrollo"
   },
   "dis-015": {
@@ -1012,7 +1137,7 @@
    },
    "rango": "3",
    "palo_naipe": "treboles",
-   "puesto": 91,
+   "puesto": 94,
    "familia": "desarrollo"
   },
   "dis-016": {
@@ -1104,7 +1229,7 @@
    },
    "rango": "2",
    "palo_naipe": "picas",
-   "puesto": 98,
+   "puesto": 101,
    "familia": "desarrollo"
   },
   "dis-018": {
@@ -1148,7 +1273,7 @@
    },
    "rango": "8",
    "palo_naipe": "picas",
-   "puesto": 50,
+   "puesto": 52,
    "familia": "desarrollo"
   },
   "dis-019": {
@@ -1232,9 +1357,9 @@
     "facilidad": 10.0,
     "costo": 10.0
    },
-   "rango": "8",
+   "rango": "7",
    "palo_naipe": "diamantes",
-   "puesto": 53,
+   "puesto": 56,
    "familia": "desarrollo"
   },
   "dis-021": {
@@ -1332,7 +1457,7 @@
    },
    "rango": "8",
    "palo_naipe": "corazones",
-   "puesto": 45,
+   "puesto": 47,
    "familia": "desarrollo"
   },
   "dis-023": {
@@ -1424,7 +1549,7 @@
    },
    "rango": "3",
    "palo_naipe": "picas",
-   "puesto": 84,
+   "puesto": 87,
    "familia": "desarrollo"
   },
   "dis-025": {
@@ -1518,7 +1643,7 @@
    },
    "rango": "5",
    "palo_naipe": "treboles",
-   "puesto": 71,
+   "puesto": 74,
    "familia": "desarrollo"
   },
   "dis-027": {
@@ -1660,7 +1785,7 @@
    },
    "rango": "8",
    "palo_naipe": "treboles",
-   "puesto": 46,
+   "puesto": 48,
    "familia": "desarrollo"
   },
   "dis-030": {
@@ -1704,7 +1829,7 @@
    },
    "rango": "8",
    "palo_naipe": "picas",
-   "puesto": 47,
+   "puesto": 49,
    "familia": "desarrollo"
   },
   "dis-031": {
@@ -1752,7 +1877,7 @@
    },
    "rango": "3",
    "palo_naipe": "treboles",
-   "puesto": 85,
+   "puesto": 88,
    "familia": "desarrollo"
   },
   "dis-032": {
@@ -1839,7 +1964,7 @@
    },
    "rango": "6",
    "palo_naipe": "treboles",
-   "puesto": 59,
+   "puesto": 62,
    "familia": "desarrollo"
   },
   "dis-034": {
@@ -1883,7 +2008,7 @@
    },
    "rango": "3",
    "palo_naipe": "treboles",
-   "puesto": 86,
+   "puesto": 89,
    "familia": "desarrollo"
   },
   "dis-035": {
@@ -1928,7 +2053,7 @@
    },
    "rango": "5",
    "palo_naipe": "treboles",
-   "puesto": 72,
+   "puesto": 75,
    "familia": "desarrollo"
   },
   "dis-036": {
@@ -1974,7 +2099,7 @@
    },
    "rango": "6",
    "palo_naipe": "treboles",
-   "puesto": 66,
+   "puesto": 69,
    "familia": "desarrollo"
   },
   "dis-037": {
@@ -2017,7 +2142,7 @@
    },
    "rango": "6",
    "palo_naipe": "corazones",
-   "puesto": 60,
+   "puesto": 63,
    "familia": "desarrollo"
   },
   "dis-038": {
@@ -2060,7 +2185,7 @@
    },
    "rango": "6",
    "palo_naipe": "corazones",
-   "puesto": 67,
+   "puesto": 70,
    "familia": "desarrollo"
   },
   "dis-039": {
@@ -2103,7 +2228,7 @@
    },
    "rango": "8",
    "palo_naipe": "corazones",
-   "puesto": 48,
+   "puesto": 50,
    "familia": "desarrollo"
   },
   "dis-040": {
@@ -2203,7 +2328,7 @@
    },
    "rango": "4",
    "palo_naipe": "corazones",
-   "puesto": 83,
+   "puesto": 86,
    "familia": "desarrollo"
   },
   "dis-042": {
@@ -2247,7 +2372,7 @@
    },
    "rango": "4",
    "palo_naipe": "treboles",
-   "puesto": 78,
+   "puesto": 81,
    "familia": "desarrollo"
   },
   "dis-043": {
@@ -2393,7 +2518,7 @@
    },
    "rango": "4",
    "palo_naipe": "corazones",
-   "puesto": 79,
+   "puesto": 82,
    "familia": "desarrollo"
   },
   "dis-046": {
@@ -2439,7 +2564,7 @@
    },
    "rango": "6",
    "palo_naipe": "treboles",
-   "puesto": 64,
+   "puesto": 67,
    "familia": "desarrollo"
   },
   "dis-047": {
@@ -2475,7 +2600,7 @@
    },
    "rango": "2",
    "palo_naipe": "treboles",
-   "puesto": 93,
+   "puesto": 96,
    "familia": "desarrollo"
   },
   "dis-048": {
@@ -2519,7 +2644,7 @@
    },
    "rango": "2",
    "palo_naipe": "treboles",
-   "puesto": 94,
+   "puesto": 97,
    "familia": "desarrollo"
   },
   "dis-049": {
@@ -2564,7 +2689,7 @@
    },
    "rango": "3",
    "palo_naipe": "treboles",
-   "puesto": 87,
+   "puesto": 90,
    "familia": "desarrollo"
   },
   "dis-050": {
@@ -2844,7 +2969,7 @@
    },
    "rango": "7",
    "palo_naipe": "picas",
-   "puesto": 56,
+   "puesto": 59,
    "familia": "desarrollo"
   },
   "dis-056": {
@@ -2883,7 +3008,7 @@
    },
    "rango": "2",
    "palo_naipe": "treboles",
-   "puesto": 96,
+   "puesto": 99,
    "familia": "desarrollo"
   },
   "dis-057": {
@@ -2929,7 +3054,7 @@
    },
    "rango": "9",
    "palo_naipe": "treboles",
-   "puesto": 40,
+   "puesto": 41,
    "familia": "desarrollo"
   },
   "dis-058": {
@@ -2974,7 +3099,7 @@
    },
    "rango": "8",
    "palo_naipe": "treboles",
-   "puesto": 49,
+   "puesto": 51,
    "familia": "desarrollo"
   },
   "dis-059": {
@@ -3063,7 +3188,7 @@
    },
    "rango": "4",
    "palo_naipe": "corazones",
-   "puesto": 80,
+   "puesto": 83,
    "familia": "desarrollo"
   },
   "dis-061": {
@@ -3107,9 +3232,9 @@
     "facilidad": 10.0,
     "costo": 3.0
    },
-   "rango": "5",
+   "rango": "4",
    "palo_naipe": "picas",
-   "puesto": 76,
+   "puesto": 79,
    "familia": "desarrollo"
   },
   "dis-062": {
@@ -3295,7 +3420,7 @@
    },
    "rango": "9",
    "palo_naipe": "diamantes",
-   "puesto": 41,
+   "puesto": 42,
    "familia": "desarrollo"
   },
   "dis-066": {
@@ -3339,7 +3464,7 @@
    },
    "rango": "3",
    "palo_naipe": "corazones",
-   "puesto": 88,
+   "puesto": 91,
    "familia": "desarrollo"
   },
   "dis-067": {
@@ -3388,7 +3513,7 @@
    },
    "rango": "7",
    "palo_naipe": "treboles",
-   "puesto": 57,
+   "puesto": 60,
    "familia": "desarrollo"
   },
   "dis-068": {
@@ -3436,7 +3561,7 @@
    },
    "rango": "9",
    "palo_naipe": "treboles",
-   "puesto": 42,
+   "puesto": 43,
    "familia": "desarrollo"
   },
   "dis-069": {
@@ -3752,7 +3877,7 @@
    },
    "rango": "8",
    "palo_naipe": "corazones",
-   "puesto": 51,
+   "puesto": 53,
    "familia": "desarrollo"
   },
   "dis-076": {
@@ -3793,7 +3918,7 @@
    },
    "rango": "5",
    "palo_naipe": "treboles",
-   "puesto": 69,
+   "puesto": 72,
    "familia": "desarrollo"
   },
   "dis-077": {
@@ -3834,7 +3959,7 @@
    },
    "rango": "6",
    "palo_naipe": "treboles",
-   "puesto": 62,
+   "puesto": 65,
    "familia": "desarrollo"
   },
   "dis-078": {
@@ -3928,7 +4053,7 @@
    },
    "rango": "6",
    "palo_naipe": "treboles",
-   "puesto": 61,
+   "puesto": 64,
    "familia": "desarrollo"
   },
   "dis-080": {
@@ -3969,7 +4094,7 @@
    },
    "rango": "4",
    "palo_naipe": "treboles",
-   "puesto": 81,
+   "puesto": 84,
    "familia": "desarrollo"
   },
   "dis-081": {
@@ -4003,7 +4128,7 @@
    },
    "rango": "2",
    "palo_naipe": "treboles",
-   "puesto": 99,
+   "puesto": 102,
    "familia": "desarrollo"
   },
   "dis-082": {
@@ -4047,7 +4172,7 @@
    },
    "rango": "7",
    "palo_naipe": "treboles",
-   "puesto": 58,
+   "puesto": 61,
    "familia": "desarrollo"
   },
   "dis-083": {
@@ -4088,7 +4213,7 @@
    },
    "rango": "3",
    "palo_naipe": "treboles",
-   "puesto": 89,
+   "puesto": 92,
    "familia": "desarrollo"
   },
   "dis-084": {
@@ -4127,7 +4252,7 @@
    },
    "rango": "5",
    "palo_naipe": "picas",
-   "puesto": 73,
+   "puesto": 76,
    "familia": "desarrollo"
   },
   "dis-085": {
@@ -4166,7 +4291,7 @@
    },
    "rango": "2",
    "palo_naipe": "picas",
-   "puesto": 92,
+   "puesto": 95,
    "familia": "desarrollo"
   },
   "dis-086": {
@@ -4211,7 +4336,7 @@
    },
    "rango": "9",
    "palo_naipe": "diamantes",
-   "puesto": 43,
+   "puesto": 44,
    "familia": "desarrollo"
   },
   "dis-087": {
@@ -4259,7 +4384,7 @@
    },
    "rango": "9",
    "palo_naipe": "picas",
-   "puesto": 39,
+   "puesto": 40,
    "familia": "desarrollo"
   },
   "dis-088": {
@@ -4307,7 +4432,7 @@
    },
    "rango": "5",
    "palo_naipe": "picas",
-   "puesto": 74,
+   "puesto": 77,
    "familia": "desarrollo"
   },
   "dis-089": {
@@ -4530,9 +4655,9 @@
    },
    "rango": "3",
    "palo_naipe": "picas",
-   "puesto": 90,
+   "puesto": 93,
    "familia": "general"
   }
  },
- "actualizado": "2026-11-14"
+ "actualizado": "2026-11-15"
 }

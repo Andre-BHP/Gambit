@@ -264,12 +264,16 @@
      "rol": "interfaz: Claude Code con Agent SDK y voz local"
     },
     {
+     "id": "age-007",
+     "rol": "canal: bot de Telegram que escucha audios y responde con voz"
+    },
+    {
      "id": "age-004",
      "rol": "operación: regla de escalamiento y resumen diario"
     }
    ],
-   "por_que": "Las cinco cartas del mazo de agentes cubren el ciclo completo: la arquitectura, de dónde salen sus capacidades, dónde vive lo aprendido, cómo se le habla y cuándo interrumpe al dueño. En ese orden se puede construir por etapas y probar cada una.",
-   "conflictos": "Permisos de solo lectura al inicio; nada de escritura a todo. Las acciones irreversibles (envíos, pagos) piden confirmación. Las cifras de la fuente de age-004 son promoción, no un dato. No instalar skills ni servidores MCP de terceros sin revisar su código y permisos.",
+   "por_que": "Las cartas del mazo de agentes cubren el ciclo completo: la arquitectura, de dónde salen sus capacidades, dónde vive lo aprendido, cómo se le habla y cuándo interrumpe al dueño. En ese orden se puede construir por etapas y probar cada una. age-007 le da un canal en el teléfono: el mismo agente, en Telegram.",
+   "conflictos": "Permisos de solo lectura al inicio; nada de escritura a todo. Las acciones irreversibles (envíos, pagos) piden confirmación. Las cifras de la fuente de age-004 son promoción, no un dato. No instalar skills ni servidores MCP de terceros sin revisar su código y permisos. En age-007, ElevenLabs y la nube pueden costar aunque el video diga gratis; el token del bot va en .env.",
    "dificultad_total": 3,
    "stack": "Claude Code + Agent SDK + MCP + Node/Express + MySQL",
    "listo": [
@@ -281,7 +285,7 @@
     "Cada skill o servidor MCP instalado fue revisado antes de usarse."
    ],
    "creada": "2026-11-13",
-   "actualizada": "2026-11-14"
+   "actualizada": "2026-11-15"
   },
   {
    "id": "mano-estudio-ia",
@@ -315,5 +319,5 @@
    "creada": "2026-11-14"
   }
  ],
- "actualizado": "2026-11-14"
+ "actualizado": "2026-11-15"
 }
