@@ -44,7 +44,7 @@
    },
    "rango": "7",
    "palo_naipe": "picas",
-   "puesto": 65,
+   "puesto": 66,
    "familia": "desarrollo"
   },
   "age-002": {
@@ -82,7 +82,7 @@
    },
    "rango": "2",
    "palo_naipe": "picas",
-   "puesto": 114,
+   "puesto": 116,
    "familia": "desarrollo"
   },
   "age-003": {
@@ -125,7 +125,7 @@
    },
    "rango": "10",
    "palo_naipe": "picas",
-   "puesto": 42,
+   "puesto": 43,
    "familia": "desarrollo"
   },
   "age-004": {
@@ -169,7 +169,7 @@
    },
    "rango": "5",
    "palo_naipe": "picas",
-   "puesto": 88,
+   "puesto": 89,
    "familia": "desarrollo"
   },
   "age-005": {
@@ -212,7 +212,7 @@
    },
    "rango": "5",
    "palo_naipe": "picas",
-   "puesto": 81,
+   "puesto": 82,
    "familia": "desarrollo"
   },
   "age-006": {
@@ -304,7 +304,7 @@
    },
    "rango": "8",
    "palo_naipe": "picas",
-   "puesto": 62,
+   "puesto": 63,
    "familia": "desarrollo",
    "impacto": 3,
    "carga": "media"
@@ -341,7 +341,7 @@
    },
    "rango": "7",
    "palo_naipe": "picas",
-   "puesto": 69,
+   "puesto": 70,
    "familia": "desarrollo",
    "impacto": 4,
    "carga": "ligera"
@@ -383,7 +383,7 @@
    },
    "rango": "10",
    "palo_naipe": "picas",
-   "puesto": 36,
+   "puesto": 37,
    "familia": "desarrollo",
    "impacto": 4,
    "carga": "ligera"
@@ -426,7 +426,7 @@
    },
    "rango": "8",
    "palo_naipe": "picas",
-   "puesto": 51,
+   "puesto": 52,
    "familia": "desarrollo",
    "impacto": 3,
    "carga": "ligera"
@@ -460,7 +460,7 @@
    },
    "rango": "2",
    "palo_naipe": "corazones",
-   "puesto": 112,
+   "puesto": 114,
    "familia": "general"
   },
   "cie-002": {
@@ -538,7 +538,7 @@
    },
    "rango": "8",
    "palo_naipe": "corazones",
-   "puesto": 52,
+   "puesto": 53,
    "familia": "general",
    "impacto": 3,
    "carga": "ligera"
@@ -577,7 +577,7 @@
    },
    "rango": "10",
    "palo_naipe": "picas",
-   "puesto": 43,
+   "puesto": 44,
    "familia": "desarrollo",
    "impacto": 4,
    "carga": "ligera"
@@ -625,7 +625,7 @@
    },
    "rango": "10",
    "palo_naipe": "diamantes",
-   "puesto": 37,
+   "puesto": 38,
    "familia": "desarrollo"
   },
   "dis-002": {
@@ -668,7 +668,7 @@
    },
    "rango": "7",
    "palo_naipe": "diamantes",
-   "puesto": 64,
+   "puesto": 65,
    "familia": "desarrollo"
   },
   "dis-003": {
@@ -902,7 +902,7 @@
    },
    "rango": "4",
    "palo_naipe": "treboles",
-   "puesto": 90,
+   "puesto": 92,
    "familia": "desarrollo"
   },
   "dis-008": {
@@ -943,7 +943,7 @@
    },
    "rango": "6",
    "palo_naipe": "corazones",
-   "puesto": 75,
+   "puesto": 76,
    "familia": "desarrollo"
   },
   "dis-009": {
@@ -1042,7 +1042,7 @@
    },
    "rango": "10",
    "palo_naipe": "treboles",
-   "puesto": 38,
+   "puesto": 39,
    "familia": "desarrollo"
   },
   "dis-011": {
@@ -1088,7 +1088,7 @@
    },
    "rango": "4",
    "palo_naipe": "treboles",
-   "puesto": 96,
+   "puesto": 98,
    "familia": "desarrollo"
   },
   "dis-012": {
@@ -1131,7 +1131,7 @@
    },
    "rango": "6",
    "palo_naipe": "corazones",
-   "puesto": 77,
+   "puesto": 78,
    "familia": "desarrollo"
   },
   "dis-013": {
@@ -1172,7 +1172,7 @@
    },
    "rango": "5",
    "palo_naipe": "treboles",
-   "puesto": 83,
+   "puesto": 84,
    "familia": "desarrollo"
   },
   "dis-014": {
@@ -1218,7 +1218,7 @@
    },
    "rango": "8",
    "palo_naipe": "treboles",
-   "puesto": 53,
+   "puesto": 54,
    "familia": "desarrollo"
   },
   "dis-015": {
@@ -1259,7 +1259,7 @@
    },
    "rango": "3",
    "palo_naipe": "treboles",
-   "puesto": 107,
+   "puesto": 108,
    "familia": "desarrollo"
   },
   "dis-016": {
@@ -1351,7 +1351,7 @@
    },
    "rango": "2",
    "palo_naipe": "picas",
-   "puesto": 115,
+   "puesto": 117,
    "familia": "desarrollo"
   },
   "dis-018": {
@@ -1395,7 +1395,7 @@
    },
    "rango": "8",
    "palo_naipe": "picas",
-   "puesto": 60,
+   "puesto": 61,
    "familia": "desarrollo"
   },
   "dis-019": {
@@ -1481,7 +1481,7 @@
    },
    "rango": "8",
    "palo_naipe": "diamantes",
-   "puesto": 63,
+   "puesto": 64,
    "familia": "desarrollo"
   },
   "dis-021": {
@@ -1579,7 +1579,7 @@
    },
    "rango": "8",
    "palo_naipe": "corazones",
-   "puesto": 54,
+   "puesto": 55,
    "familia": "desarrollo"
   },
   "dis-023": {
@@ -1671,7 +1671,7 @@
    },
    "rango": "3",
    "palo_naipe": "picas",
-   "puesto": 98,
+   "puesto": 100,
    "familia": "desarrollo"
   },
   "dis-025": {
@@ -1765,7 +1765,7 @@
    },
    "rango": "5",
    "palo_naipe": "treboles",
-   "puesto": 84,
+   "puesto": 85,
    "familia": "desarrollo"
   },
   "dis-027": {
@@ -1907,7 +1907,7 @@
    },
    "rango": "8",
    "palo_naipe": "treboles",
-   "puesto": 55,
+   "puesto": 56,
    "familia": "desarrollo"
   },
   "dis-030": {
@@ -1951,7 +1951,7 @@
    },
    "rango": "8",
    "palo_naipe": "picas",
-   "puesto": 56,
+   "puesto": 57,
    "familia": "desarrollo"
   },
   "dis-031": {
@@ -1999,7 +1999,7 @@
    },
    "rango": "3",
    "palo_naipe": "treboles",
-   "puesto": 99,
+   "puesto": 101,
    "familia": "desarrollo"
   },
   "dis-032": {
@@ -2086,7 +2086,7 @@
    },
    "rango": "7",
    "palo_naipe": "treboles",
-   "puesto": 70,
+   "puesto": 71,
    "familia": "desarrollo"
   },
   "dis-034": {
@@ -2130,7 +2130,7 @@
    },
    "rango": "3",
    "palo_naipe": "treboles",
-   "puesto": 100,
+   "puesto": 102,
    "familia": "desarrollo"
   },
   "dis-035": {
@@ -2175,7 +2175,7 @@
    },
    "rango": "5",
    "palo_naipe": "treboles",
-   "puesto": 85,
+   "puesto": 86,
    "familia": "desarrollo"
   },
   "dis-036": {
@@ -2221,7 +2221,7 @@
    },
    "rango": "6",
    "palo_naipe": "treboles",
-   "puesto": 78,
+   "puesto": 79,
    "familia": "desarrollo"
   },
   "dis-037": {
@@ -2264,7 +2264,7 @@
    },
    "rango": "7",
    "palo_naipe": "corazones",
-   "puesto": 71,
+   "puesto": 72,
    "familia": "desarrollo"
   },
   "dis-038": {
@@ -2307,7 +2307,7 @@
    },
    "rango": "6",
    "palo_naipe": "corazones",
-   "puesto": 79,
+   "puesto": 80,
    "familia": "desarrollo"
   },
   "dis-039": {
@@ -2350,7 +2350,7 @@
    },
    "rango": "8",
    "palo_naipe": "corazones",
-   "puesto": 57,
+   "puesto": 58,
    "familia": "desarrollo"
   },
   "dis-040": {
@@ -2450,7 +2450,7 @@
    },
    "rango": "4",
    "palo_naipe": "corazones",
-   "puesto": 97,
+   "puesto": 99,
    "familia": "desarrollo"
   },
   "dis-042": {
@@ -2494,7 +2494,7 @@
    },
    "rango": "4",
    "palo_naipe": "treboles",
-   "puesto": 91,
+   "puesto": 93,
    "familia": "desarrollo"
   },
   "dis-043": {
@@ -2640,7 +2640,7 @@
    },
    "rango": "4",
    "palo_naipe": "corazones",
-   "puesto": 92,
+   "puesto": 94,
    "familia": "desarrollo"
   },
   "dis-046": {
@@ -2686,7 +2686,7 @@
    },
    "rango": "6",
    "palo_naipe": "treboles",
-   "puesto": 76,
+   "puesto": 77,
    "familia": "desarrollo"
   },
   "dis-047": {
@@ -2722,7 +2722,7 @@
    },
    "rango": "2",
    "palo_naipe": "treboles",
-   "puesto": 110,
+   "puesto": 112,
    "familia": "desarrollo"
   },
   "dis-048": {
@@ -2766,7 +2766,7 @@
    },
    "rango": "2",
    "palo_naipe": "treboles",
-   "puesto": 111,
+   "puesto": 113,
    "familia": "desarrollo"
   },
   "dis-049": {
@@ -2811,7 +2811,7 @@
    },
    "rango": "3",
    "palo_naipe": "treboles",
-   "puesto": 101,
+   "puesto": 103,
    "familia": "desarrollo"
   },
   "dis-050": {
@@ -3091,7 +3091,7 @@
    },
    "rango": "7",
    "palo_naipe": "picas",
-   "puesto": 66,
+   "puesto": 67,
    "familia": "desarrollo"
   },
   "dis-056": {
@@ -3130,7 +3130,7 @@
    },
    "rango": "2",
    "palo_naipe": "treboles",
-   "puesto": 113,
+   "puesto": 115,
    "familia": "desarrollo"
   },
   "dis-057": {
@@ -3176,7 +3176,7 @@
    },
    "rango": "9",
    "palo_naipe": "treboles",
-   "puesto": 45,
+   "puesto": 46,
    "familia": "desarrollo"
   },
   "dis-058": {
@@ -3221,7 +3221,7 @@
    },
    "rango": "8",
    "palo_naipe": "treboles",
-   "puesto": 58,
+   "puesto": 59,
    "familia": "desarrollo"
   },
   "dis-059": {
@@ -3269,7 +3269,7 @@
    },
    "rango": "10",
    "palo_naipe": "treboles",
-   "puesto": 39,
+   "puesto": 40,
    "familia": "desarrollo"
   },
   "dis-060": {
@@ -3310,7 +3310,7 @@
    },
    "rango": "4",
    "palo_naipe": "corazones",
-   "puesto": 93,
+   "puesto": 95,
    "familia": "desarrollo"
   },
   "dis-061": {
@@ -3356,7 +3356,7 @@
    },
    "rango": "5",
    "palo_naipe": "picas",
-   "puesto": 89,
+   "puesto": 90,
    "familia": "desarrollo"
   },
   "dis-062": {
@@ -3542,7 +3542,7 @@
    },
    "rango": "9",
    "palo_naipe": "diamantes",
-   "puesto": 46,
+   "puesto": 47,
    "familia": "desarrollo"
   },
   "dis-066": {
@@ -3586,7 +3586,7 @@
    },
    "rango": "3",
    "palo_naipe": "corazones",
-   "puesto": 102,
+   "puesto": 104,
    "familia": "desarrollo"
   },
   "dis-067": {
@@ -3635,7 +3635,7 @@
    },
    "rango": "7",
    "palo_naipe": "treboles",
-   "puesto": 67,
+   "puesto": 68,
    "familia": "desarrollo"
   },
   "dis-068": {
@@ -3683,7 +3683,7 @@
    },
    "rango": "9",
    "palo_naipe": "treboles",
-   "puesto": 47,
+   "puesto": 48,
    "familia": "desarrollo"
   },
   "dis-069": {
@@ -3818,7 +3818,7 @@
    },
    "rango": "10",
    "palo_naipe": "treboles",
-   "puesto": 40,
+   "puesto": 41,
    "familia": "desarrollo"
   },
   "dis-072": {
@@ -3999,7 +3999,7 @@
    },
    "rango": "8",
    "palo_naipe": "corazones",
-   "puesto": 61,
+   "puesto": 62,
    "familia": "desarrollo"
   },
   "dis-076": {
@@ -4040,7 +4040,7 @@
    },
    "rango": "5",
    "palo_naipe": "treboles",
-   "puesto": 82,
+   "puesto": 83,
    "familia": "desarrollo"
   },
   "dis-077": {
@@ -4081,7 +4081,7 @@
    },
    "rango": "6",
    "palo_naipe": "treboles",
-   "puesto": 73,
+   "puesto": 74,
    "familia": "desarrollo"
   },
   "dis-078": {
@@ -4125,7 +4125,7 @@
    },
    "rango": "10",
    "palo_naipe": "treboles",
-   "puesto": 41,
+   "puesto": 42,
    "familia": "desarrollo"
   },
   "dis-079": {
@@ -4175,7 +4175,7 @@
    },
    "rango": "7",
    "palo_naipe": "treboles",
-   "puesto": 72,
+   "puesto": 73,
    "familia": "desarrollo"
   },
   "dis-080": {
@@ -4216,7 +4216,7 @@
    },
    "rango": "4",
    "palo_naipe": "treboles",
-   "puesto": 94,
+   "puesto": 96,
    "familia": "desarrollo"
   },
   "dis-081": {
@@ -4250,7 +4250,7 @@
    },
    "rango": "2",
    "palo_naipe": "treboles",
-   "puesto": 116,
+   "puesto": 118,
    "familia": "desarrollo"
   },
   "dis-082": {
@@ -4294,7 +4294,7 @@
    },
    "rango": "7",
    "palo_naipe": "treboles",
-   "puesto": 68,
+   "puesto": 69,
    "familia": "desarrollo"
   },
   "dis-083": {
@@ -4335,7 +4335,7 @@
    },
    "rango": "3",
    "palo_naipe": "treboles",
-   "puesto": 103,
+   "puesto": 105,
    "familia": "desarrollo"
   },
   "dis-084": {
@@ -4374,7 +4374,7 @@
    },
    "rango": "5",
    "palo_naipe": "picas",
-   "puesto": 86,
+   "puesto": 87,
    "familia": "desarrollo"
   },
   "dis-085": {
@@ -4413,7 +4413,7 @@
    },
    "rango": "2",
    "palo_naipe": "picas",
-   "puesto": 109,
+   "puesto": 110,
    "familia": "desarrollo"
   },
   "dis-086": {
@@ -4458,7 +4458,7 @@
    },
    "rango": "9",
    "palo_naipe": "diamantes",
-   "puesto": 48,
+   "puesto": 49,
    "familia": "desarrollo"
   },
   "dis-087": {
@@ -4506,7 +4506,7 @@
    },
    "rango": "10",
    "palo_naipe": "picas",
-   "puesto": 44,
+   "puesto": 45,
    "familia": "desarrollo"
   },
   "dis-088": {
@@ -4554,7 +4554,7 @@
    },
    "rango": "5",
    "palo_naipe": "picas",
-   "puesto": 87,
+   "puesto": 88,
    "familia": "desarrollo"
   },
   "dis-089": {
@@ -4784,7 +4784,7 @@
    },
    "rango": "9",
    "palo_naipe": "treboles",
-   "puesto": 49,
+   "puesto": 50,
    "familia": "desarrollo",
    "impacto": 3,
    "carga": "media"
@@ -4820,7 +4820,7 @@
    },
    "rango": "3",
    "palo_naipe": "picas",
-   "puesto": 108,
+   "puesto": 109,
    "familia": "desarrollo",
    "impacto": 2,
    "carga": "ligera"
@@ -4867,7 +4867,7 @@
    },
    "rango": "9",
    "palo_naipe": "treboles",
-   "puesto": 50,
+   "puesto": 51,
    "familia": "desarrollo",
    "impacto": 3,
    "carga": "media"
@@ -4949,7 +4949,7 @@
    },
    "rango": "2",
    "palo_naipe": "treboles",
-   "puesto": 117,
+   "puesto": 119,
    "familia": "desarrollo",
    "impacto": 2,
    "carga": "pesada"
@@ -4988,7 +4988,7 @@
    },
    "rango": "8",
    "palo_naipe": "picas",
-   "puesto": 59,
+   "puesto": 60,
    "familia": "desarrollo",
    "impacto": 3,
    "carga": "ligera"
@@ -5029,7 +5029,7 @@
    },
    "rango": "3",
    "palo_naipe": "treboles",
-   "puesto": 104,
+   "puesto": 106,
    "familia": "desarrollo",
    "impacto": 2,
    "carga": "media"
@@ -5059,16 +5059,16 @@
    "huella": "7ccf2c3434a2",
    "clasificada": "2026-11-15",
    "potencia": {
-    "total": 58,
+    "total": 62,
     "utilidad": 24.5,
     "impacto": 12.0,
-    "evidencia": 5.0,
+    "evidencia": 9.0,
     "facilidad": 6.0,
     "costo": 10.0
    },
-   "rango": "3",
+   "rango": "5",
    "palo_naipe": "diamantes",
-   "puesto": 106,
+   "puesto": 91,
    "familia": "desarrollo",
    "impacto": 2,
    "carga": "ligera"
@@ -5109,10 +5109,86 @@
    },
    "rango": "6",
    "palo_naipe": "treboles",
-   "puesto": 80,
+   "puesto": 81,
    "familia": "desarrollo",
    "impacto": 3,
    "carga": "media"
+  },
+  "dis-102": {
+   "campos": [
+    {
+     "campo": "ux-ui",
+     "peso": 3,
+     "aplicacion": "Elegir el héroe por giro: Split para SaaS, Full-Bleed para producto físico, Orbit para agencias y servicios."
+    },
+    {
+     "campo": "frontend",
+     "peso": 2,
+     "aplicacion": "Grid de tres columnas, imagen a 100vh con object-fit y capas con position absolute."
+    },
+    {
+     "campo": "producto",
+     "peso": 2,
+     "aplicacion": "El primer pantallazo se ajusta a lo que vende cada negocio."
+    }
+   ],
+   "nivel": "intermedio",
+   "costo": "gratis",
+   "combina_con": [
+    "dis-050",
+    "dis-054"
+   ],
+   "choca_con": [],
+   "huella": "d7ee189c0a6b",
+   "clasificada": "2026-11-16",
+   "potencia": {
+    "total": 74,
+    "utilidad": 31.5,
+    "impacto": 24.0,
+    "evidencia": 5.0,
+    "facilidad": 6.0,
+    "costo": 8.0
+   },
+   "rango": "J",
+   "palo_naipe": "diamantes",
+   "puesto": 36,
+   "familia": "desarrollo",
+   "impacto": 4,
+   "carga": "media"
+  },
+  "dis-103": {
+   "campos": [
+    {
+     "campo": "producto",
+     "peso": 3,
+     "aplicacion": "Video de presentación o guía de marca a partir del logo, sin software de motion."
+    },
+    {
+     "campo": "grafico",
+     "peso": 1,
+     "aplicacion": "Paleta, tipografía e imágenes de la identidad en una sola exportación."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "depende",
+   "combina_con": [],
+   "choca_con": [],
+   "huella": "32aa892f953f",
+   "clasificada": "2026-11-16",
+   "potencia": {
+    "total": 52,
+    "utilidad": 17.5,
+    "impacto": 12.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 7.0
+   },
+   "rango": "2",
+   "palo_naipe": "picas",
+   "puesto": 111,
+   "familia": "desarrollo",
+   "impacto": 2,
+   "carga": "ligera"
   },
   "pro-001": {
    "campos": [
@@ -5192,7 +5268,7 @@
    },
    "rango": "3",
    "palo_naipe": "picas",
-   "puesto": 105,
+   "puesto": 107,
    "familia": "general"
   },
   "tec-002": {
@@ -5226,7 +5302,7 @@
    },
    "rango": "4",
    "palo_naipe": "picas",
-   "puesto": 95,
+   "puesto": 97,
    "familia": "general",
    "impacto": 3,
    "carga": "ligera"
@@ -5262,11 +5338,11 @@
    },
    "rango": "6",
    "palo_naipe": "picas",
-   "puesto": 74,
+   "puesto": 75,
    "familia": "general",
    "impacto": 4,
    "carga": "ligera"
   }
  },
- "actualizado": "2026-11-15"
+ "actualizado": "2026-11-16"
 }
