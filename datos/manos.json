@@ -302,12 +302,16 @@
      "rol": "estudiar: un cuaderno de NotebookLM por materia con todo su material"
     },
     {
+     "id": "pro-002",
+     "rol": "comprobar: convertir lo estudiado en preguntas y contestarlas sin leer"
+    },
+    {
      "id": "cie-002",
      "rol": "verificar: revisar en quién se hizo un estudio antes de citarlo"
     }
    ],
    "por_que": "Van en el orden en que se estudia: primero se decide con qué herramienta se hace cada cosa, luego se concentra el material de la materia para repasar con cuestionarios y flashcards, y al final se revisa la evidencia antes de llevar una afirmación a un reporte o a una exposición.",
-   "conflictos": "No usar un solo chat para todo. Aunque NotebookLM responde con tus fuentes, puede resumir mal: revisar lo que entra a un entregable. No citar un estudio sin ver su población y su muestra.",
+   "conflictos": "No usar un solo chat para todo. Aunque NotebookLM responde con tus fuentes, puede resumir mal: revisar lo que entra a un entregable. No citar un estudio sin ver su población y su muestra. Las preguntas de pro-002 se escriben uno mismo: si la IA las genera, que sean de por qué y para qué, no de copiar definiciones.",
    "dificultad_total": 1,
    "stack": "NotebookLM + Perplexity + Gamma",
    "listo": [
@@ -316,8 +320,9 @@
     "Las fuentes de investigación vienen con cita y se revisó a quién aplica cada estudio.",
     "Lo que entra a un reporte se verificó contra el material original."
    ],
-   "creada": "2026-11-14"
+   "creada": "2026-11-14",
+   "actualizada": "2026-11-16"
   }
  ],
- "actualizado": "2026-11-15"
+ "actualizado": "2026-11-16"
 }
