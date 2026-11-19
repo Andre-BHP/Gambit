@@ -82,7 +82,7 @@
    },
    "rango": "2",
    "palo_naipe": "picas",
-   "puesto": 118,
+   "puesto": 119,
    "familia": "desarrollo"
   },
   "age-003": {
@@ -210,7 +210,7 @@
     "facilidad": 10.0,
     "costo": 7.0
    },
-   "rango": "5",
+   "rango": "6",
    "palo_naipe": "picas",
    "puesto": 83,
    "familia": "desarrollo"
@@ -460,7 +460,7 @@
    },
    "rango": "2",
    "palo_naipe": "corazones",
-   "puesto": 116,
+   "puesto": 117,
    "familia": "general"
   },
   "cie-002": {
@@ -1259,7 +1259,7 @@
    },
    "rango": "3",
    "palo_naipe": "treboles",
-   "puesto": 109,
+   "puesto": 110,
    "familia": "desarrollo"
   },
   "dis-016": {
@@ -1351,7 +1351,7 @@
    },
    "rango": "2",
    "palo_naipe": "picas",
-   "puesto": 119,
+   "puesto": 120,
    "familia": "desarrollo"
   },
   "dis-018": {
@@ -2722,7 +2722,7 @@
    },
    "rango": "2",
    "palo_naipe": "treboles",
-   "puesto": 114,
+   "puesto": 115,
    "familia": "desarrollo"
   },
   "dis-048": {
@@ -2766,7 +2766,7 @@
    },
    "rango": "2",
    "palo_naipe": "treboles",
-   "puesto": 115,
+   "puesto": 116,
    "familia": "desarrollo"
   },
   "dis-049": {
@@ -3130,7 +3130,7 @@
    },
    "rango": "2",
    "palo_naipe": "treboles",
-   "puesto": 117,
+   "puesto": 118,
    "familia": "desarrollo"
   },
   "dis-057": {
@@ -4038,7 +4038,7 @@
     "facilidad": 6.0,
     "costo": 10.0
    },
-   "rango": "5",
+   "rango": "6",
    "palo_naipe": "treboles",
    "puesto": 84,
    "familia": "desarrollo"
@@ -4250,7 +4250,7 @@
    },
    "rango": "2",
    "palo_naipe": "treboles",
-   "puesto": 120,
+   "puesto": 121,
    "familia": "desarrollo"
   },
   "dis-082": {
@@ -4413,7 +4413,7 @@
    },
    "rango": "2",
    "palo_naipe": "picas",
-   "puesto": 112,
+   "puesto": 113,
    "familia": "desarrollo"
   },
   "dis-086": {
@@ -4820,7 +4820,7 @@
    },
    "rango": "3",
    "palo_naipe": "picas",
-   "puesto": 110,
+   "puesto": 111,
    "familia": "desarrollo",
    "impacto": 2,
    "carga": "ligera"
@@ -4949,7 +4949,7 @@
    },
    "rango": "2",
    "palo_naipe": "treboles",
-   "puesto": 121,
+   "puesto": 122,
    "familia": "desarrollo",
    "impacto": 2,
    "carga": "pesada"
@@ -5185,9 +5185,43 @@
    },
    "rango": "2",
    "palo_naipe": "picas",
-   "puesto": 113,
+   "puesto": 114,
    "familia": "desarrollo",
    "impacto": 2,
+   "carga": "ligera"
+  },
+  "dis-104": {
+   "campos": [
+    {
+     "campo": "ux-ui",
+     "peso": 3,
+     "aplicacion": "Arrancar un sistema de diseño en Figma desde tokens de espaciado, radios, paleta y tipografía, con documentación y componentes."
+    },
+    {
+     "campo": "frontend",
+     "peso": 1,
+     "aplicacion": "Los mismos tokens pasan a variables CSS en :root."
+    }
+   ],
+   "nivel": "estudiante",
+   "costo": "depende",
+   "combina_con": [],
+   "choca_con": [],
+   "huella": "459c78bbdcaf",
+   "clasificada": "2026-11-18",
+   "potencia": {
+    "total": 58,
+    "utilidad": 17.5,
+    "impacto": 18.0,
+    "evidencia": 5.0,
+    "facilidad": 10.0,
+    "costo": 7.0
+   },
+   "rango": "3",
+   "palo_naipe": "picas",
+   "puesto": 109,
+   "familia": "desarrollo",
+   "impacto": 3,
    "carga": "ligera"
   },
   "fin-001": {
@@ -5219,7 +5253,7 @@
    },
    "rango": "3",
    "palo_naipe": "diamantes",
-   "puesto": 111,
+   "puesto": 112,
    "familia": "general",
    "impacto": 3,
    "carga": "media"
@@ -5415,5 +5449,5 @@
    "carga": "ligera"
   }
  },
- "actualizado": "2026-11-16"
+ "actualizado": "2026-11-18"
 }
